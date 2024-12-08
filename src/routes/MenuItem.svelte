@@ -13,7 +13,7 @@
 
 >
     <div
-            class="text-6xl flex font-bold ml-28 hover:text-red-600 transition-colors duration-300"
+            class="text-6xl flex font-bold ml-28 hover:text-red-500 transition-colors duration-300"
             style="transform: scale({$scale});"
     >
         <i class="{iconClass} mr-16"></i>

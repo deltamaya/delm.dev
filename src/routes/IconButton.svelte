@@ -8,13 +8,13 @@
 <a
         href={href}
         target="_blank"
-        class="icon-button text-3xl hover:text-red-600 transition-colors duration-300"
+        class="icon-button text-4xl hover:text-red-500 transition-colors duration-300 inline-block"
         aria-label={label}
-        onmouseenter={() => scale.set(1.2)}
+        style="transform: scale({$scale});"
+        onmouseenter={() => scale.set(1.25)}
         onmouseleave={() => scale.set(1)}
 >
     <i
-            class={iconClass}
-            style="transform: scale({$scale});"
+            class="{iconClass}"
     ></i>
 </a>
