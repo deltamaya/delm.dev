@@ -74,7 +74,7 @@
     <img
             src="/logo.png"
             alt="logo"
-            class="absolute inset-0  blurred_background"
+            class="blurred_background"
             in:fly={{ y: 100, duration: 400 }}
     />
 </div>

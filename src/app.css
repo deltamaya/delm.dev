@@ -21,7 +21,7 @@
 
 
 .blurred_background {
-    @apply pointer-events-none select-none blur-3xl opacity-10 z-0
+    @apply pointer-events-none select-none blur-3xl opacity-10 z-0 absolute inset-0 w-full h-full object-cover
 }
 
 @keyframes logo-float {
