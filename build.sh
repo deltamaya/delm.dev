@@ -1,3 +1,4 @@
+cd ~/home_site
 git pull
 npm install
 npm run build
