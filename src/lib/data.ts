@@ -33,3 +33,17 @@ export const operatingSystems = [
 export const shells = [
     { href: "https://ohmyz.sh/", label: "ohmyzsh", iconClass: "devicon-plain:ohmyzsh" },
 ]
+
+export const bios=[
+    'Problem Solver. Life Enthusiast.',
+    'Work Hard, Play Hard.',
+    'Technology should serve humanity.',
+    'Make Programming Great Again!',
+    'Just do it.',
+    'Stay Hungry, Stay Foolish.',
+    'Better Call Maya!',
+    'Why are you still here?',
+    'I\'m running out of intros!',
+    'Why don\'t you go have some fun?',
+    'Are you boring? Seriously.',
+]

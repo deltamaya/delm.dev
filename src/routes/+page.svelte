@@ -3,6 +3,43 @@
     import IconButton from "./IconButton.svelte";
     import MenuItem from "./MenuItem.svelte";
     import { socialLinks, menuItems } from "$lib/data";
+    import {bios} from '$lib/data'
+
+    let bioIndex=$state(0);
+    let bioSentence=$derived(bios[bioIndex])
+
+    $effect(()=>{
+        const id=setInterval(()=>{
+            if(bioIndex===bios.length-1){
+                bioIndex=0;
+            }else{
+                bioIndex++;
+            }
+        },3500)
+        return ()=>{
+            clearInterval(id)
+        }
+    })
+    $inspect(bioIndex)
+
+    function typewriter(node, { speed = 1 }) {
+		const valid = node.childNodes.length === 1 && node.childNodes[0].nodeType === Node.TEXT_NODE;
+
+		if (!valid) {
+			throw new Error(`This transition only works on elements with a single text node child`);
+		}
+
+		const text = node.textContent;
+		const duration = text.length / (speed * 0.01);
+
+		return {
+			duration,
+			tick: (t) => {
+				const i = Math.trunc(text.length * t);
+				node.textContent = text.slice(0, Math.max(1,i));
+			}
+		};
+	}
 </script>
 
 <div
@@ -33,19 +70,22 @@
                 ></div>
             </div>
         </div>
-        <div class="flex flex-col items-center mt-16">
+        <div class="flex flex-col items-center mt-16"
+            in:fly={{ y: -50, duration: 400, delay: 100 }}>
             <h1
-                class="text-4xl md:text-6xl font-bold text-gray-800 mb-4"
+                class="text-6xl font-bold text-gray-800 mb-4"
                 in:fly={{ y: 50, duration: 400, delay: 50 }}
             >
                 Hi, I'm <span class="text-red-500">Maya☆</span>.
             </h1>
+            {#key bioIndex}
             <p
-                class="text-lg md:text-xl text-gray-600 max-w-2xl mb-8"
-                in:fly={{ y: 50, duration: 400, delay: 100 }}
+                class="text-xl text-gray-600 max-w-2xl mb-8"
+                in:typewriter={{speed:2}}
             >
-                Problem Solver. Life Enthusiast. Work Hard, Play Hard.
+                {bioSentence}
             </p>
+            {/key}
         </div>
         <div class="flex space-x-4 justify-center text-gray-900">
             {#each socialLinks as item, index (index)}
