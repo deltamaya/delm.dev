@@ -4,7 +4,7 @@
     import {languages, operatingSystems} from "$lib/data.ts";
 </script>
 
-<div class="min-h-[calc(100vh-2.5rem)] flex justify-center items-center">
+<div class="min-h-screen flex justify-center items-center">
     <div class="flex flex-col items-center">
         <img
                 src="/avatar.jpg"
@@ -90,6 +90,9 @@
             </div>
         </div>
     </div>
+</div>
+<div class="h-20 bg-red-500" >
+    another page
 </div>
 
 <!--<img-->

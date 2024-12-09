@@ -1,13 +1,11 @@
 <script lang="ts">
     import "../app.css";
-
     let {children} = $props();
-
 </script>
 
 <main class="bg-gray-200 font-inter relative overflow-hidden">
     {#if children}
-            {@render children()}
+        {@render children()}
     {/if}
 </main>
 
