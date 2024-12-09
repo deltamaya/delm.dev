@@ -19,16 +19,17 @@ export const languages = [
     { href: "https://www.python.org/", label: "Python", iconClass: "lineicons:python" },
     { href: "https://www.typescriptlang.org/", label: "Typescript", iconClass: "lineicons:typescript" },
 ]
-export const favTools = [
+export const frontendFrameworks = [
     { href: "https://svelte.dev/", label: "Svelte", iconClass: "ri:svelte-fill" },
-    { href: "https://svelte.dev/", label: "Svelte", iconClass: "devicon-svelte-plain" },
-    { href: "https://svelte.dev/", label: "Svelte", iconClass: "devicon-svelte-plain" },
-    { href: "https://svelte.dev/", label: "Svelte", iconClass: "devicon-svelte-plain" },
+    { href: "https://tailwindcss.com/", label: "Tailwind", iconClass: "mdi:tailwind" },
 ]
 
 export const operatingSystems = [
     { href: "https://www.apple.com/macos", label: "MacOS", iconClass: "mdi:apple" },
     { href: "https://archlinux.org", label: "ArchLinux", iconClass: "mdi:arch" },
     { href: "https://www.microsoft.com/windows", label: "Window", iconClass: "mdi:windows" },
+]
 
+export const shells = [
+    { href: "https://ohmyz.sh/", label: "ohmyzsh", iconClass: "devicon-plain:ohmyzsh" },
 ]
