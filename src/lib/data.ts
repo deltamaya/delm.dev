@@ -38,7 +38,7 @@ export const bios = [
     'Problem Solver. Life Enthusiast.',
     'Work Hard, Play Hard.',
     'Technology should serve humanity.',
-    'Just for fun',
+    'Just for fun.',
     'Make Programming Great Again!',
     'Stay Hungry, Stay Foolish.',
     'Better Call Maya!',
