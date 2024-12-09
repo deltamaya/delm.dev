@@ -57,7 +57,7 @@
                 class="flex font-bold text-gray-800 text-2xl justify-center items-center"
             >
                 <div class="items-center mt-4 mr-1">
-                    maya.os = std::set&lbrace;
+                    maya.os = [ os for os in [
                 </div>
                 <div class="flex space-x-4 justify-center mt-4">
                     {#each operatingSystems as item, index (index)}
@@ -76,7 +76,7 @@
                         </div>
                     {/each}
                 </div>
-                <div class="mt-4 ml-1">&rbrace;</div>
+                <div class="mt-4 ml-1">] ]</div>
             </div>
         </div>
     </div>

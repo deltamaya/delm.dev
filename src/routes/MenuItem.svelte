@@ -1,5 +1,6 @@
 <script>
     import {spring} from "svelte/motion";
+    import Icon from "@iconify/svelte";
     let scale=spring(1,{stiffness:0.1,damping:0.5})
     let {href,label,title,iconClass}=$props()
 </script>
@@ -16,7 +17,7 @@
             class="text-6xl flex font-bold ml-28 hover:text-red-500 transition-colors duration-300"
             style="transform: scale({$scale});"
     >
-        <i class="{iconClass} mr-16"></i>
+            <Icon icon={iconClass} class="mr-16"/>
         <p>{title}</p>
     </div>
 </a>
