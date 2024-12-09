@@ -3,7 +3,7 @@ export const socialLinks = [
     { href: "https://twitter.com/imvm553", label: "twitter/x link", iconClass: "mdi:twitter" },
     { href: "https://t.me/dm553bot", label: "telegram bot", iconClass: "mdi:telegram" },
     { href: "https://steamcommunity.com/id/deltamaya", label: "steam community", iconClass: "mdi:steam" },
-    { href: "mailto:me@imvm.dev", label: "email me", iconClass: "ic:baseline-email" },
+    { href: "mailto:me@delm.dev", label: "email me", iconClass: "ic:baseline-email" },
 ]
 
 export const menuItems = [
@@ -19,12 +19,11 @@ export const languages = [
     { href: "https://www.python.org/", label: "Python", iconClass: "lineicons:python" },
     { href: "https://www.typescriptlang.org/", label: "Typescript", iconClass: "lineicons:typescript" },
 ]
-export const framworks = [
+export const favTools = [
+    { href: "https://svelte.dev/", label: "Svelte", iconClass: "ri:svelte-fill" },
     { href: "https://svelte.dev/", label: "Svelte", iconClass: "devicon-svelte-plain" },
     { href: "https://svelte.dev/", label: "Svelte", iconClass: "devicon-svelte-plain" },
     { href: "https://svelte.dev/", label: "Svelte", iconClass: "devicon-svelte-plain" },
-    { href: "https://svelte.dev/", label: "Svelte", iconClass: "devicon-svelte-plain" },
-
 ]
 
 export const operatingSystems = [

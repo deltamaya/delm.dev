@@ -47,7 +47,7 @@
                 Problem Solver. Life Enthusiast. Work Hard, Play Hard.
             </p>
         </div>
-        <div class="flex space-x-4 justify-center">
+        <div class="flex space-x-4 justify-center text-gray-900">
             {#each socialLinks as item, index (index)}
                 <div
                     in:fly|global={{

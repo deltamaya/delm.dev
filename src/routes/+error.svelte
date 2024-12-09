@@ -5,7 +5,7 @@
         class="min-h-[calc(100vh-2.5rem)] pb-56 flex justify-center items-center text-8xl font-bold -z-10 overflow-hidden">
     <div
             class="z-10">
-        <img src="/not-found.png" alt="not found"
+        <img src="/not_found_display.png" alt="not found"
              class="h-80 rounded-2xl border-4 border-white mb-5 drop-shadow-2xl select-none pointer-events-none"/>
         <div class="flex">
             <div>
@@ -32,6 +32,6 @@ hover:bg-transparent hover:text-gray-800 transition-colors duration-300"
 
 
     </div>
-    <img src="/not-found.png" alt="not found"
+    <img src="/not_found_display.png" alt="not found"
          class="absolute inset-0  blurred_background w-full"/>
 </div>

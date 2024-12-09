@@ -9,7 +9,8 @@ export default {
     extend: {
       fontFamily: {
         // ibmPlexSansSC: ['IBM Plex Sans SC', 'sans-serif'],
-        inter:['Inter','sans-serif']
+        inter:['Inter','sans-serif'],
+        jetbrains:[ 'JetBrains Mono', 'monospace'],
       },
     }
   },
