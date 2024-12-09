@@ -20,4 +20,4 @@ jobs:
           ssh-keyscan -H ${{ secrets.VPS_IP }} >> ~/.ssh/known_hosts
 
       - name: Deploy to VPS
-        run: ssh user@${{ secrets.VPS_IP }} 'zsh -s' < build.sh
+        run: ssh root@${{ secrets.VPS_IP }} 'zsh -s' < build.sh
