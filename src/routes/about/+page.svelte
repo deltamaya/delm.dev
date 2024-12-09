@@ -2,46 +2,47 @@
     import {fly} from "svelte/transition";
     import IconButton from "../IconButton.svelte";
     import Icon from "@iconify/svelte";
-    import {frontendFrameworks, languages, operatingSystems, shells} from "$lib/data.ts";
-     import { inview } from 'svelte-inview';
-  import type { ObserverEventDetails, Options } from 'svelte-inview';
-  let cardIsInView=$state(false);
-  let showIsInView=$state(false);
-  let showArrow=$state(true);
-  const options: Options = {
-    rootMargin: '-300px',
-    unobserveOnEnter: true,
-  };
-  const handleShowObserve= ({ detail }: CustomEvent<ObserverEventDetails>) => {
-    showIsInView = detail.inView;
-  };
-  const handleCardObserve = ({ detail }: CustomEvent<ObserverEventDetails>) => {
-    cardIsInView = detail.inView;
-    if(cardIsInView){
-        showArrow=false;
-    }
-  };
+    import {frontendFrameworks, languages, operatingSystems, shells} from "$lib/data";
+    import {inview} from 'svelte-inview';
+    import type {ObserverEventDetails, Options} from 'svelte-inview';
+
+    let cardIsInView = $state(false);
+    let showIsInView = $state(false);
+    let showArrow = $state(true);
+    const options: Options = {
+        rootMargin: '-300px',
+        unobserveOnEnter: true,
+    };
+    const handleShowObserve = ({detail}: CustomEvent<ObserverEventDetails>) => {
+        showIsInView = detail.inView;
+    };
+    const handleCardObserve = ({detail}: CustomEvent<ObserverEventDetails>) => {
+        cardIsInView = detail.inView;
+        if (cardIsInView) {
+            showArrow = false;
+        }
+    };
 
 </script>
 
 <div class="min-h-screen flex justify-center items-center -z-10">
     <div class="flex flex-col items-center z-10">
         <div class='flex justify-center items-center'>
-                    <img
-                src="/avatar.jpg"
-                alt="avatar"
-                class="w-48 rounded-full border-4 drop-shadow-2xl inline-block origin-center
+            <img
+                    src="/avatar.jpg"
+                    alt="avatar"
+                    class="w-48 rounded-full border-4 drop-shadow-2xl inline-block origin-center
                   shadow-2xl hover:scale-110 transition duration-200 ease-in-out"
-                in:fly={{ y: -50, duration: 400 }}
-        />
+                    in:fly={{ y: -50, duration: 400 }}
+            />
             <Icon icon="charm:cross" class="text-4xl mx-5"/>
-             <img
-                src="/logo.png"
-                alt="avatar"
-                class="w-48 drop-shadow-2xl
+            <img
+                    src="/logo.png"
+                    alt="avatar"
+                    class="w-48 drop-shadow-2xl
                   transition hover:scale-110 duration-200 ease-in-out"
-                in:fly={{ y: -50, duration: 400 }}
-        />
+                    in:fly={{ y: -50, duration: 400 }}
+            />
         </div>
 
         <div class="flex flex-col ml-5 items-center">
@@ -51,8 +52,8 @@
             >
                 delta<span class="text-red-500">maya</span>
             </p>
-            <div class="text-gray-400 text-xl font-bold mt-5"
-            in:fly={{ y: -50, duration: 400 ,delay:100}}>
+            <div class="text-gray-500 text-xl font-bold mt-5"
+                 in:fly={{ y: -50, duration: 400 ,delay:100}}>
                 Wuhan University of Technology
             </div>
 
@@ -62,103 +63,104 @@
             >
                 Student
             </div>
-</div>
-        <div class="flex flex-col font-bold text-gray-900 text-4xl font-jetbrains">
-   <div  class="font-bold text-gray-900 text-4xl font-jetbrains flex flex-col mt-24">
-        <div class="items-center flex"
-         in:fly={{ y: 50, duration: 400 }}>
-                        <span class="text-red-500 mr-5">sudo</span>
-            chsh -s $(which
-                        <div class="flex">
-                    {#each shells as item, index (index)}
-                        <div
-                                class="flex"
-                                in:fly|global={{
+        </div>
+        <div class="flex flex-col font-bold text-gray-900 text-4xl font-jetbrains border-8 p-4 rounded-2xl
+        border-gray-900 mt-24">
+            <div class="font-bold text-gray-900 text-4xl font-jetbrains flex flex-col">
+                <div class="items-center flex"
+                     in:fly={{ y: 50, duration: 400 }}>
+                    <span class="text-red-500 mr-5">sudo</span>
+                    chsh -s $(which
+                    <div class="flex">
+                        {#each shells as item, index (index)}
+                            <div
+                                    class="flex"
+                                    in:fly|global={{
                                 y: 50,
                                 duration: 400,
                                 delay: 100 + 25 * index,
                             }}
-                        >
-                            <IconButton
-                                    href={item.href}
-                                    label={item.label}
-                                    iconClass={item.iconClass}
-                            />
-                            {#if index !== shells.length - 1}
-                                <span class="mt-2 font-bold text-4xl mr-3">,</span>
-                            {/if}
-                        </div>
-                    {/each}
+                            >
+                                <IconButton
+                                        href={item.href}
+                                        label={item.label}
+                                        iconClass={item.iconClass}
+                                />
+                                {#if index !== shells.length - 1}
+                                    <span class="mt-2 font-bold text-4xl mr-3">,</span>
+                                {/if}
+                            </div>
+                        {/each}
+                    </div>
+                    )
                 </div>
-                        )
-        </div>
                 <div class="flex items-center " in:fly={{ y: 50, duration: 400 ,delay:50}}>
                     const maya = &lbrace;
                 </div>
-       <div class="flex mt-4 items-center" in:fly={{ y: 50, duration: 400 ,delay:100}}>
-                <div class="mr-1 ml-12">
-                    lang: std::vector&lbrace;
-                </div>
-                <div class="flex justify-center">
-                    {#each languages as item, index (index)}
-                        <div
-                                class="flex"
-                                in:fly|global={{
+                <div class="flex mt-4 items-center" in:fly={{ y: 50, duration: 400 ,delay:100}}>
+                    <div class="mr-1 ml-12">
+                        lang: std::vector&lbrace;
+                    </div>
+                    <div class="flex justify-center">
+                        {#each languages as item, index (index)}
+                            <div
+                                    class="flex"
+                                    in:fly|global={{
                                 y: 50,
                                 duration: 400,
                                 delay: 100 + 25 * index,
                             }}
-                        >
-                            <IconButton
-                                    href={item.href}
-                                    label={item.label}
-                                    iconClass={item.iconClass}
-                            />
-                            {#if index !== languages.length - 1}
-                                <span class="font-bold text-4xl mr-3">,</span>
-                            {/if}
-                        </div>
+                            >
+                                <IconButton
+                                        href={item.href}
+                                        label={item.label}
+                                        iconClass={item.iconClass}
+                                />
+                                {#if index !== languages.length - 1}
+                                    <span class="font-bold text-4xl mr-3">,</span>
+                                {/if}
+                            </div>
 
-                    {/each}
+                        {/each}
+                    </div>
+                    <div class="ml-1">&rbrace;,</div>
                 </div>
-                <div class="ml-1">&rbrace;,</div>
-       </div>
 
 
-            <div  class="flex font-bold text-gray-900 text-4xl font-jetbrains items-center mt-4"
-            in:fly={{ y: 50, duration: 400 ,delay:150}}>
-                <div class="ml-12 mr-1">
-                    os: [os for os in [
-                </div>
-                <div class="flex">
-                    {#each operatingSystems as item, index (index)}
-                        <div
-                                class="flex"
-                                in:fly|global={{
+                <div class="flex font-bold text-gray-900 text-4xl font-jetbrains items-center mt-4"
+                     in:fly={{ y: 50, duration: 400 ,delay:150}}>
+                    <div class="ml-12 mr-1">
+                        os: [os for os in [
+                    </div>
+                    <div class="flex">
+                        {#each operatingSystems as item, index (index)}
+                            <div
+                                    class="flex"
+                                    in:fly|global={{
                                 y: 50,
                                 duration: 400,
                                 delay: 150 + 25 * index,
                             }}
-                        >
-                            <IconButton
-                                    href={item.href}
-                                    label={item.label}
-                                    iconClass={item.iconClass}
-                            />
-                            {#if index !== operatingSystems.length - 1}
-                                <span class="mt-2 font-bold text-4xl mr-3">,</span>
-                            {/if}
-                        </div>
-                    {/each}
-                </div>
-                <div class="ml-1">]],</div>
+                            >
+                                <IconButton
+                                        href={item.href}
+                                        label={item.label}
+                                        iconClass={item.iconClass}
+                                />
+                                {#if index !== operatingSystems.length - 1}
+                                    <span class="mt-2 font-bold text-4xl mr-3">,</span>
+                                {/if}
+                            </div>
+                        {/each}
+                    </div>
+                    <div class="ml-1">]],</div>
 
-            </div >
-                       <div in:fly={{ y: 50, duration: 400 ,delay:100}}>&rbrace;</div>
-           </div>
+                </div>
+                <div in:fly={{ y: 50, duration: 400 ,delay:100}}>&rbrace;</div>
+            </div>
             <div class="flex font-bold text-gray-900 text-4xl font-jetbrains items-center mt-4"
-            in:fly={{ y: 50, duration: 400 ,delay:200}}>
-                <div >
+                 in:fly={{ y: 50, duration: 400 ,delay:200}}>
+                <div>
                     maya.frontend.setFav([]Tech&lbrace;
                 </div>
                 <div class="flex">
@@ -187,15 +189,15 @@
 
             <div
                     use:inview={options}
-                     oninview_change={handleShowObserve}
+                    oninview_change={handleShowObserve}
                     class:translate-y-0={showIsInView}
-                   class:opacity-100={showIsInView}
-                   class:translate-y-16={!showIsInView}
-                   class:opacity-0={!showIsInView}
+                    class:opacity-100={showIsInView}
+                    class:translate-y-16={!showIsInView}
+                    class:opacity-0={!showIsInView}
                     class="transition duration-500 ease-in-out"
-                    >
+            >
                 maya.show()
-        </div>
+            </div>
         </div>
         {#if showArrow}
             <div class="font-bold font-inter text-4xl fixed bottom-5"
@@ -204,12 +206,13 @@
                                 duration: 400,
                                 delay: 50,
                             }}
-            out:fly|local={{
+                 out:fly|local={{
                                 y: 50,
                                 duration: 400,
                                 delay: 50,
                             }}>
-                &darr;</div>
+                &darr;
+            </div>
         {/if}
     </div>
 </div>
@@ -218,14 +221,31 @@
             use:inview={options}
             oninview_change={handleCardObserve}
             class="transition duration-500 ease-in-out
-            h-3/4 w-3/4 flex flex-col justify-center items-center bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110"
+            h-3/4 w-3/4 flex justify-center items-center bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110"
             class:translate-y-0={cardIsInView}
-           class:opacity-90={cardIsInView}
-           class:translate-y-16={!cardIsInView}
-           class:opacity-0={!cardIsInView}
+            class:opacity-90={cardIsInView}
+            class:translate-y-16={!cardIsInView}
+            class:opacity-0={!cardIsInView}
             role="main"
             aria-label='Intro Card'>
-        <p class="text-gray-800 text-lg font-semibold">Floating Card</p>
+        <div class="w-1/3 h-full p-4 text-xl font-gray-900">
+            <h1 class="text-4xl font-bold">
+                Who Am I?
+            </h1>
+            <p>this is a long sentence</p>
+        </div>
+        <div class="w-1/3 p-4 h-full border-l-4 border-white">
+            <h1 class="text-4xl font-bold">
+                Skills
+            </h1>
+            <p>this is a long sentence</p>
+        </div>
+        <div class="w-1/3 p-4 h-full border-l-4 border-white">
+            <h1 class="text-4xl font-bold">
+                Hobbies!
+            </h1>
+            <p>this is a long sentence</p>
+        </div>
     </div>
 </div>
 

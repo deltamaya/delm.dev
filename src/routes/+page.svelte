@@ -80,7 +80,7 @@
             </h1>
             {#key bioIndex}
             <p
-                class="text-xl text-gray-600 max-w-2xl mb-8"
+                class="text-xl text-gray-500 max-w-2xl mb-8 font-bold"
                 in:typewriter={{speed:2}}
             >
                 {bioSentence}
