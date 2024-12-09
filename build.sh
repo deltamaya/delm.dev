@@ -1,4 +1,5 @@
 cd ~/home_site
+source ~/.zshrc
 git pull
 npm install
 npm run build
