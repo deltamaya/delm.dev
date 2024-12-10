@@ -7,7 +7,9 @@
     import {marked} from "marked";
     import type {ObserverEventDetails, Options} from 'svelte-inview';
 
-    let cardIsInView = $state(false);
+    let card1InView = $state(false);
+    let card2InView = $state(false);
+    let card3InView = $state(false);
     let showIsInView = $state(false);
     let showArrow = $state(true);
     const options: Options = {
@@ -17,9 +19,21 @@
     const handleShowObserve = ({detail}: CustomEvent<ObserverEventDetails>) => {
         showIsInView = detail.inView;
     };
-    const handleCardObserve = ({detail}: CustomEvent<ObserverEventDetails>) => {
-        cardIsInView = detail.inView;
-        if (cardIsInView) {
+    const handleCard1Observe = ({detail}: CustomEvent<ObserverEventDetails>) => {
+        card1InView = detail.inView;
+        if (card1InView) {
+            showArrow = false;
+        }
+    };
+        const handleCard2Observe = ({detail}: CustomEvent<ObserverEventDetails>) => {
+        card2InView = detail.inView;
+        if (card2InView) {
+            showArrow = false;
+        }
+    };
+            const handleCard3Observe = ({detail}: CustomEvent<ObserverEventDetails>) => {
+        card3InView = detail.inView;
+        if (card3InView) {
             showArrow = false;
         }
     };
@@ -232,35 +246,66 @@
         {/if}
     </div>
 </div>
+<div class="h-screen w-full flex justify-center items-center bg-gradient-to-br from-red-500 to-purple-700">
+    <div
+            use:inview={options}
+            oninview_change={handleCard1Observe}
+            class="transition duration-500 ease-in-out
+            h-3/4 w-3/4 flex justify-center items-center bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110"
+            class:translate-y-0={card1InView}
+            class:opacity-90={card1InView}
+            class:translate-y-16={!card1InView}
+            class:opacity-0={!card1InView}
+            role="main"
+            aria-label='Intro Card'>
+
+        <div class="w-full p-4 h-full flex flex-col">
+            <h1 class="text-4xl font-bold h-2">
+                .intro
+            </h1>
+            <div class="justify-center items-center flex flex-col flex-grow">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="h-screen w-full flex justify-center items-center bg-gradient-to-bl from-purple-700 to-red-500">
+    <div
+            use:inview={options}
+            oninview_change={handleCard2Observe}
+            class="transition duration-500 ease-in-out
+            h-3/4 w-3/4 flex justify-center items-center bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110"
+            class:translate-y-0={card2InView}
+            class:opacity-90={card2InView}
+            class:translate-y-16={!card2InView}
+            class:opacity-0={!card2InView}
+            role="main"
+            aria-label='Intro Card'>
+       <div class="w-full p-4 h-full flex flex-col">
+            <h1 class="text-4xl font-bold h-2">
+                .skills
+            </h1>
+            <div class="justify-center items-center flex flex-col flex-grow">
+
+            </div>
+
+        </div>
+    </div>
+</div>
 <div class="h-[calc(100vh-2.5rem)] w-full flex justify-center items-center bg-gradient-to-br from-red-500 to-purple-700">
     <div
             use:inview={options}
-            oninview_change={handleCardObserve}
+            oninview_change={handleCard3Observe}
             class="transition duration-500 ease-in-out
             h-3/4 w-3/4 flex justify-center items-center bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110"
-            class:translate-y-0={cardIsInView}
-            class:opacity-90={cardIsInView}
-            class:translate-y-16={!cardIsInView}
-            class:opacity-0={!cardIsInView}
+            class:translate-y-0={card3InView}
+            class:opacity-90={card3InView}
+            class:translate-y-16={!card3InView}
+            class:opacity-0={!card3InView}
             role="main"
             aria-label='Intro Card'>
-        <div class="w-1/3 h-full p-4 text-xl font-gray-900">
-            <h1 class="text-4xl font-bold">
-                .intro
-            </h1>
-            <div class="p-4">
-                {@html marked(data.intro)}
-            </div>
-        </div>
-        <div class="w-1/3 p-4 h-full border-l-4 border-white">
-            <h1 class="text-4xl font-bold">
-                .skills
-            </h1>
-            <div class="p-4 text-xl ">
-                {@html marked(data.skills)}
-            </div>
-        </div>
-        <div class="w-1/3 p-4 h-full border-l-4 border-white flex flex-col">
+        <div class="w-full p-4 h-full flex flex-col">
             <h1 class="text-4xl font-bold h-2">
                 .mindset
             </h1>
@@ -277,9 +322,9 @@
             </div>
 
         </div>
+
     </div>
 </div>
-
 
 <img
         src="/rust-1-512.png"
