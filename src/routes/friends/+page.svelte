@@ -7,11 +7,10 @@
     let decreasingColor = "rgb(190 40 40 / ratio)";
 
     $effect(() => {
-            boxElement = document.querySelector("#box");
-            createObserver();
-            console.log('box element',boxElement)
-        }
-    )
+        boxElement = document.querySelector("#box");
+        createObserver();
+        console.log("box element", boxElement);
+    });
 
     function createObserver() {
         let observer;
@@ -56,15 +55,26 @@
             prevRatio = entry.intersectionRatio;
         });
     }
-
 </script>
+
+<div
+    class="min-h-[calc(100vh-2.5rem)] flex flex-col justify-center items-center"
+></div>
+<div
+    class="min-h-[calc(100vh-2.5rem)] flex flex-col justify-center items-center"
+></div>
+
+<div id="box">
+    <div class="vertical">Welcome to <strong>The Box!</strong></div>
+</div>
 
 <style>
     #box {
         background-color: rgb(40 40 190 / 100%);
         border: 4px solid rgb(20 20 120);
-        transition: background-color 1s,
-        border 1s;
+        transition:
+            background-color 1s,
+            border 1s;
         width: 350px;
         height: 350px;
         display: flex;
@@ -77,27 +87,4 @@
         color: white;
         font: 32px "Arial";
     }
-
-    .extra {
-        width: 350px;
-        height: 350px;
-        margin-top: 10px;
-        border: 4px solid rgb(20 20 120);
-        text-align: center;
-        padding: 20px;
-    }
-
 </style>
-
-<div class="min-h-[calc(100vh-2.5rem)] flex flex-col justify-center items-center">
-
-
-</div>
-<div class="min-h-[calc(100vh-2.5rem)] flex flex-col justify-center items-center">
-
-
-</div>
-
-<div id="box">
-    <div class="vertical">Welcome to <strong>The Box!</strong></div>
-</div>

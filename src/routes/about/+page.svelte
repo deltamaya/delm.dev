@@ -18,10 +18,21 @@
 
     let options = {
         root: null,
-        rootMargin: "-300px",
+        rootMargin: "-250px",
+        threshold: [0.1],
     };
     let nodeCallbackMap = new Map();
-    let observer = new IntersectionObserver(handleObserve, options);
+    let observer: IntersectionObserver;
+
+    let scrollPosition = $state(0);
+    $effect(() => {
+        observer = new IntersectionObserver(handleObserve, options);
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            observer.disconnect();
+        };
+    });
 
     const observeme: Action = (node, callback) => {
         $effect(() => {
@@ -45,14 +56,6 @@
             }
         });
     }
-
-    let scrollPosition = $state(0);
-    $effect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    });
 
     const handleScroll = () => {
         const scrollTop = window.scrollY;
