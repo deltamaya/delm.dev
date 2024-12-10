@@ -89,7 +89,7 @@
                 class="text-8xl font-bold text-gray-800 mt-2"
                 in:fly={{ y: -50, duration: 400, delay: 50 }}
             >
-                delta<span class="text-red-500">test</span>
+                delta<span class="text-red-500">maya</span>
             </p>
             <div
                 class="text-gray-500 text-xl font-bold mt-5"
@@ -332,7 +332,6 @@
     <div
         use:observeme={() => {
             card3InView = true;
-            alert("reached card3");
         }}
         class="transition duration-500 ease-in-out
             h-3/4 w-3/4 flex justify-center items-center bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110"
