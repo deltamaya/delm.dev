@@ -76,7 +76,7 @@
         </div>
         <div
             class="flex flex-col items-center mt-16"
-            in:fly={{ y: -50, duration: 400, delay: 100 }}
+            in:fly={{ y: -50, duration: 400, delay: 100}}
         >
             <h1
                 class="text-6xl font-bold text-gray-800 mb-4"

@@ -4,6 +4,7 @@
     import Icon from "@iconify/svelte";
     import {frontendFrameworks, languages, operatingSystems, shells} from "$lib/data";
     import {inview} from 'svelte-inview';
+    import {marked} from "marked";
     import type {ObserverEventDetails, Options} from 'svelte-inview';
 
     let cardIsInView = $state(false);
@@ -23,6 +24,21 @@
         }
     };
 
+    let scrollPosition = $state(0)
+    $effect(() => {
+        window.addEventListener('scroll', handleScroll)
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    })
+
+    const handleScroll = () => {
+        const scrollTop = window.scrollY;
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        scrollPosition = scrollTop / scrollHeight;
+    };
+
+    let {data} = $props()
 </script>
 
 <div class="min-h-screen flex justify-center items-center -z-10">
@@ -66,7 +82,7 @@
         </div>
         <div class="flex flex-col font-bold text-gray-900 text-4xl font-jetbrains border-8 p-4 rounded-2xl
         border-gray-900 mt-24">
-            <div class="font-bold text-gray-900 text-4xl font-jetbrains flex flex-col">
+            <div class="font-bold text-gray-900 font-jetbrains flex flex-col">
                 <div class="items-center flex"
                      in:fly={{ y: 50, duration: 400 }}>
                     <span class="text-red-500 mr-5">sudo</span>
@@ -78,7 +94,7 @@
                                     in:fly|global={{
                                 y: 50,
                                 duration: 400,
-                                delay: 100 + 25 * index,
+                                delay: 100 + 50 * index,
                             }}
                             >
                                 <IconButton
@@ -108,7 +124,7 @@
                                     in:fly|global={{
                                 y: 50,
                                 duration: 400,
-                                delay: 100 + 25 * index,
+                                delay: 100 + 50 * index,
                             }}
                             >
                                 <IconButton
@@ -127,7 +143,7 @@
                 </div>
 
 
-                <div class="flex font-bold text-gray-900 text-4xl font-jetbrains items-center mt-4"
+                <div class="flex font-bold text-gray-900 font-jetbrains items-center mt-4"
                      in:fly={{ y: 50, duration: 400 ,delay:150}}>
                     <div class="ml-12 mr-1">
                         os: [os for os in [
@@ -139,7 +155,7 @@
                                     in:fly|global={{
                                 y: 50,
                                 duration: 400,
-                                delay: 150 + 25 * index,
+                                delay: 150 + 50 * index,
                             }}
                             >
                                 <IconButton
@@ -170,7 +186,7 @@
                                 in:fly|global={{
                                 y: 50,
                                 duration: 400,
-                                delay: 200 + 25 * index,
+                                delay: 200 + 50 * index,
                             }}
                         >
                             <IconButton
@@ -196,7 +212,7 @@
                     class:opacity-0={!showIsInView}
                     class="transition duration-500 ease-in-out"
             >
-                maya.show()
+                <span style="color: hsl({scrollPosition*720}, 80%, 50%)">maya.show()</span>
             </div>
         </div>
         {#if showArrow}
@@ -209,7 +225,7 @@
                  out:fly|local={{
                                 y: 50,
                                 duration: 400,
-                                delay: 50,
+                                delay: 100,
                             }}>
                 &darr;
             </div>
@@ -230,21 +246,36 @@
             aria-label='Intro Card'>
         <div class="w-1/3 h-full p-4 text-xl font-gray-900">
             <h1 class="text-4xl font-bold">
-                Who Am I?
+                .intro
             </h1>
-            <p>this is a long sentence</p>
+            <div class="p-4">
+                {@html marked(data.intro)}
+            </div>
         </div>
         <div class="w-1/3 p-4 h-full border-l-4 border-white">
             <h1 class="text-4xl font-bold">
-                Skills
+                .skills
             </h1>
-            <p>this is a long sentence</p>
+            <div class="p-4 text-xl ">
+                {@html marked(data.skills)}
+            </div>
         </div>
-        <div class="w-1/3 p-4 h-full border-l-4 border-white">
-            <h1 class="text-4xl font-bold">
-                Hobbies!
+        <div class="w-1/3 p-4 h-full border-l-4 border-white flex flex-col">
+            <h1 class="text-4xl font-bold h-2">
+                .mindset
             </h1>
-            <p>this is a long sentence</p>
+            <div class="justify-center items-center flex flex-col flex-grow">
+                <div class="flex space-x-4 text-3xl font-bold items-center">
+                    <p>I Support</p>
+                    <img alt="pride flag" src="/pride_flag.png" class="h-12"/>
+                    <p>!</p>
+                </div>
+                <div class="flex space-x-4 text-3xl font-bold items-center">
+                    <img alt="yellow flag" src="/yellow_flag.png" class="h-12"/>
+                    <p>自由意志</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
