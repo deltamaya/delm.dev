@@ -1,57 +1,103 @@
 <script>
-  let xTilt = 0; // X轴倾斜角度
-  let yTilt = 0; // Y轴倾斜角度
+    const numSteps = 20.0;
 
-  const handleMouseMove = (event) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const x = event.clientX - rect.left; // 鼠标在图片内的X坐标
-    const y = event.clientY - rect.top; // 鼠标在图片内的Y坐标
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
+    let boxElement;
+    let prevRatio = 0.0;
+    let increasingColor = "rgb(40 40 190 / ratio)";
+    let decreasingColor = "rgb(190 40 40 / ratio)";
 
-    // 根据鼠标位置计算倾斜角度，限制最大倾斜为 10 度
-    xTilt = ((x - centerX) / centerX) * 10; // 水平方向
-    yTilt = ((y - centerY) / centerY) * -10; // 垂直方向（负号反转）
-  };
+    $effect(() => {
+            boxElement = document.querySelector("#box");
+            createObserver();
+            console.log('box element',boxElement)
+        }
+    )
 
-  const resetTilt = () => {
-    xTilt = 0;
-    yTilt = 0;
-  };
+    function createObserver() {
+        let observer;
+
+        let options = {
+            root: null,
+            rootMargin: "0px",
+            threshold: buildThresholdList(),
+        };
+
+        observer = new IntersectionObserver(handleIntersect, options);
+        observer.observe(boxElement);
+    }
+
+    function buildThresholdList() {
+        let thresholds = [];
+        let numSteps = 20;
+
+        for (let i = 1.0; i <= numSteps; i++) {
+            let ratio = i / numSteps;
+            thresholds.push(ratio);
+        }
+
+        thresholds.push(0);
+        return thresholds;
+    }
+
+    function handleIntersect(entries, observer) {
+        entries.forEach((entry) => {
+            if (entry.intersectionRatio > prevRatio) {
+                entry.target.style.backgroundColor = increasingColor.replace(
+                    "ratio",
+                    entry.intersectionRatio,
+                );
+            } else {
+                entry.target.style.backgroundColor = decreasingColor.replace(
+                    "ratio",
+                    entry.intersectionRatio,
+                );
+            }
+
+            prevRatio = entry.intersectionRatio;
+        });
+    }
+
 </script>
 
 <style>
-  .image-container {
-    perspective: 1000px; /* 设置3D视角 */
-    display: inline-block;
-  }
+    #box {
+        background-color: rgb(40 40 190 / 100%);
+        border: 4px solid rgb(20 20 120);
+        transition: background-color 1s,
+        border 1s;
+        width: 350px;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
 
-  .image {
-    width: 300px;
-    height: 200px;
-    transform-origin: center; /* 以图片中心为变换基点 */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  }
+    .vertical {
+        color: white;
+        font: 32px "Arial";
+    }
 
-  .image:hover {
-    transform: scale(1.2); /* 悬浮时轻微放大 */
-  }
+    .extra {
+        width: 350px;
+        height: 350px;
+        margin-top: 10px;
+        border: 4px solid rgb(20 20 120);
+        text-align: center;
+        padding: 20px;
+    }
+
 </style>
 
 <div class="min-h-[calc(100vh-2.5rem)] flex flex-col justify-center items-center">
-<div
-  class="image-container"
-  on:mousemove={handleMouseMove}
-  on:mouseleave={resetTilt}
->
-  <img
-    class="image"
-    src="https://via.placeholder.com/300x200"
-    alt="示例图片"
-    style="transform: scale(1.2) rotateX({yTilt}deg) rotateY({xTilt}deg);"
-  />
+
+
 </div>
+<div class="min-h-[calc(100vh-2.5rem)] flex flex-col justify-center items-center">
+
 
 </div>
 
+<div id="box">
+    <div class="vertical">Welcome to <strong>The Box!</strong></div>
+</div>

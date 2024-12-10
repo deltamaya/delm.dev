@@ -4,7 +4,7 @@
     import Icon from "@iconify/svelte";
     import {frontendFrameworks, languages, operatingSystems, shells} from "$lib/data";
     import {inview} from 'svelte-inview';
-    import {marked} from "marked";
+
     import type {ObserverEventDetails, Options} from 'svelte-inview';
 
     let card1InView = $state(false);
