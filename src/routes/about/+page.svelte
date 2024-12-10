@@ -18,8 +18,8 @@
 
     let options = {
         root: null,
-        rootMargin: "-250px",
-        threshold: [0.1],
+        rootMargin: "0px",
+        threshold: [0.2],
     };
     let nodeCallbackMap = new Map();
     let observer: IntersectionObserver;
