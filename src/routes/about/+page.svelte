@@ -89,7 +89,7 @@
                 class="text-8xl font-bold text-gray-800 mt-2"
                 in:fly={{ y: -50, duration: 400, delay: 50 }}
             >
-                delta<span class="text-red-500">maya</span>
+                delta<span class="text-red-500">test</span>
             </p>
             <div
                 class="text-gray-500 text-xl font-bold mt-5"
