@@ -5,10 +5,14 @@
     import { socialLinks, menuItems } from "$lib/data";
     import { bios } from "$lib/data";
 
+    let mobileLayout=$state(false)
+
     let bioIndex = $state(0);
     let bioSentence = $derived(bios[bioIndex]);
 
     $effect(() => {
+        mobileLayout=window.innerWidth<=1180
+
         const id = setInterval(() => {
             if (bioIndex === bios.length - 1) {
                 bioIndex = 0;
@@ -16,11 +20,17 @@
                 bioIndex++;
             }
         }, 5000);
+        window.addEventListener('resize',handleResize)
         return () => {
             clearInterval(id);
+            window.removeEventListener('resize',handleResize)
         };
     });
     // $inspect(bioIndex)
+
+    const handleResize = () => {
+        mobileLayout=window.innerWidth<=1180
+    };
 
     function typewriter(node, { speed = 1 }) {
         const valid =
@@ -47,12 +57,13 @@
 </script>
 
 <div
-    class="min-h-[calc(100vh-2.5rem)] flex justify-between items-center px-32 text-center overflow-hidden
+        class:flex-col={mobileLayout}
+    class="min-h-[calc(100vh-2.5rem)] flex  justify-evenly items-center px-32 text-center
     -z-10
 "
 >
     <div
-        class="w-1/2 flex flex-col justify-between items-center z-10
+        class="flex flex-col justify-between items-center z-10
     "
     >
         <div class="flex items-center title-float">
@@ -111,10 +122,10 @@
             {/each}
         </div>
     </div>
-    <div class="w-1/2 items-center flex flex-col z-10 space-y-5 justify-center">
+    <div class="items-center flex flex-col z-10 space-y-5 justify-center">
         {#each menuItems as item, index (index)}
             <div
-                class="w-full ml-48"
+                class="w-full"
                 in:fly|global={{ x: 100, duration: 400, delay: 50 * index }}
             >
                 <MenuItem
