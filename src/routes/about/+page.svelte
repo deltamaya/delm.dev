@@ -8,48 +8,43 @@
         operatingSystems,
         shells,
     } from "$lib/data";
-    import { inview } from "svelte-inview";
-
-    import type { ObserverEventDetails, Options } from "svelte-inview";
+    import type { Action } from "svelte/action";
 
     let card1InView = $state(false);
     let card2InView = $state(false);
     let card3InView = $state(false);
     let showIsInView = $state(false);
     let showArrow = $state(true);
-    const options: Options = {
+
+    let options = {
+        root: null,
         rootMargin: "-300px",
-        unobserveOnEnter: true,
     };
-    const handleShowObserve = ({
-        detail,
-    }: CustomEvent<ObserverEventDetails>) => {
-        showIsInView = detail.inView;
+    let nodeCallbackMap = new Map();
+    let observer = new IntersectionObserver(handleObserve, options);
+
+    const observeme: Action = (node, callback) => {
+        $effect(() => {
+            nodeCallbackMap.set(node, callback);
+            observer.observe(node);
+            return () => {
+                nodeCallbackMap.delete(node);
+                observer.unobserve(node);
+            };
+        });
     };
-    const handleCard1Observe = ({
-        detail,
-    }: CustomEvent<ObserverEventDetails>) => {
-        card1InView = detail.inView;
-        if (card1InView) {
-            showArrow = false;
-        }
-    };
-    const handleCard2Observe = ({
-        detail,
-    }: CustomEvent<ObserverEventDetails>) => {
-        card2InView = detail.inView;
-        if (card2InView) {
-            showArrow = false;
-        }
-    };
-    const handleCard3Observe = ({
-        detail,
-    }: CustomEvent<ObserverEventDetails>) => {
-        card3InView = detail.inView;
-        if (card3InView) {
-            showArrow = false;
-        }
-    };
+
+    function handleObserve(entries, observer) {
+        entries.forEach((entry) => {
+            if (entry.intersectionRatio > 0) {
+                // console.log("inview: ", entry);
+                let callback = nodeCallbackMap.get(entry.target);
+                if (callback) {
+                    callback();
+                }
+            }
+        });
+    }
 
     let scrollPosition = $state(0);
     $effect(() => {
@@ -249,8 +244,9 @@
             </div>
 
             <div
-                use:inview={options}
-                oninview_change={handleShowObserve}
+                use:observeme={() => {
+                    showIsInView = true;
+                }}
                 class:translate-y-0={showIsInView}
                 class:opacity-100={showIsInView}
                 class:translate-y-16={!showIsInView}
@@ -285,8 +281,10 @@
     class="h-screen w-full flex justify-center items-center bg-gradient-to-br from-red-500 to-purple-700"
 >
     <div
-        use:inview={options}
-        oninview_change={handleCard1Observe}
+        use:observeme={() => {
+            card1InView = true;
+            showArrow = false;
+        }}
         class="transition duration-500 ease-in-out
             h-3/4 w-3/4 flex justify-center items-center bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110"
         class:translate-y-0={card1InView}
@@ -308,8 +306,9 @@
     class="h-screen w-full flex justify-center items-center bg-gradient-to-bl from-purple-700 to-red-500"
 >
     <div
-        use:inview={options}
-        oninview_change={handleCard2Observe}
+        use:observeme={() => {
+            card2InView = true;
+        }}
         class="transition duration-500 ease-in-out
             h-3/4 w-3/4 flex justify-center items-center bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110"
         class:translate-y-0={card2InView}
@@ -331,8 +330,9 @@
     class="h-[calc(100vh-2.5rem)] w-full flex justify-center items-center bg-gradient-to-br from-red-500 to-purple-700"
 >
     <div
-        use:inview={options}
-        oninview_change={handleCard3Observe}
+        use:observeme={() => {
+            card3InView = true;
+        }}
         class="transition duration-500 ease-in-out
             h-3/4 w-3/4 flex justify-center items-center bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110"
         class:translate-y-0={card3InView}
