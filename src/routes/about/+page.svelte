@@ -332,6 +332,7 @@
     <div
         use:observeme={() => {
             card3InView = true;
+            alert("reached card3");
         }}
         class="transition duration-500 ease-in-out
             h-3/4 w-3/4 flex justify-center items-center bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110"
