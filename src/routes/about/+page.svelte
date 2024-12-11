@@ -24,6 +24,7 @@
     let rbraceInView = $state(false);
     let frontendInView = $state(false);
     let politicValueInView = $state(false);
+    let languageInView = $state(false);
 
 
     let options = {
@@ -32,13 +33,17 @@
         threshold: [0.4],
     };
     let observer: IntersectionObserver;
-
+    let mobileLayout = $state(false)
+    const mobileLayoutThreshold = 920;
     let scrollPosition = $state(0);
     $effect(() => {
         observer = new IntersectionObserver(handleObserve, options);
         window.addEventListener("scroll", handleScroll);
+        window.addEventListener('resize', handleResize)
+        mobileLayout = window.innerWidth <= mobileLayoutThreshold;
         return () => {
             window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener('resize', handleResize)
             observer.disconnect();
         };
     });
@@ -66,7 +71,9 @@
             document.documentElement.scrollHeight - window.innerHeight;
         scrollPosition = scrollTop / scrollHeight;
     };
-
+    const handleResize = () => {
+        mobileLayout = window.innerWidth <= mobileLayoutThreshold
+    };
 </script>
 
 <div class="min-h-screen flex justify-center items-center -z-10">
@@ -155,7 +162,7 @@
 
 </div>
 <div
-        class="h-screen w-full flex justify-center items-center bg-gradient-to-bl from-purple-700 to-red-500"
+        class="min-h-screen w-full flex justify-center items-center bg-gradient-to-bl from-purple-700 to-red-500"
 >
     <div
             use:observeme
@@ -172,11 +179,13 @@
         <div class="w-full p-4 h-full flex flex-col">
             <h1 class="text-4xl font-bold h-2">.skills</h1>
             <div
-                    class="mt-16 flex flex-col font-bold text-gray-900 text-4xl font-jetbrains  p-4"
+                    class="mt-12 flex flex-col font-black text-gray-900 text-2xl font-jetbrains "
             >
                 <div class="font-bold text-gray-900 font-jetbrains flex flex-col">
                     <InviewPopup {observeme} isDisplay={chshInView} inviewCallback={()=>chshInView=true}>
                         <div
+                                class:flex-col={mobileLayout}
+                                class:items-baseline={mobileLayout}
                                 class="items-center flex"
                         >
                             <span class="text-red-500 mr-5">sudo</span>
@@ -209,6 +218,7 @@
                     </InviewPopup>
                     <InviewPopup {observeme} isDisplay={mayaInView} inviewCallback={()=>mayaInView=true}>
                         <div
+
                                 class="flex items-center"
                         >
                             const maya = &lbrace;
@@ -216,7 +226,9 @@
                     </InviewPopup>
                     <InviewPopup {observeme} isDisplay={langInView} inviewCallback={()=>langInView=true}>
                         <div
-                                class="flex mt-4 items-center"
+                                class:flex-col={mobileLayout}
+                                class:items-baseline={mobileLayout}
+                                class="flex items-center"
                         >
                             <div class="mr-1 ml-12">lang: std::vector&lbrace;</div>
                             <div class="flex justify-center">
@@ -247,7 +259,9 @@
                     </InviewPopup>
                     <InviewPopup {observeme} isDisplay={osInView} inviewCallback={()=>osInView=true}>
                         <div
-                                class="flex font-bold text-gray-900 font-jetbrains items-center mt-4"
+                                class:flex-col={mobileLayout}
+                                class:items-baseline={mobileLayout}
+                                class="flex font-bold text-gray-900 font-jetbrains items-center"
                         >
                             <div class="ml-12 mr-1">os: [os for os in [</div>
                             <div class="flex">
@@ -283,9 +297,12 @@
                     </InviewPopup>
                     <InviewPopup {observeme} isDisplay={frontendInView} inviewCallback={()=>frontendInView=true}>
                         <div
-                                class="flex font-bold text-gray-900 text-4xl font-jetbrains items-center mt-4"
+                                class:flex-col={mobileLayout}
+                                class:items-baseline={mobileLayout}
+                                class="flex font-bold text-gray-900 text-2xl font-jetbrains items-center"
                         >
-                            <div>maya.frontend.setFav([]Tech&lbrace;</div>
+                            <div>maya.frontend</div>
+                            <div>.setFav([]Tech&lbrace;</div>
                             <div class="flex">
                                 {#each frontendFrameworks as item, index (index)}
                                     <div
@@ -312,21 +329,31 @@
                             <div class="ml-1">&rbrace;)</div>
                         </div>
                     </InviewPopup>
-                </div>
+                    <InviewPopup {observeme} isDisplay={languageInView} inviewCallback={()=>languageInView=true}>
+                        <div
+                                                                class:flex-col={mobileLayout}
+                                class:items-baseline={mobileLayout}
+                                class="flex">
+                            <span>maya.speak(</span>
+                            <span>O_EN_INTERMEDIATE | O_ZH_NATIVE</span>
+                            <span>)</span>
 
+                        </div>
+                    </InviewPopup>
+                    <div
+                            use:observeme
+                            oninview={()=>{showIsInView=true}}
+                            class:translate-y-0={showIsInView}
+                            class:opacity-100={showIsInView}
+                            class:translate-y-16={!showIsInView}
+                            class:opacity-0={!showIsInView}
+                            class="transition duration-500 ease-in-out"
+                    >
+                        maya.<span style="color: hsl({scrollPosition * 720}, 80%, 50%)"
+                    >show()</span
+                    >
+                    </div>
 
-                <div
-                        use:observeme
-                        oninview={()=>{showIsInView=true}}
-                        class:translate-y-0={showIsInView}
-                        class:opacity-100={showIsInView}
-                        class:translate-y-16={!showIsInView}
-                        class:opacity-0={!showIsInView}
-                        class="transition duration-500 ease-in-out"
-                >
-                    maya.<span style="color: hsl({scrollPosition * 720}, 80%, 50%)"
-                >show()</span
-                >
                 </div>
             </div>
         </div>
@@ -369,7 +396,7 @@
                                     src="/yellow_flag.png"
                                     class="h-12"
                             />
-                            <p>自由意志</p>
+                            <p>Libertarianism</p>
                         </div>
                     </InviewPopup>
 
