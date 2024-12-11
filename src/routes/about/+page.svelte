@@ -17,8 +17,14 @@
     let showIsInView = $state(false);
     let showArrow = $state(true);
     let lgbtSupportInView = $state(false);
+    let chshInView = $state(false);
+    let mayaInView = $state(false);
+    let langInView = $state(false);
+    let osInView = $state(false);
+    let rbraceInView = $state(false);
+    let frontendInView = $state(false);
     let politicValueInView = $state(false);
-    let skillsLineInView=$state([false,false,false,false,false]);
+
 
     let options = {
         root: null,
@@ -169,133 +175,145 @@
                     class="mt-16 flex flex-col font-bold text-gray-900 text-4xl font-jetbrains  p-4"
             >
                 <div class="font-bold text-gray-900 font-jetbrains flex flex-col">
-                    <div
-                            class="items-center flex"
-                    >
-                        <span class="text-red-500 mr-5">sudo</span>
-                        chsh -s $(which
-                        <div class="flex">
-                            {#each shells as item, index (index)}
-                                <div
-                                        class="flex"
-                                        in:fly|global={{
+                    <InviewPopup {observeme} isDisplay={chshInView} inviewCallback={()=>chshInView=true}>
+                        <div
+                                class="items-center flex"
+                        >
+                            <span class="text-red-500 mr-5">sudo</span>
+                            chsh -s $(which
+                            <div class="flex">
+                                {#each shells as item, index (index)}
+                                    <div
+                                            class="flex"
+                                            in:fly|global={{
                                     y: 50,
                                     duration: 400,
                                     delay: 100 + 50 * index,
                                 }}
-                                >
-                                    <IconButton
-                                            href={item.href}
-                                            label={item.label}
-                                            iconClass={item.iconClass}
-                                    />
-                                    {#if index !== shells.length - 1}
+                                    >
+                                        <IconButton
+                                                href={item.href}
+                                                label={item.label}
+                                                iconClass={item.iconClass}
+                                        />
+                                        {#if index !== shells.length - 1}
                                     <span class="mt-2 font-bold text-4xl mr-3"
                                     >,</span
                                     >
-                                    {/if}
-                                </div>
-                            {/each}
+                                        {/if}
+                                    </div>
+                                {/each}
+                            </div>
+                            )
                         </div>
-                        )
-                    </div>
-                    <div
-                            class="flex items-center"
-                    >
-                        const maya = &lbrace;
-                    </div>
-                    <div
-                            class="flex mt-4 items-center"
-                    >
-                        <div class="mr-1 ml-12">lang: std::vector&lbrace;</div>
-                        <div class="flex justify-center">
-                            {#each languages as item, index (index)}
-                                <div
-                                        class="flex"
-                                        in:fly|global={{
+                    </InviewPopup>
+                    <InviewPopup {observeme} isDisplay={mayaInView} inviewCallback={()=>mayaInView=true}>
+                        <div
+                                class="flex items-center"
+                        >
+                            const maya = &lbrace;
+                        </div>
+                    </InviewPopup>
+                    <InviewPopup {observeme} isDisplay={langInView} inviewCallback={()=>langInView=true}>
+                        <div
+                                class="flex mt-4 items-center"
+                        >
+                            <div class="mr-1 ml-12">lang: std::vector&lbrace;</div>
+                            <div class="flex justify-center">
+                                {#each languages as item, index (index)}
+                                    <div
+                                            class="flex"
+                                            in:fly|global={{
                                     y: 50,
                                     duration: 400,
                                     delay: 100 + 50 * index,
                                 }}
-                                >
-                                    <IconButton
-                                            href={item.href}
-                                            label={item.label}
-                                            iconClass={item.iconClass}
-                                    />
-                                    {#if index !== languages.length - 1}
+                                    >
+                                        <IconButton
+                                                href={item.href}
+                                                label={item.label}
+                                                iconClass={item.iconClass}
+                                        />
+                                        {#if index !== languages.length - 1}
                                     <span class="font-bold text-4xl mr-3"
                                     >,</span
                                     >
-                                    {/if}
-                                </div>
-                            {/each}
+                                        {/if}
+                                    </div>
+                                {/each}
+                            </div>
+                            <div class="ml-1">&rbrace;,</div>
                         </div>
-                        <div class="ml-1">&rbrace;,</div>
-                    </div>
-
-                    <div
-                            class="flex font-bold text-gray-900 font-jetbrains items-center mt-4"
-                    >
-                        <div class="ml-12 mr-1">os: [os for os in [</div>
-                        <div class="flex">
-                            {#each operatingSystems as item, index (index)}
-                                <div
-                                        class="flex"
-                                        in:fly|global={{
+                    </InviewPopup>
+                    <InviewPopup {observeme} isDisplay={osInView} inviewCallback={()=>osInView=true}>
+                        <div
+                                class="flex font-bold text-gray-900 font-jetbrains items-center mt-4"
+                        >
+                            <div class="ml-12 mr-1">os: [os for os in [</div>
+                            <div class="flex">
+                                {#each operatingSystems as item, index (index)}
+                                    <div
+                                            class="flex"
+                                            in:fly|global={{
                                     y: 50,
                                     duration: 400,
                                     delay: 150 + 50 * index,
                                 }}
-                                >
-                                    <IconButton
-                                            href={item.href}
-                                            label={item.label}
-                                            iconClass={item.iconClass}
-                                    />
-                                    {#if index !== operatingSystems.length - 1}
+                                    >
+                                        <IconButton
+                                                href={item.href}
+                                                label={item.label}
+                                                iconClass={item.iconClass}
+                                        />
+                                        {#if index !== operatingSystems.length - 1}
                                     <span class="mt-2 font-bold text-4xl mr-3"
                                     >,</span
                                     >
-                                    {/if}
-                                </div>
-                            {/each}
+                                        {/if}
+                                    </div>
+                                {/each}
+                            </div>
+                            <div class="ml-1">]],</div>
                         </div>
-                        <div class="ml-1">]],</div>
-                    </div>
-                    <div>
-                        &rbrace;
-                    </div>
-                </div>
-                <div
-                        class="flex font-bold text-gray-900 text-4xl font-jetbrains items-center mt-4"
-                >
-                    <div>maya.frontend.setFav([]Tech&lbrace;</div>
-                    <div class="flex">
-                        {#each frontendFrameworks as item, index (index)}
-                            <div
-                                    class="flex"
-                                    in:fly|global={{
+                    </InviewPopup>
+                    <InviewPopup {observeme} isDisplay={rbraceInView} inviewCallback={()=>rbraceInView=true}>
+                        <div>
+                            &rbrace;
+                        </div>
+                    </InviewPopup>
+                    <InviewPopup {observeme} isDisplay={frontendInView} inviewCallback={()=>frontendInView=true}>
+                        <div
+                                class="flex font-bold text-gray-900 text-4xl font-jetbrains items-center mt-4"
+                        >
+                            <div>maya.frontend.setFav([]Tech&lbrace;</div>
+                            <div class="flex">
+                                {#each frontendFrameworks as item, index (index)}
+                                    <div
+                                            class="flex"
+                                            in:fly|global={{
                                 y: 50,
                                 duration: 400,
                                 delay: 200 + 50 * index,
                             }}
-                            >
-                                <IconButton
-                                        href={item.href}
-                                        label={item.label}
-                                        iconClass={item.iconClass}
-                                />
-                                {#if index !== frontendFrameworks.length - 1}
+                                    >
+                                        <IconButton
+                                                href={item.href}
+                                                label={item.label}
+                                                iconClass={item.iconClass}
+                                        />
+                                        {#if index !== frontendFrameworks.length - 1}
                                 <span class="mt-2 font-bold text-4xl mr-3"
                                 >,</span
                                 >
-                                {/if}
+                                        {/if}
+                                    </div>
+                                {/each}
                             </div>
-                        {/each}
-                    </div>
-                    <div class="ml-1">&rbrace;)</div>
+                            <div class="ml-1">&rbrace;)</div>
+                        </div>
+                    </InviewPopup>
                 </div>
+
 
                 <div
                         use:observeme
