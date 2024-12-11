@@ -97,7 +97,7 @@
             />
         </div>
 
-        <div class="flex flex-col ml-5 items-center">
+        <div class="flex flex-col items-center">
             <p
                     class="lg:text-8xl md:text-6xl text-4xl font-bold text-gray-800 mt-2"
                     in:fly={{ y: -50, duration: 400, delay: 50 }}
@@ -166,7 +166,7 @@
             <div>While I enjoy anime, I also have a soft spot for U.S. and Japanese animated series.</div>
             <a href="/exchange" class="hover:underline">
                 <div class="text-indigo-500">
-                    Feel like we'd vibe? Let's exchange friend links! You're always welcome. 😊
+                    Feel like we'd vibe? Let's exchange <span class="font-bold italic underline">Friend Links</span>! You're always welcome. 😊
                 </div>
             </a>
 
@@ -391,7 +391,7 @@
     <div
             use:observeme
             oninview={()=>{card3InView=true}}
-            class="transition duration-500 ease-in-out flex flex-col flex-grow
+            class="transition duration-500 ease-in-out flex flex-col
             m-8 bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110 p-4"
             class:translate-y-0={card3InView}
             class:opacity-90={card3InView}
