@@ -104,7 +104,7 @@
                 delta<span class="text-red-500">maya</span>
             </p>
             <div
-                    class="lg:text-2xl  text-xl text-gray-500  font-bold mt-5"
+                    class="lg:text-xl  text-sm text-gray-500  font-bold mt-5"
                     in:fly={{ y: -50, duration: 400, delay: 100 }}
             >
                 Wuhan University of Technology
