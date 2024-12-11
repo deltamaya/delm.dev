@@ -21,7 +21,7 @@
         rootMargin: "0px",
         threshold: [0.2],
     };
-    let nodeCallbackMap = new Map();
+    let nodeCallbackMap = new Map<Element,()=>void|undefined>();
     let observer: IntersectionObserver;
 
     let scrollPosition = $state(0);
@@ -34,7 +34,7 @@
         };
     });
 
-    const observeme: Action = (node, callback) => {
+    const observeme: Action = (node, callback?:()=>void) => {
         $effect(() => {
             nodeCallbackMap.set(node, callback);
             observer.observe(node);
@@ -45,7 +45,7 @@
         });
     };
 
-    function handleObserve(entries, observer) {
+    function handleObserve(entries:IntersectionObserverEntry[]) {
         entries.forEach((entry) => {
             if (entry.intersectionRatio > 0) {
                 // console.log("inview: ", entry);
@@ -64,7 +64,6 @@
         scrollPosition = scrollTop / scrollHeight;
     };
 
-    let { data } = $props();
 </script>
 
 <div class="min-h-screen flex justify-center items-center -z-10">

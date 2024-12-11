@@ -48,7 +48,7 @@
 
         return {
             duration,
-            tick: (t) => {
+            tick: (t:number) => {
                 const i = Math.trunc(text.length * t);
                 node.textContent = text.slice(0, Math.max(1, i));
             },
@@ -58,7 +58,7 @@
 
 <div
         class:flex-col={mobileLayout}
-    class="min-h-[calc(100vh-2.5rem)] flex  justify-evenly items-center px-32 text-center
+    class="min-h-[calc(100vh-2.5rem)] flex  justify-evenly items-center self-center text-center
     -z-10
 "
 >
@@ -66,11 +66,11 @@
         class="flex flex-col justify-between items-center z-10
     "
     >
-        <div class="flex items-center title-float">
+        <div class="flex items-baseline title-float">
             <img
-                src="/avatar.jpg"
-                alt="avatar"
-                class="w-32 rounded-full border-4 drop-shadow-2xl"
+                src="/logo.png"
+                alt="logo"
+                class="w-32 drop-shadow-2xl"
                 in:fly={{ y: -50, duration: 400 }}
             />
             <div class="flex flex-col ml-5">
@@ -122,11 +122,13 @@
             {/each}
         </div>
     </div>
-    <div class="items-center flex flex-col z-10 space-y-5 justify-center">
+    {#key mobileLayout}
+    <div class="items-center flex flex-col z-10 space-y-5 justify-center transition duration-400 ease-in-out">
         {#each menuItems as item, index (index)}
             <div
                 class="w-full"
-                in:fly|global={{ x: 100, duration: 400, delay: 50 * index }}
+                in:fly|global={!mobileLayout?{ x: 100, duration: 400, delay: 50 * index }:
+                                        {y: 100, duration: 400, delay: 50 * index }}
             >
                 <MenuItem
                     href={item.href}
@@ -137,7 +139,7 @@
             </div>
         {/each}
     </div>
-
+        {/key}
     <img
         src="/logo.png"
         alt="logo"
