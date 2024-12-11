@@ -2,8 +2,10 @@ export const socialLinks = [
     { href: 'https://github.com/deltamaya', label: 'github link', iconClass: 'mdi:github' },
     { href: "https://twitter.com/0xdelm", label: "twitter/x link", iconClass: "mdi:twitter" },
     { href: "https://t.me/deltamayabot", label: "telegram bot", iconClass: "mdi:telegram" },
+    { href: "https://music.163.com/#/user/home?id=372313613", label: "netease music", iconClass: "ri:netease-cloud-music-fill" },
     { href: "https://steamcommunity.com/id/deltamaya", label: "steam community", iconClass: "mdi:steam" },
     { href: "mailto:me@delm.dev", label: "email me", iconClass: "ic:baseline-email" },
+
 ]
 
 export const menuItems = [
