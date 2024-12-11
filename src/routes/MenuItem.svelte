@@ -8,13 +8,13 @@
 <a
         href={href}
         aria-label={label}
-        class="w-4/5 h-16 rounded-xl flex items-center"
+        class="w-4/5 max-h-16 rounded-xl flex items-center"
         onmouseenter={() => scale.set(1.1)}
         onmouseleave={() => scale.set(1)}
 
 >
     <div
-            class="text-6xl flex font-bold ml-28 hover:text-red-500 transition-colors duration-300"
+            class="lg:text-6xl md:text-4xl sm:text-2xl text-xl flex font-bold hover:text-red-500 transition-colors duration-300"
             style="transform: scale({$scale});"
     >
             <Icon icon={iconClass} class="mr-16"/>

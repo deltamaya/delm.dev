@@ -73,12 +73,12 @@
             <img
                     src="/logo.png"
                     alt="logo"
-                    class="w-32 drop-shadow-2xl"
+                    class="w-12 sm:w-16 md:w-24 lg:w-32 drop-shadow-2xl"
                     in:fly={{ y: -50, duration: 400 }}
             />
             <div class="flex flex-col ml-5">
                 <p
-                        class="text-8xl font-bold text-gray-800 mt-2"
+                        class="text-xl lg:text-8xl md:text-4xl sm:text-2xl font-bold text-gray-800 mt-2"
                         in:fly={{ y: -50, duration: 400, delay: 50 }}
                 >
                     delm.<span class="text-red-500">dev</span>
@@ -93,14 +93,14 @@
                 in:fly={{ y: -50, duration: 400, delay: 100}}
         >
             <h1
-                    class="text-6xl font-bold text-gray-800 mb-4"
+                    class="lg:text-6xl md:text-4l sm:text-2xl text-xl font-bold text-gray-800 mb-4"
                     in:fly={{ y: 50, duration: 400, delay: 50 }}
             >
                 Hi, I'm <span class="text-red-500">Maya☆</span>.
             </h1>
             {#key bioIndex}
                 <p
-                        class="text-xl text-gray-500 max-w-2xl mb-8 font-bold"
+                        class="lg:text-xl text-sm text-gray-500 max-w-2xl mb-8 font-bold"
                         in:typewriter={{ speed: 2 }}
                 >
                     {bioSentence}

@@ -82,7 +82,7 @@
             <img
                     src="/avatar.jpg"
                     alt="avatar"
-                    class="w-48 rounded-full border-4 drop-shadow-2xl inline-block origin-center
+                    class="lg:w-48 md:w-32 sm:w-24 w-16 rounded-full border-4 drop-shadow-2xl inline-block origin-center
                   shadow-2xl hover:scale-110 transition-transform duration-200 ease-in-out"
                     in:fly={{ y: -50, duration: 400 }}
             />
@@ -90,7 +90,7 @@
             <img
                     src="/logo.png"
                     alt="avatar"
-                    class="w-48 drop-shadow-2xl
+                    class="lg:w-48 md:w-32 sm:w-24 w-16 drop-shadow-2xl
                   transition-transform hover:scale-110 duration-200 ease-in-out"
                     in:fly={{ y: -50, duration: 400 }}
             />
@@ -98,20 +98,20 @@
 
         <div class="flex flex-col ml-5 items-center">
             <p
-                    class="text-8xl font-bold text-gray-800 mt-2"
+                    class="lg:text-8xl md:text-6xl sm:text-4xl text-2xl font-bold text-gray-800 mt-2"
                     in:fly={{ y: -50, duration: 400, delay: 50 }}
             >
                 delta<span class="text-red-500">maya</span>
             </p>
             <div
-                    class="text-gray-500 text-xl font-bold mt-5"
+                    class="lg:text-2xl  text-xl text-gray-500  font-bold mt-5"
                     in:fly={{ y: -50, duration: 400, delay: 100 }}
             >
                 Wuhan University of Technology
             </div>
 
             <div
-                    class="text-gray-800 text-xl font-bold justify-center items-center"
+                    class="lg:text-2xl  text-xl text-gray-800 font-bold justify-center items-center"
                     in:fly={{ y: -50, duration: 400, delay: 100 }}
             >
                 Student
@@ -179,7 +179,7 @@
         <div class="w-full p-4 h-full flex flex-col">
             <h1 class="text-4xl font-bold h-2">.skills</h1>
             <div
-                    class="mt-12 flex flex-col font-black text-gray-900 text-2xl font-jetbrains "
+                    class="mt-12 flex flex-col font-black text-gray-900 lg:text-2xl sm:text-sm font-jetbrains "
             >
                 <div class="font-bold text-gray-900 font-jetbrains flex flex-col">
                     <InviewPopup {observeme} isDisplay={chshInView} inviewCallback={()=>chshInView=true}>
@@ -206,7 +206,7 @@
                                                 iconClass={item.iconClass}
                                         />
                                         {#if index !== shells.length - 1}
-                                    <span class="mt-2 font-bold text-4xl mr-3"
+                                    <span class="mt-2 font-bold lg:text-4xl sm:text-sm mr-3"
                                     >,</span
                                     >
                                         {/if}
@@ -231,7 +231,7 @@
                                 class="flex items-center"
                         >
                             <div class="mr-1 ml-12">lang: std::vector&lbrace;</div>
-                            <div class="flex justify-center">
+                            <div class="flex justify-center flex-wrap">
                                 {#each languages as item, index (index)}
                                     <div
                                             class="flex"
@@ -247,7 +247,7 @@
                                                 iconClass={item.iconClass}
                                         />
                                         {#if index !== languages.length - 1}
-                                    <span class="font-bold text-4xl mr-3"
+                                    <span class="font-bold lg:text-4xl md:text-md mr-3"
                                     >,</span
                                     >
                                         {/if}
@@ -280,7 +280,7 @@
                                                 iconClass={item.iconClass}
                                         />
                                         {#if index !== operatingSystems.length - 1}
-                                    <span class="mt-2 font-bold text-4xl mr-3"
+                                    <span class="mt-2 font-bold lg:text-4xl md:text-md mr-3"
                                     >,</span
                                     >
                                         {/if}
@@ -299,7 +299,7 @@
                         <div
                                 class:flex-col={mobileLayout}
                                 class:items-baseline={mobileLayout}
-                                class="flex font-bold text-gray-900 text-2xl font-jetbrains items-center"
+                                class="flex font-bold text-gray-900 font-jetbrains items-center"
                         >
                             <div>maya.frontend</div>
                             <div>.setFav([]Tech&lbrace;</div>
@@ -319,7 +319,7 @@
                                                 iconClass={item.iconClass}
                                         />
                                         {#if index !== frontendFrameworks.length - 1}
-                                <span class="mt-2 font-bold text-4xl mr-3"
+                                <span class="mt-2 font-bold lg:text-4xl md:text-md mr-3"
                                 >,</span
                                 >
                                         {/if}
@@ -360,7 +360,7 @@
     </div>
 </div>
 <div
-        class="h-[calc(100vh-2.5rem)] w-full flex justify-center items-center bg-gradient-to-br from-red-500 to-purple-700"
+        class="h-[calc(100vh-2.5rem)] w-full flex justify-center items-center bg-gradient-to-br from-red-500 to-purple-700 lg:text-4xl md:text-2xl"
 >
     <div
             use:observeme
@@ -378,19 +378,19 @@
         <div class="w-full p-4 h-full flex flex-col">
             <h1 class="text-4xl font-bold h-2">.mindset</h1>
             <div class="justify-center items-center flex flex-col flex-grow space-y-5">
-                <div class="flex space-x-4 text-3xl font-bold items-center">
+                <div class="flex space-x-4 font-bold items-center">
                     <InviewPopup {observeme} isDisplay={lgbtSupportInView} inviewCallback={()=>lgbtSupportInView=true}>
-                        <div class="flex space-x-4 justify-center items-center">
+                        <div class="flex space-x-4 justify-center items-center flex-wrap">
                             <p>I Support</p>
                             <img alt="pride flag" src="/pride_flag.png" class="h-12"/>
                             <p>!</p>
                         </div>
                     </InviewPopup>
                 </div>
-                <div class="flex space-x-4 text-3xl font-bold items-center">
+                <div class="flex space-x-4 font-bold items-center">
                     <InviewPopup {observeme} isDisplay={politicValueInView}
                                  inviewCallback={()=>politicValueInView=true}>
-                        <div class="flex space-x-4 justify-center items-center">
+                        <div class="flex space-x-4 justify-center items-center flex-wrap">
                             <img
                                     alt="yellow flag"
                                     src="/yellow_flag.png"
