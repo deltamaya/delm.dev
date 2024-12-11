@@ -25,6 +25,7 @@
     let frontendInView = $state(false);
     let politicValueInView = $state(false);
     let languageInView = $state(false);
+    let todoInView = $state(false);
 
 
     let options = {
@@ -182,6 +183,13 @@
                     class="mt-12 flex flex-col font-black text-gray-900 lg:text-2xl sm:text-sm font-jetbrains "
             >
                 <div class="font-bold text-gray-900 font-jetbrains flex flex-col">
+                    <InviewPopup {observeme} isDisplay={todoInView} inviewCallback={()=>todoInView=true}>
+                        <div
+                                class="items-center flex flex-wrap text-gray-500 italic"
+                        >
+                            //&nbsp;<span class="text-orange-600">todo:&nbsp;</span>make it cooler
+                        </div>
+                    </InviewPopup>
                     <InviewPopup {observeme} isDisplay={chshInView} inviewCallback={()=>chshInView=true}>
                         <div
                                 class="items-center flex flex-wrap"
