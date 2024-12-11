@@ -144,7 +144,7 @@
             use:observeme
             oninview={()=>{card1InView=true;showArrow=false}}
             class="transition duration-500 ease-in-out
-            h-3/4 w-3/4 flex flex-col bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110 p-4"
+            m-16 flex flex-col bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110 p-4"
             class:translate-y-0={card1InView}
             class:opacity-90={card1InView}
             class:translate-y-16={!card1InView}
@@ -152,27 +152,23 @@
             role="main"
             aria-label="Intro Card"
     >
-        <h1 class="text-4xl font-bold h-2">.intro</h1>
-        <div class="p-4 w-full h-full flex flex-col">
-            <div class="mt-12 justify-center items-center flex flex-col flex-grow">
-                <div class="text-center lg:text-3xl md:text-2xl text-xl font-bold text-gray-800 mb-4">
-                    Hi there! I'm Maya☆!
-                </div>
-                <div class="text-center text-gray-700 lg:text-2xl md:text-xl text-lg leading-relaxed">
-                    <div>A Computer Science student originally from Shandong, China.</div>
-                    <div>I'm a STEM enthusiast with a love for all things "Nerdy", especially the digital multimedia world.</div>
-                    <div>My dream is to become a Full-stack Magic Girl (yes, that's as awesome as it sounds!).</div>
-                    <div>In my downtime, you'll probably find me watching animations.</div>
-                    <div>While I enjoy anime, I also have a soft spot for U.S. and Japanese animated series.</div>
-                    <a href="/exchange" class="hover:underline">
-                        <div class="text-indigo-500">
-                            Feel like we'd vibe? Let's exchange friend links! You're always welcome. 😊
-                        </div>
-                    </a>
-
-                </div>
-
+        <h1 class="text-4xl font-bold">.intro</h1>
+        <div class="text-center lg:text-3xl md:text-2xl text-xl font-bold text-gray-800 mb-4">
+            Hi there! I'm Maya☆!
+        </div>
+        <div class="text-center text-gray-700 lg:text-2xl md:text-xl text-lg leading-relaxed">
+            <div>A Computer Science student originally from Shandong, China.</div>
+            <div>I'm a STEM enthusiast with a love for all things "Nerdy", especially the digital multimedia
+                world.
             </div>
+            <div>My dream is to become a Full-stack Magic Girl (yes, that's as awesome as it sounds!).</div>
+            <div>In my downtime, you'll probably find me watching animations.</div>
+            <div>While I enjoy anime, I also have a soft spot for U.S. and Japanese animated series.</div>
+            <a href="/exchange" class="hover:underline">
+                <div class="text-indigo-500">
+                    Feel like we'd vibe? Let's exchange friend links! You're always welcome. 😊
+                </div>
+            </a>
 
         </div>
 
@@ -186,7 +182,7 @@
             use:observeme
             oninview={()=>{card2InView=true}}
             class="transition duration-500 ease-in-out
-            h-3/4 w-3/4 flex justify-center items-center bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110"
+            m-8 flex justify-center items-center bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110"
             class:translate-y-0={card2InView}
             class:opacity-90={card2InView}
             class:translate-y-16={!card2InView}
@@ -395,8 +391,8 @@
     <div
             use:observeme
             oninview={()=>{card3InView=true}}
-            class="transition duration-500 ease-in-out flex flex-col
-            h-3/4 w-3/4 bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110 p-4"
+            class="transition duration-500 ease-in-out flex flex-col flex-grow
+            m-16 bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110 p-4"
             class:translate-y-0={card3InView}
             class:opacity-90={card3InView}
             class:translate-y-16={!card3InView}
@@ -405,7 +401,7 @@
             role="main"
             aria-label="Intro Card"
     >
-            <h1 class="text-4xl font-bold h-2">.mindset</h1>
+        <h1 class="text-4xl font-bold h-2">.mindset</h1>
 
         <div class="h-full w-full p-4 flex flex-col">
             <div class="justify-center items-center flex flex-col flex-grow space-y-5 mt-12">
