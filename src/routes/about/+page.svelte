@@ -184,12 +184,11 @@
                 <div class="font-bold text-gray-900 font-jetbrains flex flex-col">
                     <InviewPopup {observeme} isDisplay={chshInView} inviewCallback={()=>chshInView=true}>
                         <div
-                                class:flex-col={mobileLayout}
-                                class:items-baseline={mobileLayout}
-                                class="items-center flex"
+                                class="items-center flex flex-wrap"
                         >
-                            <span class="text-red-500 mr-5">sudo</span>
-                            chsh -s $(which
+                            <span class="text-red-500">sudo&nbsp;</span>
+                            <span class="text-orange-500">chsh&nbsp;</span>
+                            -s $(<span class="text-orange-500">which&nbsp;</span>
                             <div class="flex">
                                 {#each shells as item, index (index)}
                                     <div
@@ -206,8 +205,8 @@
                                                 iconClass={item.iconClass}
                                         />
                                         {#if index !== shells.length - 1}
-                                    <span class="mt-2 font-bold lg:text-4xl sm:text-sm mr-3"
-                                    >,</span
+                                    <span class="mt-2 font-bold lg:text-4xl sm:text-sm"
+                                    >,&nbsp;</span
                                     >
                                         {/if}
                                     </div>
@@ -221,7 +220,7 @@
 
                                 class="flex items-center"
                         >
-                            const maya = &lbrace;
+                            <span class="text-red-500">const&nbsp;</span>maya = &lbrace;
                         </div>
                     </InviewPopup>
                     <InviewPopup {observeme} isDisplay={langInView} inviewCallback={()=>langInView=true}>
@@ -230,7 +229,9 @@
                                 class:items-baseline={mobileLayout}
                                 class="flex items-center"
                         >
-                            <div class="mr-1 ml-12">lang: std::vector&lbrace;</div>
+                            <div class="mr-1 ml-12">lang: <span class="text-green-500">std</span>::<span
+                                    class="text-green-500">vector</span>&lbrace;
+                            </div>
                             <div class="flex justify-center flex-wrap">
                                 {#each languages as item, index (index)}
                                     <div
@@ -247,8 +248,8 @@
                                                 iconClass={item.iconClass}
                                         />
                                         {#if index !== languages.length - 1}
-                                    <span class="font-bold lg:text-4xl md:text-md mr-3"
-                                    >,</span
+                                    <span class="font-bold lg:text-4xl md:text-md"
+                                    >,&nbsp;</span
                                     >
                                         {/if}
                                     </div>
@@ -263,7 +264,9 @@
                                 class:items-baseline={mobileLayout}
                                 class="flex font-bold text-gray-900 font-jetbrains items-center"
                         >
-                            <div class="ml-12 mr-1">os: [os for os in [</div>
+                            <div class="ml-12 mr-1">os: [os <span class="text-red-500">for</span> os <span
+                                    class="text-red-500">in</span> [
+                            </div>
                             <div class="flex">
                                 {#each operatingSystems as item, index (index)}
                                     <div
@@ -280,8 +283,8 @@
                                                 iconClass={item.iconClass}
                                         />
                                         {#if index !== operatingSystems.length - 1}
-                                    <span class="mt-2 font-bold lg:text-4xl md:text-md mr-3"
-                                    >,</span
+                                    <span class="mt-2 font-bold lg:text-4xl md:text-md"
+                                    >,&nbsp;</span
                                     >
                                         {/if}
                                     </div>
@@ -302,7 +305,8 @@
                                 class="flex font-bold text-gray-900 font-jetbrains items-center"
                         >
                             <div>maya.frontend</div>
-                            <div>.setFav([]Tech&lbrace;</div>
+                            <div>.<span class="text-blue-500">setFav</span>([]<span class="text-green-500">Tech</span>&lbrace;
+                            </div>
                             <div class="flex">
                                 {#each frontendFrameworks as item, index (index)}
                                     <div
@@ -319,8 +323,8 @@
                                                 iconClass={item.iconClass}
                                         />
                                         {#if index !== frontendFrameworks.length - 1}
-                                <span class="mt-2 font-bold lg:text-4xl md:text-md mr-3"
-                                >,</span
+                                <span class="mt-2 font-bold lg:text-4xl md:text-md"
+                                >,&nbsp;</span
                                 >
                                         {/if}
                                     </div>
@@ -331,11 +335,12 @@
                     </InviewPopup>
                     <InviewPopup {observeme} isDisplay={languageInView} inviewCallback={()=>languageInView=true}>
                         <div
-                                                                class:flex-col={mobileLayout}
+                                class:flex-col={mobileLayout}
                                 class:items-baseline={mobileLayout}
                                 class="flex">
-                            <span>maya.speak(</span>
-                            <span>O_EN_INTERMEDIATE | O_ZH_NATIVE</span>
+                            <span>maya.<span class="text-blue-500">speak</span>(</span>
+                            <span><span class="text-purple-500">O_EN_INTERMEDIATE</span> | <span
+                                    class="text-purple-500">O_ZH_NATIVE</span></span>
                             <span>)</span>
 
                         </div>
