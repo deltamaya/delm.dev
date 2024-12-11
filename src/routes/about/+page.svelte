@@ -525,6 +525,7 @@
                             class="flex space-x-4 justify-center items-center flex-wrap"
                         >
                             <img
+                                alt="anarchism symbol"
                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Anarchy-symbol.svg/600px-Anarchy-symbol.svg.png"
                                 class="w-16"
                             />
