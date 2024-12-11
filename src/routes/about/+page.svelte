@@ -138,7 +138,7 @@
     </div>
 </div>
 <div
-        class="h-screen w-full flex flex-col justify-center items-center bg-gradient-to-br from-red-500 to-purple-700"
+        class="min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-br from-red-500 to-purple-700"
 >
     <div
             use:observeme
@@ -390,7 +390,7 @@
     </div>
 </div>
 <div
-        class="h-screen w-full flex justify-center items-center bg-gradient-to-br from-red-500 to-purple-700 lg:text-4xl md:text-2xl p-4"
+        class="min-h-screen w-full flex justify-center items-center bg-gradient-to-br from-red-500 to-purple-700 lg:text-4xl md:text-2xl p-4"
 >
     <div
             use:observeme
