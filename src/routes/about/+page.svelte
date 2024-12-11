@@ -144,7 +144,7 @@
             use:observeme
             oninview={()=>{card1InView=true;showArrow=false}}
             class="transition duration-500 ease-in-out
-            m-16 flex flex-col bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110 p-4"
+            m-8 flex flex-col bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110 p-4"
             class:translate-y-0={card1InView}
             class:opacity-90={card1InView}
             class:translate-y-16={!card1InView}
@@ -191,9 +191,9 @@
             aria-label="Intro Card"
     >
         <div class="w-full p-4 h-full flex flex-col">
-            <h1 class="text-4xl font-bold h-2">.skills</h1>
+            <h1 class="text-4xl font-bold">.skills</h1>
             <div
-                    class="mt-12 flex flex-col font-black text-gray-900 lg:text-2xl sm:text-sm font-jetbrains "
+                    class="flex flex-col font-black text-gray-900 lg:text-2xl sm:text-sm font-jetbrains "
             >
                 <div class="font-bold text-gray-900 font-jetbrains flex flex-col">
                     <InviewPopup {observeme} isDisplay={todoInView} inviewCallback={()=>todoInView=true}>
@@ -392,7 +392,7 @@
             use:observeme
             oninview={()=>{card3InView=true}}
             class="transition duration-500 ease-in-out flex flex-col flex-grow
-            m-16 bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110 p-4"
+            m-8 bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110 p-4"
             class:translate-y-0={card3InView}
             class:opacity-90={card3InView}
             class:translate-y-16={!card3InView}
@@ -401,10 +401,10 @@
             role="main"
             aria-label="Intro Card"
     >
-        <h1 class="text-4xl font-bold h-2">.mindset</h1>
+        <h1 class="text-4xl font-bold">.mindset</h1>
 
         <div class="h-full w-full p-4 flex flex-col">
-            <div class="justify-center items-center flex flex-col flex-grow space-y-5 mt-12">
+            <div class="justify-center items-center flex flex-col flex-grow space-y-5">
                 <div class="flex space-x-4 font-bold items-center">
                     <InviewPopup {observeme} isDisplay={lgbtSupportInView} inviewCallback={()=>lgbtSupportInView=true}>
                         <div class="flex space-x-4 justify-center items-center flex-wrap">
