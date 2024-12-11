@@ -73,12 +73,12 @@
             <img
                     src="/logo.png"
                     alt="logo"
-                    class="w-12 sm:w-16 md:w-24 lg:w-32 drop-shadow-2xl"
+                    class="w-24 md:w-28 lg:w-32 drop-shadow-2xl"
                     in:fly={{ y: -50, duration: 400 }}
             />
             <div class="flex flex-col ml-5">
                 <p
-                        class="text-xl lg:text-8xl md:text-4xl sm:text-2xl font-bold text-gray-800 mt-2"
+                        class="lg:text-8xl md:text-6xl text-4xl font-bold text-gray-800 mt-2"
                         in:fly={{ y: -50, duration: 400, delay: 50 }}
                 >
                     delm.<span class="text-red-500">dev</span>
@@ -93,7 +93,7 @@
                 in:fly={{ y: -50, duration: 400, delay: 100}}
         >
             <h1
-                    class="lg:text-6xl md:text-4l sm:text-2xl text-xl font-bold text-gray-800 mb-4"
+                    class="lg:text-6xl md:text-4l text-2xl font-bold text-gray-800 mb-4"
                     in:fly={{ y: 50, duration: 400, delay: 50 }}
             >
                 Hi, I'm <span class="text-red-500">Maya☆</span>.

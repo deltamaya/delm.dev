@@ -82,7 +82,7 @@
             <img
                     src="/avatar.jpg"
                     alt="avatar"
-                    class="lg:w-48 md:w-32 sm:w-24 w-16 rounded-full border-4 drop-shadow-2xl inline-block origin-center
+                    class="lg:w-48 md:w-32 w-24 rounded-full border-4 drop-shadow-2xl inline-block origin-center
                   shadow-2xl hover:scale-110 transition-transform duration-200 ease-in-out"
                     in:fly={{ y: -50, duration: 400 }}
             />
@@ -90,7 +90,7 @@
             <img
                     src="/logo.png"
                     alt="avatar"
-                    class="lg:w-48 md:w-32 sm:w-24 w-16 drop-shadow-2xl
+                    class="lg:w-48 md:w-32 w-24 drop-shadow-2xl
                   transition-transform hover:scale-110 duration-200 ease-in-out"
                     in:fly={{ y: -50, duration: 400 }}
             />
@@ -98,7 +98,7 @@
 
         <div class="flex flex-col ml-5 items-center">
             <p
-                    class="lg:text-8xl md:text-6xl sm:text-4xl text-2xl font-bold text-gray-800 mt-2"
+                    class="lg:text-8xl md:text-6xl text-4xl font-bold text-gray-800 mt-2"
                     in:fly={{ y: -50, duration: 400, delay: 50 }}
             >
                 delta<span class="text-red-500">maya</span>

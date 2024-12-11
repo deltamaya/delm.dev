@@ -14,7 +14,7 @@
 
 >
     <div
-            class="lg:text-6xl md:text-4xl sm:text-2xl text-xl flex font-bold hover:text-red-500 transition-colors duration-300"
+            class="lg:text-6xl md:text-4xl text-3xl flex font-bold hover:text-red-500 transition-colors duration-300"
             style="transform: scale({$scale});"
     >
             <Icon icon={iconClass} class="mr-16"/>
