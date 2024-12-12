@@ -2,16 +2,12 @@
     import {fly} from "svelte/transition";
     import IconButton from "../../compoents/IconButton.svelte";
     import Icon from "@iconify/svelte";
-    import {
-        frontendFrameworks,
-        languages,
-        operatingSystems,
-        shells,
-    } from "$lib/data";
     import type {Action} from "svelte/action";
     import InviewPopup from "../../compoents/InviewPopup.svelte";
     import WavingText from "../../compoents/WavingText.svelte";
 
+
+    const {data} = $props()
     let card1InView = $state(false);
     let card2InView = $state(false);
     let card3InView = $state(false);
@@ -253,7 +249,7 @@
                             -s $(<span class="text-orange-500">which&nbsp;</span
                         >
                             <div class="flex">
-                                {#each shells as item, index (index)}
+                                {#each data.shells as item, index (index)}
                                     <div
                                             class="flex"
                                             in:fly|global={{
@@ -267,7 +263,7 @@
                                                 label={item.label}
                                                 iconClass={item.iconClass}
                                         />
-                                        {#if index !== shells.length - 1}
+                                        {#if index !== data.shells.length - 1}
                                             <span
                                                     class="mt-2 font-bold lg:text-4xl sm:text-sm"
                                             >,&nbsp;</span
@@ -305,7 +301,7 @@
                             >&lbrace;
                             </div>
                             <div class="flex justify-center flex-wrap">
-                                {#each languages as item, index (index)}
+                                {#each data.lang as item, index (index)}
                                     <div
                                             class="flex"
                                             in:fly|global={{
@@ -319,7 +315,7 @@
                                                 label={item.label}
                                                 iconClass={item.iconClass}
                                         />
-                                        {#if index !== languages.length - 1}
+                                        {#if index !== data.lang.length - 1}
                                             <span
                                                     class="font-bold lg:text-4xl md:text-md"
                                             >,&nbsp;</span
@@ -346,7 +342,7 @@
                                 <span class="text-red-500">in</span> [
                             </div>
                             <div class="flex">
-                                {#each operatingSystems as item, index (index)}
+                                {#each data.os as item, index (index)}
                                     <div
                                             class="flex"
                                             in:fly|global={{
@@ -360,7 +356,7 @@
                                                 label={item.label}
                                                 iconClass={item.iconClass}
                                         />
-                                        {#if index !== operatingSystems.length - 1}
+                                        {#if index !== data.os.length - 1}
                                             <span
                                                     class="mt-2 font-bold lg:text-4xl md:text-md"
                                             >,&nbsp;</span
@@ -396,7 +392,7 @@
                             >&lbrace;
                             </div>
                             <div class="flex">
-                                {#each frontendFrameworks as item, index (index)}
+                                {#each data.frontend as item, index (index)}
                                     <div
                                             class="flex"
                                             in:fly|global={{
@@ -410,7 +406,7 @@
                                                 label={item.label}
                                                 iconClass={item.iconClass}
                                         />
-                                        {#if index !== frontendFrameworks.length - 1}
+                                        {#if index !== data.frontend.length - 1}
                                             <span
                                                     class="mt-2 font-bold lg:text-4xl md:text-md"
                                             >,&nbsp;</span

@@ -2,13 +2,13 @@
     import {fly} from "svelte/transition";
     import IconButton from "../compoents/IconButton.svelte";
     import MenuItem from "../compoents/MenuItem.svelte";
-    import {socialLinks, menuItems} from "$lib/data";
-    import {bios} from "$lib/data";
 
+
+    const {data}=$props()
     let mobileLayout = $state(false);
 
     let bioIndex = $state(0);
-    let bioSentence = $derived(bios[bioIndex]);
+    let bioSentence = $derived(data.bios[bioIndex]);
     let typing = $state(false)
 
     const mobileLayoutThreshold = 900;
@@ -17,7 +17,7 @@
         mobileLayout = window.innerWidth <= mobileLayoutThreshold;
 
         const id = setInterval(() => {
-            if (bioIndex === bios.length - 1) {
+            if (bioIndex === data.bios.length - 1) {
                 bioIndex = 0;
             } else {
                 bioIndex++;
@@ -53,7 +53,7 @@
             duration,
             tick: (t: number) => {
                 const i = Math.trunc(text.length * t);
-                node.textContent = text.slice(0, Math.max(1, i));
+                node.textContent = text.slice(0, i);
             },
         };
     }
@@ -117,7 +117,7 @@
         </div>
 
         <div class="flex space-x-4 justify-center text-gray-900">
-            {#each socialLinks as item, index (index)}
+            {#each data.socials as item, index (index)}
                 <div
                         in:fly|global={!mobileLayout
                         ? {
@@ -142,7 +142,7 @@
     </div>
     {#key mobileLayout}
         <div class="items-center flex flex-col z-10 space-y-5 justify-center">
-            {#each menuItems as item, index (index)}
+            {#each data.menu as item, index (index)}
                 <div
                         class="w-full"
                         in:fly|global={!mobileLayout
