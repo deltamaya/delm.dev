@@ -154,9 +154,7 @@
         <h1 class="text-4xl font-bold">.intro</h1>
         <div class="font-bold items-center justify-center flex lg:text-3xl md:text-2xl text-xl text-gray-700">
             <WavingText text="Ciallo ～(∠・ω&lt; )⌒★!"/>
-        </div>&nbsp;
-
-
+        </div>
         <div
                 class="text-center text-gray-700 lg:text-2xl md:text-xl text-lg leading-relaxed"
         >
