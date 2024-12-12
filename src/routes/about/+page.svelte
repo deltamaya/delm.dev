@@ -1,6 +1,6 @@
 <script lang="ts">
     import { fly } from "svelte/transition";
-    import IconButton from "../IconButton.svelte";
+    import IconButton from "../../compoents/IconButton.svelte";
     import Icon from "@iconify/svelte";
     import {
         frontendFrameworks,
@@ -9,7 +9,8 @@
         shells,
     } from "$lib/data";
     import type { Action } from "svelte/action";
-    import InviewPopup from "../InviewPopup.svelte";
+    import InviewPopup from "../../compoents/InviewPopup.svelte";
+    import FloatingText from "../../compoents/WavingText.svelte";
 
     let card1InView = $state(false);
     let card2InView = $state(false);
@@ -156,30 +157,31 @@
     >
         <h1 class="text-4xl font-bold">.intro</h1>
         <div
-            class="text-center lg:text-3xl md:text-2xl text-xl font-bold text-gray-800 mb-4"
+            class="text-center lg:text-3xl md:text-2xl text-xl font-bold text-gray-800 mb-4 text-wave"
         >
-            Hi there! I'm Maya☆!
+            Hi there, I'm Maya☆!
         </div>
         <div
             class="text-center text-gray-700 lg:text-2xl md:text-xl text-lg leading-relaxed"
         >
-            <div>
-                A Computer Science student originally from Shandong, China.
+            <div class="flex">
+                A&nbsp;<strong>Computer Science</strong>&nbsp;student originally from Shandong, China.
             </div>
-            <div>
-                I'm a STEM enthusiast with a love for all things "Nerdy",
+            <div class="flex">
+                I'm a &nbsp;<strong>STEM</strong>&nbsp; enthusiast with a love for all things "Nerdy"🤓,
                 especially the digital multimedia world.
             </div>
-            <div>
-                My dream is to become a Full-stack Magic Girl (yes, that's as
-                awesome as it sounds!).
+            <div class="flex">
+                My dream is to become a&nbsp;<div class="font-bold">Full-stack Magic Girl</div>&nbsp;!
+                &nbsp;<div class="font-bold"><FloatingText text="Ciallo ～(∠・ω&lt; )⌒★!"/></div>&nbsp;
+
             </div>
             <div>
                 In my downtime, you'll probably find me watching animations.
             </div>
             <div>
-                While I enjoy anime, I also have a soft spot for U.S. and
-                Japanese animated series.
+                While I enjoy anime, I also have a soft spot for 🇺🇸 and
+                🗾 animated series.
             </div>
             <a href="/exchange" class="hover:underline">
                 <div class="text-indigo-500">
@@ -464,7 +466,7 @@
             card3InView = true;
         }}
         class="transition duration-500 ease-in-out flex flex-col
-            m-8 bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110 p-4"
+            w-3/4 h-3/4 bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110 p-4"
         class:translate-y-0={card3InView}
         class:opacity-90={card3InView}
         class:translate-y-16={!card3InView}

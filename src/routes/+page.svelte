@@ -1,10 +1,9 @@
 <script lang="ts">
-    import { crossfade, fly, slide } from "svelte/transition";
-    import IconButton from "./IconButton.svelte";
-    import MenuItem from "./MenuItem.svelte";
+    import { fly } from "svelte/transition";
+    import IconButton from "../compoents/IconButton.svelte";
+    import MenuItem from "../compoents/MenuItem.svelte";
     import { socialLinks, menuItems } from "$lib/data";
     import { bios } from "$lib/data";
-    import { cubicInOut, expoIn, expoInOut } from "svelte/easing";
 
     let mobileLayout = $state(false);
 
@@ -35,28 +34,28 @@
         mobileLayout = window.innerWidth <= mobileLayoutThreshold;
     };
 
-    function typewriter(node, { speed = 1 }) {
-        const valid =
-            node.childNodes.length === 1 &&
-            node.childNodes[0].nodeType === Node.TEXT_NODE;
-
-        if (!valid) {
-            throw new Error(
-                `This transition only works on elements with a single text node child`,
-            );
-        }
-
-        const text = node.textContent;
-        const duration = text.length / (speed * 0.01);
-
-        return {
-            duration,
-            tick: (t: number) => {
-                const i = Math.trunc(text.length * t);
-                node.textContent = text.slice(0, Math.max(1, i));
-            },
-        };
-    }
+    // function typewriter(node, { speed = 1 }) {
+    //     const valid =
+    //         node.childNodes.length === 1 &&
+    //         node.childNodes[0].nodeType === Node.TEXT_NODE;
+    //
+    //     if (!valid) {
+    //         throw new Error(
+    //             `This transition only works on elements with a single text node child`,
+    //         );
+    //     }
+    //
+    //     const text = node.textContent;
+    //     const duration = text.length / (speed * 0.01);
+    //
+    //     return {
+    //         duration,
+    //         tick: (t: number) => {
+    //             const i = Math.trunc(text.length * t);
+    //             node.textContent = text.slice(0, Math.max(1, i));
+    //         },
+    //     };
+    // }
 </script>
 
 <div
