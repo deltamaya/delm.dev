@@ -7,15 +7,51 @@
     let curIndex = $state(0)
     let curProject = $derived(data.projects[curIndex])
 
-    const imageWidth = 300;
-    const imageGap = 50;
-    const sep = imageWidth + 2 * imageGap;
-    const hsep = sep / 2;
+    let imageWidth = $state(300);
+    let imageGap = $state(50);
+    let sep = $derived(imageWidth + 2 * imageGap);
+    let hsep = $derived(sep / 2);
 
     let isDown = false;
     let prevX = 0;
+
+
+    const largeWidth = 300;
+    const largeGap = 50;
+    const largeThreshold = 1000;
+
+
+    const midWidth = 200;
+    const midGap = 35;
+    const midThreshold = 700;
+
+
+    const smallWidth = 150;
+    const smallGap = 25;
+
+
+    function setImageSize() {
+        if (window.innerWidth > largeThreshold) {
+            imageWidth = largeWidth;
+            imageGap = largeGap;
+        } else if (window.innerWidth > midThreshold) {
+            imageWidth = midWidth;
+            imageGap = midGap;
+        } else {
+            imageWidth = smallWidth;
+            imageGap = smallGap;
+        }
+    }
+
+    function handleResize() {
+        setImageSize()
+    }
+
+
     $effect(
         () => {
+            setImageSize()
+            window.addEventListener('resize', handleResize)
             window.addEventListener('wheel', handleWheel)
             window.addEventListener('mousedown', handleDown)
             window.addEventListener('mousemove', handleMove)
@@ -23,6 +59,7 @@
             window.addEventListener('touchstart', handleTouchDown)
             window.addEventListener('touchmove', handleTouchMove)
             return () => {
+                window.removeEventListener('resize', handleResize)
                 window.removeEventListener('wheel', handleWheel)
                 window.removeEventListener('mousedown', handleDown)
                 window.removeEventListener('mousemove', handleMove)
@@ -65,7 +102,7 @@
         prevX = e.clientX
     }
 
-    function handleUp(e: MouseEvent) {
+    function handleUp() {
         isDown = false
     }
 
