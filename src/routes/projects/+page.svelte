@@ -1,6 +1,5 @@
 <script lang="ts">
     import { fly } from "svelte/transition";
-    import Icon from "@iconify/svelte";
     import IconButton from "../../compoents/IconButton.svelte";
     const { data } = $props();
 
