@@ -102,7 +102,7 @@
                     class="lg:text-xl text-sm text-gray-500 max-w-2xl mb-8 font-bold"
                     in:fly={{
                         duration: 500,
-                        x: 50,
+                        x: -50,
                     }}
                 >
                     {bioSentence}
