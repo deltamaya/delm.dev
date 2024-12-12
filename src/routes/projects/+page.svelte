@@ -20,14 +20,35 @@
             window.addEventListener('mousedown', handleDown)
             window.addEventListener('mousemove', handleMove)
             window.addEventListener('mouseup', handleUp)
+            window.addEventListener('touchstart', handleTouchDown)
+            window.addEventListener('touchmove', handleTouchMove)
             return () => {
                 window.removeEventListener('wheel', handleWheel)
                 window.removeEventListener('mousedown', handleDown)
                 window.removeEventListener('mousemove', handleMove)
                 window.removeEventListener('mouseup', handleUp)
+                window.removeEventListener('touchstart', handleTouchDown)
+                window.removeEventListener('touchmove', handleTouchMove)
             }
         }
     )
+
+    function handleTouchMove(e: TouchEvent) {
+        if (!isDown) return
+        if (e.touches[0].clientX > prevX + 100) {
+            curIndex = Math.min(curIndex + 1, data.projects.length - 1);
+            isDown = false
+        }
+        if (e.touches[0].clientX < prevX - 100) {
+            curIndex = Math.max(curIndex - 1, 0);
+            isDown = false
+        }
+    }
+
+    function handleTouchDown(e: TouchEvent) {
+        isDown = true
+        prevX = e.touches[0].clientX
+    }
 
     function handleWheel(e: WheelEvent) {
         e.preventDefault();
@@ -74,7 +95,6 @@
 
     <div
             in:fly|local={{ y: -100, duration: 400 }}
-
             class="w-full flex transform duration-500 ease-in-out snap-x snap-proximity"
             style="transform: translateX(calc(50% - {(curIndex * sep)+hsep}px));"
     >
