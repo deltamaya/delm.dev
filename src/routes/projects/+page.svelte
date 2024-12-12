@@ -36,11 +36,11 @@
     function handleTouchMove(e: TouchEvent) {
         if (!isDown) return
         if (e.touches[0].clientX > prevX + 100) {
-            curIndex = Math.min(curIndex + 1, data.projects.length - 1);
+            curIndex = Math.max(curIndex - 1, 0);
             isDown = false
         }
         if (e.touches[0].clientX < prevX - 100) {
-            curIndex = Math.max(curIndex - 1, 0);
+            curIndex = Math.min(curIndex + 1, data.projects.length - 1);
             isDown = false
         }
     }
@@ -72,13 +72,12 @@
     function handleMove(e: MouseEvent) {
         if (!isDown) return
         if (e.clientX > prevX + 100) {
-            curIndex = Math.min(curIndex + 1, data.projects.length - 1);
+            curIndex = Math.max(curIndex - 1, 0);
             isDown = false
         }
         if (e.clientX < prevX - 100) {
-            curIndex = Math.max(curIndex - 1, 0);
+            curIndex = Math.min(curIndex + 1, data.projects.length - 1);
             isDown = false
-
         }
     }
 
