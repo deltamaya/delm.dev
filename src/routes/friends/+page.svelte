@@ -119,9 +119,9 @@ $inspect(data)
         {/each}
     </div>
 </div>
-<div class="text-9xl pointer-events-none select-none z-0 fixed object-cover font-bold opacity-20 top-0 left-0">
+<div class="text-9xl pointer-events-none select-none z-0 fixed object-cover font-bold text-gray-300 top-0 left-0">
     TOGETHER WE
 </div>
-<div class="text-9xl pointer-events-none select-none z-0 fixed object-cover font-bold opacity-20 bottom-10 right-0">
+<div class="text-9xl pointer-events-none select-none z-0 fixed object-cover font-bold text-gray-300 bottom-10 right-0">
     ADVANCE
 </div>
