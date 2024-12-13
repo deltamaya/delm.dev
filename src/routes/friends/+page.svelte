@@ -54,11 +54,11 @@ $inspect(data)
 
     function handleTouchMove(e: TouchEvent) {
         if (!isDown) return;
-        if (e.touches[0].clientY > prevY + 100) {
+        if (e.touches[0].clientY > prevY + 50) {
             setPrevFriend();
             isDown = false;
         }
-        if (e.touches[0].clientY < prevY - 100) {
+        if (e.touches[0].clientY < prevY - 50) {
             setNextFriend();
             isDown = false;
         }
@@ -88,7 +88,7 @@ $inspect(data)
     }
 </script>
 <div
-    class="h-[calc(100vh-2.5rem)] flex justify-center items-center -z-10"
+    class="h-[calc(100vh-2.5rem)] flex justify-center items-center -z-10  overflow-hidden"
 >
     <div
         class="flex flex-col transform duration-500 ease-in-out w-full justify-center items-center z-10"
@@ -112,7 +112,9 @@ $inspect(data)
                           </div>
                       </div>
                   </div>
-            <a class="absolute right-6 self-end font-bold lg:text-xl md:text-lg text-sm text-indigo-500 italic hover:underline" href={friend.link}>link</a>
+            <a class="absolute right-6 self-end font-bold lg:text-xl md:text-lg text-sm text-indigo-500 italic hover:underline" href={friend.link}>
+                link
+            </a>
         </div>
         {/each}
     </div>
