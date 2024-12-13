@@ -13,9 +13,9 @@ export const socialLinks = [
 ]
 
 export const menuItems = [
-    {href: 'https://imvm.dev', label: 'blogs', title: 'Blogs', iconClass: 'fa-solid:blog'},
+    {href: 'https://blog.delm.dev', label: 'blogs', title: 'Blogs', iconClass: 'fa-solid:blog'},
     {href: "/friends", label: "friends", title: "Friends", iconClass: "fa-solid:heart"},
-    {href: 'projects', label: 'projects', title: 'Projects', iconClass: 'ion:hammer'},
+    {href: '/projects', label: 'projects', title: 'Projects', iconClass: 'ion:hammer'},
     {href: "/about", label: "about", title: "About", iconClass: "fa-solid:info-circle"},
 ]
 

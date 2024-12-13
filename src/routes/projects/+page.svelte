@@ -22,8 +22,8 @@
     const midGap = 35;
     const midThreshold = 768;
 
-    const smallWidth = 150;
-    const smallGap = 25;
+    const smallWidth = 100;
+    const smallGap = 20;
 
     function setPrevProject() {
         curIndex = Math.max(curIndex - 1, 0);
@@ -53,7 +53,7 @@
     function getDefaultBackground(name: string) {
         let ret = "";
         name.split(" ").forEach((s) => (ret += s.charAt(0)));
-        return ret;
+        return ret.toUpperCase();
     }
 
     $effect(() => {
@@ -168,7 +168,7 @@
             Learn More
         </a>
     </div>
-    <div class="flex justify-around w-full">
+    <div class="flex justify-around w-full z-10">
         <IconButton
             callback={() => setPrevProject()}
             iconClass="mingcute:arrow-left-fill"

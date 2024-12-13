@@ -10,7 +10,7 @@
 </main>
 
 <footer class=" bg-gray-900 text-gray-200 py-4 flex justify-center items-center font-inter h-10 z-40">
-    <p class="text-sm text-center flex flex-wrap justify-center items-center">
+    <div class="text-sm text-center flex flex-wrap justify-center items-center z-40">
         <span class="inline-block mr-2">©</span>
         <span>2024 Maya. All works Copyleft.</span>
         <a
@@ -21,5 +21,5 @@
         >
             Learn more about Copyleft
         </a>
-    </p>
+    </div>
 </footer>
