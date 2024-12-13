@@ -74,11 +74,11 @@
 
     function handleTouchMove(e: TouchEvent) {
         if (!isDown) return;
-        if (e.touches[0].clientX > prevX + 100) {
+        if (e.touches[0].clientX > prevX + 50) {
             setPrevProject();
             isDown = false;
         }
-        if (e.touches[0].clientX < prevX - 100) {
+        if (e.touches[0].clientX < prevX - 50) {
             setNextProject();
             isDown = false;
         }
