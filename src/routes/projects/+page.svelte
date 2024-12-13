@@ -132,7 +132,9 @@
                     {:else}
                     <div class="
                     justify-center items-center lg:text-6xl md:text-4xl text-2xl text-white
-                   bg-gradient-to-br {randomFadeColor()} font-bold flex w-full h-full lg:border-4 border-2 border-white rounded-2xl transition duration-500 ease-in-out  pointer-events-none select-none">
+                   bg-gradient-to-br {randomFadeColor()} font-bold flex w-full h-full lg:border-4 border-2 border-white rounded-2xl transition duration-500 ease-in-out  pointer-events-none select-none"
+                                        class:active={curIndex === index}
+                    >
                         {getDefaultBackground(project.name)}
                     </div>
                     {/if}
