@@ -54,17 +54,13 @@
         setImageSize();
         window.addEventListener("resize", handleResize);
         window.addEventListener("wheel", handleWheel);
-        window.addEventListener("mousedown", handleDown);
-        window.addEventListener("mousemove", handleMove);
-        window.addEventListener("mouseup", handleUp);
+
         window.addEventListener("touchstart", handleTouchDown);
         window.addEventListener("touchmove", handleTouchMove);
         return () => {
             window.removeEventListener("resize", handleResize);
             window.removeEventListener("wheel", handleWheel);
-            window.removeEventListener("mousedown", handleDown);
-            window.removeEventListener("mousemove", handleMove);
-            window.removeEventListener("mouseup", handleUp);
+
             window.removeEventListener("touchstart", handleTouchDown);
             window.removeEventListener("touchmove", handleTouchMove);
         };
@@ -96,27 +92,6 @@
             setNextProject();
         }
     }
-
-    function handleDown(e: MouseEvent) {
-        isDown = true;
-        prevX = e.clientX;
-    }
-
-    function handleUp() {
-        isDown = false;
-    }
-
-    function handleMove(e: MouseEvent) {
-        if (!isDown) return;
-        if (e.clientX > prevX + 100) {
-            setPrevProject();
-            isDown = false;
-        }
-        if (e.clientX < prevX - 100) {
-            setNextProject();
-            isDown = false;
-        }
-    }
 </script>
 
 <div
@@ -138,7 +113,7 @@
                 <img
                     src={curProject.bghref}
                     alt=""
-                    class="border-4 border-white rounded-2xl transition duration-500 ease-in-out"
+                    class="lg:border-4 border-2 border-white rounded-2xl transition duration-500 ease-in-out  pointer-events-none select-none"
                     class:active={curIndex === index}
                 />
             </button>

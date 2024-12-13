@@ -78,7 +78,7 @@
             <img
                 src="/avatar.jpg"
                 alt="avatar"
-                class="lg:w-48 md:w-32 w-24 rounded-full border-4 drop-shadow-2xl inline-block origin-center
+                class="lg:w-48 md:w-32 w-24 rounded-full lg:border-4 border-2 drop-shadow-2xl inline-block origin-center
                   shadow-2xl hover:scale-110 transition-transform duration-200 ease-in-out"
                 in:fly={{ y: -50, duration: 400 }}
             />
