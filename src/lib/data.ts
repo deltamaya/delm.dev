@@ -74,12 +74,12 @@ export const friends=[
         name:'nyne',
         avatar:'https://avatars.githubusercontent.com/u/67669799?v=4',
         desc:'Hello, world!',
-        link:'https://www.delm.dev'
+        link:'https://nyne.dev'
     },
         {
         name:'maya',
         avatar:'/avatar.jpg',
-        desc:'Hello, world!',
+        desc:'Together We Advance',
         link:'https://www.delm.dev'
     },
 ]
