@@ -68,3 +68,18 @@ export const projects = [
         link: 'https://github.com/deltamaya/ArcVP'
     },
 ]
+
+export const friends=[
+    {
+        name:'maya',
+        avatar:'/avatar.jpg',
+        desc:'Hello, world!',
+        link:'https://www.delm.dev'
+    },
+    {
+        name:'nyne',
+        avatar:'https://avatars.githubusercontent.com/u/67669799?v=4',
+        desc:'Hello, world!',
+        link:'https://www.delm.dev'
+    },
+]
