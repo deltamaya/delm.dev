@@ -2,7 +2,6 @@
     import { fly } from "svelte/transition";
 
 let {data}=$props()
-$inspect(data)
         let curIndex = $state(0);
     let imageHeight = $state(200);
     let imageGap = $state(50);
@@ -96,7 +95,7 @@ $inspect(data)
     >
         {#each data.friends as friend, index(index)}
         <div class="rounded-2xl items-center justify-center flex hover:cursor-pointer drop-shadow-2xl
-        transition duration-300 ease-in-out bg-gray-100 p-4" onclick={()=>curIndex=index}
+        transition duration-300 ease-in-out bg-gray-100 p-4"
         in:fly|global={{ x: 100, duration: 400,delay:index*100 }}
                         style="width: calc({imageHeight/0.6}px);height: calc({imageHeight}px);margin-top: calc({imageGap}px);margin-bottom: calc({imageGap}px);"
                             class:scale-150={curIndex === index}>
@@ -112,7 +111,7 @@ $inspect(data)
                           </div>
                       </div>
                   </div>
-            <a class="absolute right-6 self-end font-bold lg:text-xl md:text-lg text-sm text-indigo-500 italic hover:underline" href={friend.link}>
+            <a class="absolute bottom-4 right-4 font-bold lg:text-xl md:text-lg text-sm text-indigo-500 italic hover:underline" href={friend.link}>
                 link
             </a>
         </div>
