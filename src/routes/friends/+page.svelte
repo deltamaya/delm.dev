@@ -25,13 +25,10 @@ $inspect(data)
         setImageSize();
     }
     function setImageSize() {
-            console.log('resize')
-
         if (window.innerWidth > largeThreshold) {
             imageHeight = largeHeight;
             imageGap = largeGap;
         } else if (window.innerWidth > midThreshold) {
-            console.log('mid')
             imageHeight = midHeight;
             imageGap = midGap;
         } else {
