@@ -50,6 +50,12 @@
         setImageSize();
     }
 
+    function getDefaultBackground(name:string){
+        let ret=''
+        name.split(' ').forEach(s=>ret+=s.charAt(0))
+        return ret
+    }
+
     $effect(() => {
         setImageSize();
         window.addEventListener("resize", handleResize);
@@ -92,6 +98,12 @@
             setNextProject();
         }
     }
+
+    function randomFadeColor(){
+        let colors=['from-red-500 to-purple-700','from-green-400 to-blue-700']
+        return colors[Math.floor(Math.random() * colors.length)]
+    }
+
 </script>
 
 <div
@@ -110,12 +122,20 @@
                 style="width: calc({imageWidth}px);margin-left: calc({imageGap}px);margin-right: calc({imageGap}px);"
                 class="flex transition duration-500 ease-in-out flex-shrink-0 drop-shadow-2xl snap-center"
             >
+                {#if project.bghref!==''}
                 <img
-                    src={curProject.bghref}
-                    alt=""
+                    src={project.bghref}
+                    alt="project background"
                     class="lg:border-4 border-2 border-white rounded-2xl transition duration-500 ease-in-out  pointer-events-none select-none"
                     class:active={curIndex === index}
                 />
+                    {:else}
+                    <div class="
+                    justify-center items-center lg:text-6xl md:text-4xl text-2xl text-white
+                   bg-gradient-to-br {randomFadeColor()} font-bold flex w-full h-full lg:border-4 border-2 border-white rounded-2xl transition duration-500 ease-in-out  pointer-events-none select-none">
+                        {getDefaultBackground(project.name)}
+                    </div>
+                    {/if}
             </button>
         {/each}
     </div>

@@ -61,22 +61,10 @@ export const projects = [
         desc: 'Free and open source software for video recording and live streaming.',
         link: 'https://github.com/obsproject/obs-studio'
     },
-        {
-        name: 'Open Broadcaster Softwar2e',
-        bghref: '/obs.jpg',
-        desc: 'Free and open source software for video recording and live streaming.',
-        link: 'https://github.com/obsproject/obs-studio'
-    },
-        {
-        name: 'Open Broadcaster Softwa3re',
-        bghref: '/obs.jpg',
-        desc: 'Free and open source software for video recording and live streaming.',
-        link: 'https://github.com/obsproject/obs-studio'
-    },
-        {
-        name: 'Open Broadcaster Softw4are',
-        bghref: '/obs.jpg',
-        desc: 'Free and open source software for video recording and live streaming.',
-        link: 'https://github.com/obsproject/obs-studio'
+    {
+        name: 'Arc VP',
+        bghref: '',
+        desc: 'A tiny little video player based on FFmpeg, SDL2 and ImGui.',
+        link: 'https://github.com/deltamaya/ArcVP'
     },
 ]
