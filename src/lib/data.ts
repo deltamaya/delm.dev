@@ -69,17 +69,40 @@ export const projects = [
     },
 ]
 
-export const friends=[
+export const friends = [
     {
-        name:'nyne',
-        avatar:'https://avatars.githubusercontent.com/u/67669799?v=4',
-        desc:'Hello, world!',
-        link:'https://nyne.dev'
+        name: '欠陥電気',
+        avatar: 'https://secure.gravatar.com/avatar/bedbc698e8dbf819a84b440b9ad0ee8e?s=256',
+        desc: 'Any sufficiently advanced technology is indistinguishable from magic.',
+        link: 'https://blog.apeiria.net',
+        site: '欠陥電気の摸鱼小池',
     },
-        {
-        name:'maya',
-        avatar:'/avatar.jpg',
-        desc:'Together We Advance',
-        link:'https://www.delm.dev'
+    {
+        name: 'Sunset',
+        avatar: 'https://avatars.githubusercontent.com/u/26019675?v=4',
+        desc: 'Lead Programmer of @Sunset-Edu-Tech-Group. English & Chinese.',
+        link: 'https://sunmkt.uk/',
+        site: '',
+    },
+    {
+        name: 'nyne',
+        avatar: 'https://avatars.githubusercontent.com/u/67669799?v=4',
+        desc: '',
+        link: 'https://nyne.dev',
+        site: '',
+    },
+    {
+        name: 'maya',
+        avatar: 'https://avatars.githubusercontent.com/u/118270686?v=4',
+        desc: 'Together We Advance.',
+        link: 'https://www.delm.dev',
+        site: 'local',
+    },
+    {
+        name: 'Mori Meina',
+        avatar: 'https://www.xzc-meina.top/',
+        desc: 'Stop Doing IT Jobs!!!!!',
+        link: 'https://avatars.githubusercontent.com/u/79711420?v=4',
+        site: '',
     },
 ]

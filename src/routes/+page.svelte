@@ -60,7 +60,7 @@
 
 <div
     class:flex-col={mobileLayout}
-    class="min-h-[calc(100vh-2.5rem)] flex justify-evenly items-center self-center text-center
+    class="min-h-[calc(100vh-2.5rem)] flex justify-evenly items-center self-center text-center gap-10
     -z-10
 "
 >
@@ -72,7 +72,7 @@
             <img
                 src="/logo.png"
                 alt="logo"
-                class="w-24 md:w-28 lg:w-32 drop-shadow-2xl"
+                class="w-16 md:w-28 lg:w-32 drop-shadow-2xl"
                 in:fly={{ y: -50, duration: 400 }}
             />
             <div class="flex flex-col ml-5">
