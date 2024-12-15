@@ -41,6 +41,7 @@ export const shells = [
 ]
 
 export const bios = [
+    'Together We Advance.',
     'Problem Solver. Life Enthusiast.',
     'Work Hard, Play Hard.',
     'Technology should serve humanity.',
@@ -97,12 +98,5 @@ export const friends = [
         desc: 'Together We Advance.',
         link: 'https://www.delm.dev',
         site: 'local',
-    },
-    {
-        name: 'Mori Meina',
-        avatar: 'https://www.xzc-meina.top/',
-        desc: 'Stop Doing IT Jobs!!!!!',
-        link: 'https://avatars.githubusercontent.com/u/79711420?v=4',
-        site: '',
     },
 ]
