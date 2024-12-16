@@ -76,9 +76,9 @@
     <div class="flex flex-col items-center z-10">
         <div class="flex justify-center items-center">
             <img
-                src="/avatar.jpg"
+                src="https://gravatar.com/avatar/1a7b31cac6c2bbac137446c8a5da03a0?size=256"
                 alt="avatar"
-                class="lg:w-48 md:w-32 w-24 rounded-full lg:border-4 border-2 drop-shadow-2xl inline-block origin-center
+                class="lg:w-36 md:w-28 w-20 rounded-full lg:border-4 border-2 drop-shadow-2xl inline-block origin-center
                   shadow-2xl hover:scale-110 transition-transform duration-200 ease-in-out"
                 in:fly={{ y: -50, duration: 400 }}
             />

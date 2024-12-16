@@ -94,7 +94,7 @@ export const friends = [
     },
     {
         name: 'maya',
-        avatar: 'https://avatars.githubusercontent.com/u/118270686?v=4',
+        avatar: 'https://gravatar.com/avatar/1a7b31cac6c2bbac137446c8a5da03a0?size=256',
         desc: 'Together We Advance.',
         link: 'https://www.delm.dev',
         site: 'local',
