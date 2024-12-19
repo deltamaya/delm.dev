@@ -42,17 +42,33 @@ export const shells = [
 
 export const bios = [
     'Together We Advance.',
-    'Problem Solver. Life Enthusiast.',
     'Work Hard, Play Hard.',
     'Technology should serve humanity.',
+    'Problem Solver. Life Enthusiast.',
     'Make Programming Great Again!',
     'Stay Hungry, Stay Foolish.',
+    'It works on my machine',
+    'GAME OVER',
+    'One good deed a day',
+    'Skill Issue',
+    '悠哉日常大王',
     'Just for fun.',
     'Better Call Maya!',
     'Why are you still here?',
     'I\'m running out of intros!',
-    'Why don\'t you go have some fun?',
-    'Are you boring? Seriously.',
+    'Are you boring?',
+    'Why don\'t you go read my blogs?',
+    'It\'s better than staying here and watch me!',
+    'There is nothing here, really.',
+    'What are you expecting?',
+    '...',
+    '...',
+    'Okay, you won.',
+    'I\'ll tell you a little secret',
+    'But remember, do not tell anybody',
+    'You matter more than you realize.',
+    'Your presence brings something unique to this world.',
+    'You are valued, needed, and loved.'
 ]
 
 export const projects = [
