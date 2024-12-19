@@ -1,7 +1,7 @@
 <script lang="ts">
     import { fly } from "svelte/transition";
-    import IconLink from "../compoents/IconLink.svelte";
-    import MenuItem from "../compoents/MenuItem.svelte";
+    import IconLink from "./IconLink.svelte";
+    import MenuItem from "./MenuItem.svelte";
 
     const { data } = $props();
     let mobileLayout = $state(false);

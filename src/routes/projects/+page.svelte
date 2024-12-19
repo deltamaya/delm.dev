@@ -1,6 +1,6 @@
 <script lang="ts">
     import { fly } from "svelte/transition";
-    import IconButton from "../../compoents/IconButton.svelte";
+    import IconButton from "../IconButton.svelte";
     const { data } = $props();
 
     let curIndex = $state(0);
