@@ -128,7 +128,7 @@
                                     class="font-bold lg:text-lg text-xs text-indigo-500 italic hover:underline"
                                     href={friend.link}
                             >
-                                {friend.site || 'site'}
+                                {friend.site || 'visit site'}
                             </a>
                         </div>
                     </div>

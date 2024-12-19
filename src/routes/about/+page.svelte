@@ -142,7 +142,7 @@
             showArrow = false;
         }}
         class="transition duration-500 ease-in-out
-            m-8 flex flex-col bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110 p-4"
+            m-8 flex flex-col bg-gray-200 rounded-3xl drop-shadow-2xl hover:scale-110 p-4 w-3/4"
         class:translate-y-0={card1InView}
         class:opacity-90={card1InView}
         class:translate-y-16={!card1InView}
@@ -166,7 +166,7 @@
             </div>
             <div>
                 I'm a&nbsp;<strong>STEM</strong>&nbsp;enthusiast with a love for
-                all things "Nerdy"🤓, especially the digital multimedia world.
+                all things "Nerdy", especially the digital multimedia world.
             </div>
             <div class="flex items-center justify-center flex-wrap">
                 <div>My dream is to become a Full-Stack&nbsp;</div>
@@ -176,11 +176,10 @@
                 <div>&nbsp;!</div>
             </div>
             <div>
-                In my downtime, you'll probably find me watching animations.
+                I enjoy watching anime and connecting with like-minded friends to discuss technology, culture, and creativity.
             </div>
             <div>
-                While I enjoy anime, I also have a soft spot for 🇺🇸 and 🗾
-                animated series.
+               I am currently a university student, actively planning my career development, particularly exploring opportunities in technology and education.
             </div>
             <a href="/exchange" class="hover:underline">
                 <div class="text-indigo-500">
