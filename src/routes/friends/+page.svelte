@@ -41,7 +41,7 @@
     $effect(() => {
         setImageSize();
         window.addEventListener("resize", handleResize);
-        window.addEventListener("wheel", handleWheel);
+        window.addEventListener("wheel", handleWheel, {passive: false});
 
         window.addEventListener("touchstart", handleTouchDown);
         window.addEventListener("touchmove", handleTouchMove);
@@ -70,13 +70,19 @@
         prevY = e.touches[0].clientY;
     }
 
+    let accumulatedDeltaY = 0;
+    const scrollThreshold = 50;
+
     function handleWheel(e: WheelEvent) {
         e.preventDefault();
-        if (e.deltaY < 0) {
-            setPrevFriend();
-        }
-        if (e.deltaY > 0) {
+        accumulatedDeltaY += e.deltaY;
+        console.log(accumulatedDeltaY)
+        if (accumulatedDeltaY > scrollThreshold) {
             setNextFriend();
+            accumulatedDeltaY = 0;
+        } else if (accumulatedDeltaY < -scrollThreshold) {
+            setPrevFriend();
+            accumulatedDeltaY = 0;
         }
     }
 
@@ -113,11 +119,11 @@
                     />
 
                     <div class="flex flex-col flex-grow justify-between lg:mt-4 md:mt-2 mt-0">
-                                            <div
-                            class="text-gray-800 font-bold lg:text-2xl md:text-xl text-lg"
-                    >
-                        {friend.name}
-                    </div>
+                        <div
+                                class="text-gray-800 font-bold lg:text-2xl md:text-xl text-lg"
+                        >
+                            {friend.name}
+                        </div>
                         <div class="flex justify-between">
                             <div
                                     class="text-gray-400 lg:text-lg text-xs flex-shrink"
