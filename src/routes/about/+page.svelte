@@ -176,10 +176,10 @@
                 <div>&nbsp;!</div>
             </div>
             <div>
-                I enjoy watching anime and connecting with like-minded friends to discuss technology, culture, and creativity.
+                I enjoy watching <strong>anime</strong> and connecting with like-minded friends to discuss <strong>technology</strong>, <strong>culture</strong>, and <strong>creativity</strong>.
             </div>
             <div>
-               I am currently a university student, actively planning my career development, particularly exploring opportunities in technology and education.
+               I am currently a university student, actively planning my career development, particularly exploring opportunities in <strong>technology</strong> and <strong>education</strong>.
             </div>
             <a href="/exchange" class="hover:underline">
                 <div class="text-indigo-500">
