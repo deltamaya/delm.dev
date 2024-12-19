@@ -2,7 +2,6 @@
     import { fly } from "svelte/transition";
     import Icon from "@iconify/svelte";
     import type { Action } from "svelte/action";
-    import InviewPopup from "../InviewPopup.svelte";
     import IntroCard from "./IntroCard.svelte";
     import SkillCard from "./SkillCard.svelte";
     import MindsetCard from "./MindsetCard.svelte";
@@ -18,7 +17,6 @@
         rootMargin: "0px",
         threshold: [0.4],
     };
-    let data=$props()
     let observer: IntersectionObserver;
     let mobileLayout = $state(false);
     const mobileLayoutThreshold = 920;
@@ -161,7 +159,7 @@
         role="main"
         aria-label="Intro Card"
     >
-       <SkillCard {observeme} {mobileLayout} skills={data} {scrollPosition}/>
+       <SkillCard {observeme} {mobileLayout} {scrollPosition}/>
     </div>
 </div>
 <div
