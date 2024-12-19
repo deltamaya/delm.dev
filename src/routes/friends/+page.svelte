@@ -1,5 +1,6 @@
 <script lang="ts">
     import {fly} from "svelte/transition";
+    import {cubicInOut} from "svelte/easing";
 
     let {data} = $props();
     let curIndex = $state(0);
@@ -76,7 +77,6 @@
     function handleWheel(e: WheelEvent) {
         e.preventDefault();
         accumulatedDeltaY += e.deltaY;
-        console.log(accumulatedDeltaY)
         if (accumulatedDeltaY >= scrollThreshold) {
             setNextFriend();
             accumulatedDeltaY = 0;
@@ -100,13 +100,15 @@
 >
     <div
             class="flex flex-col transform duration-500 ease-in-out w-full justify-center items-center z-10"
+
             style="transform: translateY(calc(50% - {curIndex * sep + hsep}px));"
     >
+        <div in:fly={{y:-1500,duration:1000,easing:cubicInOut}} class="flex flex-col">
+
         {#each data.friends as friend, index (index)}
             <div
                     class="rounded-2xl flex drop-shadow-2xl
         transition duration-300 ease-in-out bg-gray-100 p-4"
-                    in:fly|global={{ x: 100, duration: 400, delay: index * 100 }}
                     style="width: calc({imageHeight /
                     0.6}px);height: calc({imageHeight}px);margin-top: calc({imageGap}px);margin-bottom: calc({imageGap}px);"
                     class:scale-150={curIndex === index}
@@ -141,6 +143,8 @@
                 </div>
             </div>
         {/each}
+        </div>
+
     </div>
 </div>
 <div

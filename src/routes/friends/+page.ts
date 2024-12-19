@@ -1,18 +1,21 @@
 import {friends} from "$lib/data";
 
-function shuffleArray(array:any) {
-  for (let i = array.length - 1; i > 0; i--) {
-    // Generate a random index between 0 and i
-    const j = Math.floor(Math.random() * (i + 1));
-    // Swap elements at indices i and j
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
+function shuffleArray(array: any[]) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    const index = array.findIndex((item) => item.name === 'maya')
+    if (index !== -1) {
+        const [item] = array.splice(index, 1);
+        array.push(item);
+    }
+    return array
 }
 
 
-export function load(){
+export function load() {
     return {
-        friends:shuffleArray(friends)
+        friends: shuffleArray(friends)
     }
 }

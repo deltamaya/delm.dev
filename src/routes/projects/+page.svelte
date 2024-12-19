@@ -33,6 +33,7 @@
         curIndex = Math.min(curIndex + 1, data.projects.length - 1);
     }
 
+
     function setImageSize() {
         if (window.innerWidth > largeThreshold) {
             imageWidth = largeWidth;
@@ -89,16 +90,20 @@
         prevX = e.touches[0].clientX;
     }
 
+    let accumulatedDeltaY = 0;
+    const scrollThreshold = 100;
+
     function handleWheel(e: WheelEvent) {
         e.preventDefault();
-        if (e.deltaY < 0) {
-            setPrevProject();
-        }
-        if (e.deltaY > 0) {
+        accumulatedDeltaY += e.deltaY;
+        if (accumulatedDeltaY >= scrollThreshold) {
             setNextProject();
+            accumulatedDeltaY = 0;
+        } else if (accumulatedDeltaY <= -scrollThreshold) {
+            setPrevProject();
+            accumulatedDeltaY = 0;
         }
     }
-
     function randomFadeColor() {
         let colors = [
             "from-red-500 to-purple-700",

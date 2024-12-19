@@ -93,17 +93,18 @@ export const friends = [
         site: '',
     },
         {
-        name: 'Reverier-Xu',
-        avatar: 'https://avatars.githubusercontent.com/u/41937333?v=4',
-        desc: '一个希望写点有趣东西的理想主义者',
-        link: 'https://blog.woooo.tech/',
-        site: 'Reverier\'s Blog',
-    },
-    {
         name: 'maya',
         avatar: 'https://gravatar.com/avatar/1a7b31cac6c2bbac137446c8a5da03a0?size=256',
         desc: 'Together We Advance.',
         link: 'https://www.delm.dev',
         site: 'localhost',
     },
+        {
+        name: 'Reverier-Xu',
+        avatar: 'https://avatars.githubusercontent.com/u/41937333?v=4',
+        desc: '一个希望写点有趣东西的理想主义者',
+        link: 'https://blog.woooo.tech/',
+        site: 'Reverier\'s Blog',
+    },
+
 ]
