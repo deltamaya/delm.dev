@@ -71,16 +71,16 @@
     }
 
     let accumulatedDeltaY = 0;
-    const scrollThreshold = 50;
+    const scrollThreshold = 100;
 
     function handleWheel(e: WheelEvent) {
         e.preventDefault();
         accumulatedDeltaY += e.deltaY;
         console.log(accumulatedDeltaY)
-        if (accumulatedDeltaY > scrollThreshold) {
+        if (accumulatedDeltaY >= scrollThreshold) {
             setNextFriend();
             accumulatedDeltaY = 0;
-        } else if (accumulatedDeltaY < -scrollThreshold) {
+        } else if (accumulatedDeltaY <= -scrollThreshold) {
             setPrevFriend();
             accumulatedDeltaY = 0;
         }
