@@ -3,13 +3,13 @@
     let {children} = $props();
 </script>
 
-<main class="bg-gray-200 font-inter relative overflow-hidden">
+<main class="bg-gray-200 font-inter relative overflow-hidden z-0">
     {#if children}
         {@render children()}
     {/if}
 </main>
 
-<footer class=" bg-gray-900 text-gray-200 py-4 flex justify-center items-center font-inter h-10 z-40">
+<footer class=" bg-gray-900 text-gray-200 py-4 flex justify-center items-center font-inter h-10 z-40 relative">
     <div class="text-sm text-center flex flex-wrap justify-center items-center z-40">
         <span class="inline-block mr-2">©</span>
         <span>2024 Maya. All works Copyleft.</span>

@@ -117,12 +117,13 @@
     class="min-h-[calc(100vh-2.5rem)] flex flex-col justify-center items-center -z-10"
 >
     <div
-        in:fly|local={{ y: -100, duration: 400 }}
         class="w-full flex transform duration-500 ease-in-out snap-x snap-proximity z-10"
         style="transform: translateX(calc(50% - {curIndex * sep + hsep}px));"
     >
         {#each data.projects as project, index (project.name)}
             <button
+        in:fly|global={{ y: -100, duration: 400,delay:50*index }}
+
                 onclick={() => {
                     curIndex = index;
                 }}
