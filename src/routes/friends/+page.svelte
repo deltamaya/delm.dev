@@ -117,7 +117,7 @@
                     <img
                             src={friend.avatar}
                             alt="avatar"
-                            class="lg:w-24 md:w-20 w-14 rounded-full lg:border-4 border-2 border-white"
+                            class="lg:w-24 md:w-20 w-14 rounded-xl lg:border-4 border-2 border-white"
                     />
 
                     <div class="flex flex-col flex-grow justify-between lg:mt-4 md:mt-2 mt-0">

@@ -122,5 +122,11 @@ export const friends = [
         link: 'https://blog.woooo.tech/',
         site: 'Reverier\'s Blog',
     },
-
+        {
+        name: 'archlinux 简明指南',
+        avatar: 'https://arch.icekylin.online/images/hero.svg',
+        desc: '让 archlinux 成为你的常用系统吧！',
+        link: 'https://arch.icekylin.online/',
+        site: '',
+    },
 ]
