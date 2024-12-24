@@ -28,7 +28,6 @@
             window.removeEventListener("resize", handleResize);
         };
     });
-    // $inspect(bioIndex)
 
     const handleResize = () => {
         mobileLayout = window.innerWidth <= mobileLayoutThreshold;
@@ -60,24 +59,24 @@
 
 <div
     class:flex-col={mobileLayout}
-    class="min-h-[calc(100vh-2.5rem)] flex justify-evenly items-center self-center text-center gap-10
+    class="min-h-[calc(100vh-2.5rem)] flex justify-evenly items-center self-center text-center gap-10 flex-wrap
     -z-10
 "
 >
     <div
-        class="flex flex-col justify-between items-center z-10
+        class="flex flex-col justify-between items-center z-10 mx-3
     "
     >
         <div class="flex items-baseline title-float">
             <img
                 src="/logo.png"
                 alt="logo"
-                class="w-16 md:w-28 lg:w-32 drop-shadow-2xl"
+                class="w-24 md:w-28 lg:w-48 drop-shadow-2xl"
                 in:fly={{ y: -50, duration: 400 }}
             />
             <div class="flex flex-col ml-5">
                 <p
-                    class="lg:text-8xl md:text-6xl text-4xl font-bold text-gray-800 mt-2"
+                    class="lg:text-9xl md:text-7xl text-6xl font-bold text-gray-800 mt-2"
                     in:fly={{ y: -50, duration: 400, delay: 50 }}
                 >
                     delm.<span class="text-red-500">dev</span>
