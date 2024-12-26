@@ -20,7 +20,7 @@ export const menuItems = [
 ]
 
 export const languages = [
-    {href: "https://isocpp.org/", label: "C++", iconClass: "devicon-plain:cplusplus"},
+    {href: "https://en.cppreference.com/w/", label: "C++", iconClass: "devicon-plain:cplusplus"},
     {href: "https://go.dev/", label: "Go", iconClass: "file-icons:go"},
     {href: "https://www.python.org/", label: "Python", iconClass: "lineicons:python"},
     {href: "https://www.typescriptlang.org/", label: "Typescript", iconClass: "lineicons:typescript"},
