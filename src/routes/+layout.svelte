@@ -12,7 +12,7 @@
 <footer class="bg-gray-900 text-white py-4 flex justify-center items-center font-inter h-10 !z-40 relative">
     <div class="text-sm text-center flex flex-wrap justify-center items-center z-40">
         <span class="inline-block mr-2">©</span>
-        <span>2024 Maya. All works&nbsp;</span>
+        <span>{new Date().getFullYear()} Maya. All works&nbsp;</span>
         <a
                 href="https://www.gnu.org/copyleft/"
                 target="_blank"
