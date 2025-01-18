@@ -9,8 +9,8 @@ export default {
         extend: {
             fontFamily: {
                 // ibmPlexSansSC: ['IBM Plex Sans SC', 'sans-serif'],
-                inter: ['Inter', 'sans-serif'],
-                jetbrains: ['JetBrains Mono', 'consolas', 'monospace'],
+                IBMPlexMono: ['IBM Plex Mono', 'monospace'],
+                IBMPlexSans:['IBM Plex Sans','sans']
             },
             animation: {
                 wave: "wave 2s ease-in-out infinite",
