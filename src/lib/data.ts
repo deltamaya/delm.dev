@@ -13,31 +13,34 @@ export const socialLinks = [
 ]
 
 export const menuItems = [
-    {href: 'https://blog.delm.dev', label: 'blogs', title: 'Blogs', iconClass: 'fa-solid:blog'},
-    {href: "/friends", label: "friends", title: "Friends", iconClass: "fa-solid:heart"},
-    {href: '/projects', label: 'projects', title: 'Projects', iconClass: 'ion:hammer'},
-    {href: "/about", label: "about", title: "About", iconClass: "fa-solid:info-circle"},
+    {href: 'https://blog.delm.dev', label: 'blogs', title: 'Blogs', iconUrl: 'fa-solid:blog'},
+    {href: "/friends", label: "friends", title: "Friends", iconUrl: "fa-solid:heart"},
+    {href: '/projects', label: 'projects', title: 'Projects', iconUrl: 'ion:hammer'},
+    {href: "/about", label: "about", title: "About", iconUrl: "fa-solid:info-circle"},
 ]
 
 export const languages = [
-    {href: "https://en.cppreference.com/w/", label: "C++", iconClass: "devicon-plain:cplusplus"},
-    {href: "https://go.dev/", label: "Go", iconClass: "file-icons:go"},
-    {href: "https://www.python.org/", label: "Python", iconClass: "lineicons:python"},
-    {href: "https://www.typescriptlang.org/", label: "Typescript", iconClass: "lineicons:typescript"},
+    {href: "https://en.cppreference.com/w/", label: "c plus plus", iconUrl: "cpp.svg"},
+    {href: "https://go.dev/", label: "go", iconUrl: "go.svg"},
+    {href: "https://www.python.org/", label: "python", iconUrl: "python.svg"},
+    {href: "https://www.typescriptlang.org/", label: "typescript", iconUrl: "ts.svg"},
 ]
 export const frontendFrameworks = [
-    {href: "https://svelte.dev/", label: "Svelte", iconClass: "ri:svelte-fill"},
-    {href: "https://tailwindcss.com/", label: "Tailwind", iconClass: "mdi:tailwind"},
+    {href: "https://svelte.dev/", label: "Svelte", iconUrl: "svelte.svg"},
+    {href: "https://tailwindcss.com/", label: "Tailwind", iconUrl: "tailwind.svg"},
 ]
 
 export const operatingSystems = [
-    {href: "https://www.apple.com/macos", label: "MacOS", iconClass: "mdi:apple"},
-    {href: "https://archlinux.org", label: "ArchLinux", iconClass: "mdi:arch"},
-    {href: "https://www.microsoft.com/windows", label: "Window", iconClass: "mdi:windows"},
+    {href: "https://www.apple.com/macos", label: "macOS", iconUrl: "apple.svg"},
+    {href: "https://archlinux.org", label: "ArchLinux", iconUrl: "archlinux.svg"},
+    {href: "https://www.microsoft.com/windows", label: "Windows", iconUrl: "microsoft.svg"},
 ]
 
-export const shells = [
-    {href: "https://ohmyz.sh/", label: "ohmyzsh", iconClass: "devicon-plain:ohmyzsh"},
+export const miscs = [
+    {href: "https://www.google.com/chrome/", label: "chrome", iconUrl: "chrome.svg"},
+    {href: "https://ohmyz.sh/", label: "zsh", iconUrl: "zsh.svg"},
+    {href: "https://neovim.io/", label: "neovim", iconUrl: "nvim.svg"},
+    {href: "https://code.visualstudio.com/", label: "vscode", iconUrl: "vscode.svg"},
 ]
 
 export const bios = [
