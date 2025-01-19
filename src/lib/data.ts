@@ -75,16 +75,28 @@ export const bios = [
 
 export const projects = [
     {
-        name: 'Open Broadcaster Software',
-        bghref: '/obs.jpg',
+        title: 'OBS Studio',
+        iconUrl: 'https://obsproject.com/assets/images/new_icon_small-r.png',
         desc: 'Free and open source software for video recording and live streaming.',
-        link: 'https://github.com/obsproject/obs-studio'
+        href: 'https://github.com/obsproject/obs-studio'
     },
     {
-        name: 'Arc VP',
-        bghref: '',
-        desc: 'A tiny little video player based on FFmpeg, SDL2 and ImGui.',
-        link: 'https://github.com/deltamaya/ArcVP'
+        title: 'Arc VP',
+        iconUrl: 'player.svg',
+        desc: 'Toy video player based on FFmpeg, OpenGL, SDL2 and ImGui.',
+        href: 'https://github.com/deltamaya/ArcVP'
+    },
+        {
+        title: 'kvraft',
+        iconUrl: 'hashtag.svg',
+        desc: 'Distributed kv service build on Raft consensus.',
+        href: 'https://github.com/deltamaya/MIT6.824'
+    },
+            {
+        title: 'venera',
+        iconUrl: 'https://nyne.dev/venera.png',
+        desc: 'A comic app allows you read from multiple sources in a single app.',
+        href: 'https://github.com/venera-app/venera'
     },
 ]
 

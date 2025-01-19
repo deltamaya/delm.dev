@@ -115,11 +115,13 @@
         </div>
 
     </div>
-    <div class="flex flex-col  font-bold text-4xl py-16 px-48">
+    <div class="flex flex-col  font-bold text-4xl py-16 px-48 space-y-5">
         <div class="text-6xl font-extrabold">
             .projects
         </div>
-        Here are
+        <div>
+            Here are some projects I built or contributed.
+        </div>
         <ProjectsDisplay/>
     </div>
     <div class="flex flex-col  font-bold text-4xl py-16 px-48 bg-neutral-800 text-white">
