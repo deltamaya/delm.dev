@@ -41,6 +41,7 @@ export const miscs = [
     {href: "https://ohmyz.sh/", label: "zsh", iconUrl: "zsh.svg"},
     {href: "https://neovim.io/", label: "neovim", iconUrl: "nvim.svg"},
     {href: "https://code.visualstudio.com/", label: "vscode", iconUrl: "vscode.svg"},
+    {href: "https://catppuccin.com/", label: "catppuccin", iconUrl: "https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png"},
 ]
 
 export const bios = [
