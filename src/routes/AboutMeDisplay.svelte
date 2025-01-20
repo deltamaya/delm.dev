@@ -26,13 +26,4 @@
         I am currently a university student, actively planning my career development, particularly exploring
         opportunities in <strong>technology</strong> and <strong>education</strong>.
     </div>
-    <div>
-          Feel like we'd vibe? Let's exchange
-        <a href="/exchange" class="hover:underline bg-red-600 px-3 py-1 italic underline">
-    Friend Links
-    </a>
-        !
-         You're always welcome. 😊
-    </div>
-
 </div>

@@ -41,7 +41,11 @@ export const miscs = [
     {href: "https://ohmyz.sh/", label: "zsh", iconUrl: "zsh.svg"},
     {href: "https://neovim.io/", label: "neovim", iconUrl: "nvim.svg"},
     {href: "https://code.visualstudio.com/", label: "vscode", iconUrl: "vscode.svg"},
-    {href: "https://catppuccin.com/", label: "catppuccin", iconUrl: "https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png"},
+    {
+        href: "https://catppuccin.com/",
+        label: "catppuccin",
+        iconUrl: "https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png"
+    },
 ]
 
 export const bios = [
@@ -86,13 +90,13 @@ export const projects = [
         desc: 'Toy video player based on FFmpeg, OpenGL, SDL2 and ImGui.',
         href: 'https://github.com/deltamaya/ArcVP'
     },
-        {
+    {
         title: 'kvraft',
         iconUrl: 'hashtag.svg',
         desc: 'Distributed kv service build on Raft consensus.',
         href: 'https://github.com/deltamaya/MIT6.824'
     },
-            {
+    {
         title: 'venera',
         iconUrl: 'https://nyne.dev/venera.png',
         desc: 'A comic app allows you read from multiple sources in a single app.',
@@ -122,25 +126,26 @@ export const friends = [
         link: 'https://nyne.dev',
         site: '',
     },
-        {
-        name: 'maya',
-        avatar: 'https://avatars.githubusercontent.com/u/118270686?v=4',
-        desc: 'Together We Advance.',
-        link: 'https://www.delm.dev',
-        site: 'localhost',
-    },
-        {
+
+    {
         name: 'Reverier-Xu',
         avatar: 'https://avatars.githubusercontent.com/u/41937333?v=4',
         desc: '一个希望写点有趣东西的理想主义者',
         link: 'https://blog.woooo.tech/',
         site: 'Reverier\'s Blog',
     },
-        {
+    {
         name: 'archlinux 简明指南',
         avatar: 'https://arch.icekylin.online/images/hero.svg',
         desc: '让 archlinux 成为你的常用系统吧！',
         link: 'https://arch.icekylin.online/',
         site: '',
+    },
+    {
+        name: 'maya',
+        avatar: 'https://avatars.githubusercontent.com/u/118270686?v=4',
+        desc: 'Together We Advance.',
+        link: 'https://www.delm.dev',
+        site: 'localhost',
     },
 ]

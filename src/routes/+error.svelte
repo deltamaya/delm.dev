@@ -19,7 +19,7 @@
 </script>
 
 <div
-        class="min-h-[calc(100vh-2.5rem)] pb-56 flex justify-center items-center lg:text-8xl md:text-6xl sm:text-4xl text-2xl font-bold -z-10 overflow-hidden"
+        class="min-h-[calc(100vh-4rem)] pb-56 flex justify-center items-center lg:text-8xl md:text-6xl sm:text-4xl text-2xl font-bold -z-10 overflow-hidden"
 >
     <div class="z-10">
         <img
@@ -32,7 +32,7 @@
                 class="flex">
             <div>
                 <div class="lg:text-9xl md:text-8xl text-6xl">Oops!</div>
-                <div class="h-2 w-full bg-red-500"></div>
+                <div class="h-2 w-full bg-red-600"></div>
             </div>
 
             <div
@@ -41,7 +41,7 @@
                 <div>404</div>
                 <div>Not Found</div>
                 <button
-                        class="lg:text-2xl md:text-xl sm:text-lg text-sm bg-red-500 border-red-500 border-2 text-gray-200 p-1
+                        class="lg:text-2xl md:text-xl sm:text-lg text-sm bg-red-600 border-red-600 border-2 text-gray-200 p-1
 hover:bg-transparent hover:text-gray-800 transition-colors duration-300"
                         onclick={() => history.back()}
                 >Let's Get the Hell Out of Here!

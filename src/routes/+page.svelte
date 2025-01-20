@@ -9,7 +9,6 @@
     import SocialLink from "./SocialLink.svelte";
 
 
-
 </script>
 
 <div class="flex flex-col w-full">
@@ -103,11 +102,13 @@
         </div>
         <AboutMeDisplay/>
     </div>
-    <div class="flex flex-col  font-bold text-4xl py-16 px-48">
+    <div class="flex flex-col  font-bold text-4xl py-16 px-48 space-y-5">
         <div class="text-6xl font-extrabold">
             .links
         </div>
-        Here are some links of my friends or some websites I appreciate.
+        <div>
+            Here are some links of my friends or some websites I appreciate.
+        </div>
         <FriendsDisplay/>
     </div>
 </div>
