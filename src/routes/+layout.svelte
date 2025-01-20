@@ -1,7 +1,42 @@
 <script lang="ts">
     import "../app.css";
+    import {fly} from 'svelte/transition'
+
     let {children} = $props();
+        let showHeader = $state(false);
+    let showHeaderThreshold = 500;
+
+    $effect(() => {
+        handleScroll()
+        window.addEventListener('scroll', handleScroll)
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    })
+
+    function handleScroll() {
+        showHeader = window.scrollY > showHeaderThreshold;
+    }
 </script>
+
+{#if showHeader}
+    <div class="flex w-full fixed px-48 py-5 bg-neutral-800 opacity-95 text-white z-10"
+         transition:fly={{y:-50,duration:200}}>
+        <div class="flex font-extrabold text-3xl space-x-10">
+            <img src="logo-white.png" class="w-[70px] h-[35px]" alt="logo"/>
+            <div>
+                Projects
+            </div>
+            <div>
+                About
+            </div>
+            <div>
+                Friends
+            </div>
+        </div>
+    </div>
+{/if}
+    <div class="w-full h-6 bg-red-600"></div>
 
 <main class="bg-neutral-100 font-Inter">
     {#if children}

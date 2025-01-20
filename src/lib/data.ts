@@ -1,6 +1,6 @@
 export const socialLinks = [
-    {href: 'https://github.com/deltamaya', label: 'github link', iconClass: 'mdi:github'},
-    {href: "https://twitter.com/0xdelm", label: "twitter/x link", iconClass: "mdi:twitter"},
+    {href: 'https://github.com/deltamaya', label: 'github', iconClass: 'mdi:github'},
+    {href: "https://bsky.app/profile/delm.dev", label: "bluesky", iconClass: "ri:bluesky-fill"},
     {href: "https://t.me/deltamayabot", label: "telegram bot", iconClass: "mdi:telegram"},
     {
         href: "https://music.163.com/#/user/home?id=372313613",

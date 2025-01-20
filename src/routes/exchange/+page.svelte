@@ -3,7 +3,7 @@
 
 </script>
 
-<div class="min-h-[calc(100vh-2.5rem)] flex justify-evenly items-center self-center text-center gap-10
+<div class="min-h-[calc(100vh-4rem)] flex justify-evenly items-center self-center text-center gap-10
 bg-gray-200 font-bold
     -z-10
 ">
@@ -15,7 +15,7 @@ bg-gray-200 font-bold
         <div class="mt-10">
                     <div
                                  in:fly={{ y: 50, duration: 400 }}>
-            Send via <a href="mailto:me@delm.dev" class="font-bold text-red-500 underline">Email</a>
+            Send via <a href="mailto:me@delm.dev" class="font-bold text-red-600 underline">Email</a>
         </div>
         <div
                      in:fly={{ y: 50, duration: 400 ,delay:100}}>
@@ -23,7 +23,7 @@ bg-gray-200 font-bold
         </div>
         <div
                      in:fly={{ y: 50, duration: 400  ,delay:200}}>
-            Send via <a href="https://t.me/deltamayabot"  class="font-bold text-red-500 underline">Telegram Bot</a>
+            Send via <a href="https://t.me/deltamayabot"  class="font-bold text-red-600 underline">Telegram Bot</a>
         </div>
         </div>
 

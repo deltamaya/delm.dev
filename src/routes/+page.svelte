@@ -1,6 +1,5 @@
 <script lang="ts">
 
-    import {fly} from 'svelte/transition'
 
     import ProjectsDisplay from "./ProjectsDisplay.svelte";
     import FriendsDisplay from "./FriendsDisplay.svelte";
@@ -9,41 +8,11 @@
     import IconLink from "./IconLink.svelte";
     import SocialLink from "./SocialLink.svelte";
 
-    let showHeader = $state(false);
-    let showHeaderThreshold = 500;
 
-    $effect(() => {
-        handleScroll()
-        window.addEventListener('scroll', handleScroll)
-        return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-    })
-
-    function handleScroll() {
-        showHeader = window.scrollY > showHeaderThreshold;
-    }
 
 </script>
-{#if showHeader}
-    <div class="flex w-full fixed px-48 py-5 bg-neutral-800 opacity-95 text-white z-10"
-         transition:fly={{y:-50,duration:200}}>
-        <div class="flex font-extrabold text-3xl space-x-10">
-            <img src="logo-white.png" class="w-[70px] h-[35px]" alt="logo"/>
-            <div>
-                Projects
-            </div>
-            <div>
-                About
-            </div>
-            <div>
-                Friends
-            </div>
-        </div>
-    </div>
-{/if}
+
 <div class="flex flex-col w-full">
-    <div class="w-full h-6 bg-red-600"></div>
     <div class="my-5 px-48 w-full flex">
         <div class="flex flex-grow">
             <div class="flex font-extrabold text-3xl space-x-10">
@@ -77,7 +46,7 @@
     </div>
     <div class="bg-neutral-800 w-full flex flex-col font-bold text-4xl py-16 px-48 text-white">
         <div class="text-6xl font-extrabold">
-            .skillset
+            .tech
         </div>
         <div class="flex flex-col space-y-5 mt-5">
             <div class="flex items-center">
@@ -125,9 +94,12 @@
         </div>
         <ProjectsDisplay/>
     </div>
-    <div class="flex flex-col  font-bold text-4xl py-16 px-48 bg-neutral-800 text-white">
+    <div class="flex flex-col  font-bold text-4xl py-16 px-48 bg-neutral-800 text-white space-y-5">
         <div class="text-6xl font-extrabold">
             .info
+        </div>
+        <div>
+            Some information about me.
         </div>
         <AboutMeDisplay/>
     </div>
