@@ -87,7 +87,7 @@ export const projects = [
     {
         title: 'Arc VP',
         iconUrl: 'player.svg',
-        desc: 'Toy video player based on FFmpeg, OpenGL, SDL2 and ImGui.',
+        desc: 'Toy video player based on FFmpeg, OpenGL, and SDL2.',
         href: 'https://github.com/deltamaya/ArcVP'
     },
     {

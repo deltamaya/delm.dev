@@ -29,8 +29,8 @@
         </div>
     </div>
     <div class="px-48 flex justify-center items-center flex-col my-24">
-        <div class="h-96 w-96 border-8 hover:border-red-600 border-neutral-900 transition-colors duration-300 rounded-full">
-            <img src="avatar.jpg" alt="avatar" class="rounded-full"/>
+        <div class="h-92 w-96 border-8 hover:border-red-600 border-neutral-900 transition-colors duration-300 rounded-full">
+            <img src="avatar.png" alt="avatar" class="rounded-full"/>
         </div>
         <div class="font-extrabold text-4xl px-48 pt-32 text-center">
             Hey, I'm <span class="text-red-600">deltamaya</span>.
