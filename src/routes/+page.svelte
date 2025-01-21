@@ -12,7 +12,7 @@
 </script>
 
 <div class="flex flex-col w-full">
-    <div class="my-5 px-48 w-full flex">
+    <div class="my-5 lg:px-48 md:px-32 sm:px-16 px-2 w-full flex">
         <div class="flex flex-grow">
             <div class="flex font-extrabold text-3xl space-x-10">
                 <img src="logo.png" class="w-[70px] h-[40px]" alt="logo"/>
@@ -28,11 +28,10 @@
             </div>
         </div>
     </div>
-    <div class="px-48 flex justify-center items-center flex-col my-24">
-        <div class="h-92 w-96 border-8 hover:border-red-600 border-neutral-900 transition-colors duration-300 rounded-full">
-            <img src="avatar.png" alt="avatar" class="rounded-full"/>
-        </div>
-        <div class="font-extrabold text-4xl px-48 pt-32 text-center">
+    <div class="lg:px-48 md:px-32 sm:px-16 px-2 flex justify-center items-center flex-col lg:my-24 md:my-16 sm:my-8 my-4">
+        <img src="avatar.png" alt="avatar"
+             class="lg:h-96 md:h-64 sm:h-48 h-36 rounded-full lg:border-8 md:border-6 border-4 hover:border-red-600 border-neutral-900 transition-colors duration-300"/>
+        <div class="font-extrabold lg:text-4xl md:text-3xl sm:text-2xl text-xl lg:px-48 px-16 lg:pt-32 md:pt-24 pt-12 text-center">
             Hey, I'm <span class="text-red-600">deltamaya</span>.
             A Computer Science student originally
             from Shandong, China. I hope this page could help you understand me better.
@@ -43,11 +42,11 @@
             {/each}
         </div>
     </div>
-    <div class="bg-neutral-800 w-full flex flex-col font-bold text-4xl py-16 px-48 text-white">
-        <div class="text-6xl font-extrabold">
+    <div class="bg-neutral-800 w-full flex flex-col font-bold text-4xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 text-white">
+        <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .tech
         </div>
-        <div class="flex flex-col space-y-5 mt-5">
+        <div class="flex flex-col space-y-5 mt-5 lg:text-5xl md:text-3xl text-2xl">
             <div class="flex items-center">
                 languages:
                 <div class="ml-3 flex space-x-3 justify-center items-center">
@@ -55,7 +54,6 @@
                         <IconLink iconUrl={lang.iconUrl} label={lang.label} href={lang.href}/>
                     {/each}
                 </div>
-
             </div>
             <div class="flex items-center space-x-3">
                 OS:
@@ -84,8 +82,8 @@
         </div>
 
     </div>
-    <div class="flex flex-col  font-bold text-4xl py-16 px-48 space-y-5">
-        <div class="text-6xl font-extrabold">
+    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5">
+        <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .projects
         </div>
         <div>
@@ -93,8 +91,8 @@
         </div>
         <ProjectsDisplay/>
     </div>
-    <div class="flex flex-col  font-bold text-4xl py-16 px-48 bg-neutral-800 text-white space-y-5">
-        <div class="text-6xl font-extrabold">
+    <div class="flex flex-col  font-bold text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 bg-neutral-800 text-white space-y-5">
+        <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .info
         </div>
         <div>
@@ -102,8 +100,8 @@
         </div>
         <AboutMeDisplay/>
     </div>
-    <div class="flex flex-col  font-bold text-4xl py-16 px-48 space-y-5">
-        <div class="text-6xl font-extrabold">
+    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5">
+        <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .links
         </div>
         <div>
