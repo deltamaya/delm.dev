@@ -2,7 +2,7 @@
     import WavingText from "./WavingText.svelte";
 </script>
 
-<div class="flex flex-col space-y-10 lg:text-4xl md:text-3xl text-2xl">
+<div class="flex flex-col space-y-10 lg:text-3xl md:text-2xl text-xl">
     <div>
         A&nbsp;<span class="bg-red-600 lg:px-3 lg:py-2 px-1 py-1">Computer Science</span>&nbsp;student originally
         from Shandong, China.

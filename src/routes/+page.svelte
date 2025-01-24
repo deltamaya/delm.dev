@@ -32,7 +32,7 @@
         <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .tech
         </div>
-        <div class="flex flex-col space-y-5 mt-5 lg:text-5xl md:text-3xl text-2xl">
+        <div class="flex flex-col space-y-5 mt-5 lg:text-5xl md:text-3xl text-2xl p-5">
             <div class="flex items-center">
                 languages:
                 <div class="ml-3 flex space-x-3 justify-center items-center">
