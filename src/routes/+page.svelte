@@ -7,28 +7,14 @@
     import {frontendFrameworks, languages, miscs, operatingSystems, socialLinks} from "$lib/data";
     import IconLink from "./IconLink.svelte";
     import SocialLink from "./SocialLink.svelte";
+    import Header from "./Header.svelte";
 
 
 </script>
 
 <div class="flex flex-col w-full">
-    <div class="my-5 lg:px-48 md:px-32 sm:px-16 px-2 w-full flex">
-        <div class="flex flex-grow">
-            <div class="flex font-extrabold text-3xl space-x-10">
-                <img src="logo.png" class="w-[70px] h-[40px]" alt="logo"/>
-                <div>
-                    Projects
-                </div>
-                <div>
-                    About
-                </div>
-                <div>
-                    Friends
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="lg:px-48 md:px-32 sm:px-16 px-2 flex justify-center items-center flex-col lg:my-24 md:my-16 sm:my-8 my-4">
+    <Header dark={false}/>
+    <div class="flex flex-col justify-center items-center">
         <img src="avatar.png" alt="avatar"
              class="lg:h-96 md:h-64 sm:h-48 h-36 rounded-full lg:border-8 md:border-6 border-4 hover:border-red-600 border-neutral-900 transition-colors duration-300"/>
         <div class="font-extrabold lg:text-4xl md:text-3xl sm:text-2xl text-xl lg:px-48 px-16 lg:pt-32 md:pt-24 pt-12 text-center">
@@ -36,7 +22,7 @@
             A Computer Science student originally
             from Shandong, China. I hope this page could help you understand me better.
         </div>
-        <div class="flex mt-10 space-x-2">
+        <div class="flex my-10 space-x-2">
             {#each socialLinks as link}
                 <SocialLink iconClass={link.iconClass} label={link.label} href={link.href}/>
             {/each}
