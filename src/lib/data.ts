@@ -78,6 +78,12 @@ export const bios = [
 ]
 
 export const projects = [
+        {
+        title: 'DELM Blog',
+        iconUrl: 'blog.svg',
+        desc: 'The blog subdomain where I post content with text centered.',
+        href: 'https://blog.delm.dev'
+    },
     {
         title: 'OBS Studio',
         iconUrl: 'https://obsproject.com/assets/images/new_icon_small-r.png',
