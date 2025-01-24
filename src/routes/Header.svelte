@@ -28,7 +28,7 @@ class:bg-neutral-800={dark}
      transition:fly={{y:-50,duration:200}}
 >
     <div class="flex flex-grow lg:w-[1024px] md:w-[720px] sm:w-[500px] ">
-        <div class="flex font-extrabold lg:space-x-10 md:space-x-7 space-x-5">
+        <div class="flex flex-wrap font-extrabold lg:gap-10 md:gap-7 gap-5">
             <img src={dark?"logo-white.png":"logo.png"} class="lg:w-[70px] lg:h-[40px] md:w-[60px] md:h-[35px] w-[50px] h-[28px]" alt="logo"/>
             <div>
                 Projects
