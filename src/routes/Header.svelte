@@ -20,12 +20,9 @@
 
 </script>
 
-
-<div class="py-5 lg:px-20 md:px-15 px-10 self-center w-full flex lg:text-4xl md:text-3xl text-2xl z-10 opacity-95"
-    class:text-white={dark}
-class:bg-neutral-800={dark}
-         class:fixed={dark}
-     transition:fly={{y:-50,duration:200}}
+{#if dark}
+<div class="py-5 lg:px-20 md:px-15 px-10 self-center w-full flex lg:text-4xl md:text-3xl text-2xl z-10 opacity-95 text-white bg-neutral-800 fixed"
+     transition:fly|global={{y:-50,duration:200}}
 >
     <div class="flex lg:w-[1024px] md:w-[720px] sm:w-[500px] ">
         <div class="flex flex-wrap font-extrabold lg:gap-10 md:gap-7 gap-5">
@@ -42,3 +39,23 @@ class:bg-neutral-800={dark}
         </div>
     </div>
 </div>
+{:else }
+    <div class="py-5 lg:px-20 md:px-15 px-10 self-center w-full flex lg:text-4xl md:text-3xl text-2xl z-10 opacity-95"
+>
+    <div class="flex lg:w-[1024px] md:w-[720px] sm:w-[500px] ">
+        <div class="flex flex-wrap font-extrabold lg:gap-10 md:gap-7 gap-5">
+            <img src={dark?"logo-white.png":"logo.png"} class="lg:w-[70px] lg:h-[40px] md:w-[60px] md:h-[35px] w-[50px] h-[28px]" alt="logo"/>
+            <div>
+                Projects
+            </div>
+            <div>
+                About
+            </div>
+            <div>
+                Friends
+            </div>
+        </div>
+    </div>
+</div>
+    {/if}
+
