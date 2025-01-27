@@ -78,7 +78,7 @@ export const bios = [
 ]
 
 export const projects = [
-        {
+    {
         title: 'DELM Blog',
         iconUrl: 'blog.svg',
         desc: 'The blog subdomain where I post content with text centered.',
@@ -111,14 +111,14 @@ export const projects = [
 ]
 
 export const friends = [
-        {
+    {
         name: 'Neko_oxff',
         avatar: 'https://avatars.githubusercontent.com/u/54382007',
         desc: 'A Studen from Taiwan Tainan City',
         link: 'https://neko-0xff-blog.deno.dev/',
         site: 'Neko_oxff Tech Blog',
     },
-        {
+    {
         name: 'bloodnighttw',
         avatar: 'https://bntw.dev/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F44264182%3Fs%3D460%26u%3Db59e580f37ab7e6a3979ab8a6df1f12ba6588069%26v%3D4&w=384&q=75',
         desc: 'Software Developer | Gamer',
