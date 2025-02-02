@@ -84,12 +84,12 @@ export const projects = [
         desc: 'The blog subdomain where I post content with text centered.',
         href: 'https://blog.delm.dev'
     },
-    {
-        title: 'OBS Studio',
-        iconUrl: 'https://obsproject.com/assets/images/new_icon_small-r.png',
-        desc: 'Free and open source software for video recording and live streaming.',
-        href: 'https://github.com/obsproject/obs-studio'
-    },
+    // {
+    //     title: 'OBS Studio',
+    //     iconUrl: 'https://obsproject.com/assets/images/new_icon_small-r.png',
+    //     desc: 'Free and open source software for video recording and live streaming.',
+    //     href: 'https://github.com/obsproject/obs-studio'
+    // },
     {
         title: 'Arc VP',
         iconUrl: 'player.svg',

@@ -41,7 +41,7 @@
                     {/each}
                 </div>
             </div>
-            <div class="flex items-center space-x-3">
+            <div class="flex items-center">
                 OS:
                 <div class="ml-3 flex space-x-3 justify-center items-center">
                     {#each operatingSystems as os}
@@ -49,7 +49,7 @@
                     {/each}
                 </div>
             </div>
-            <div class="flex items-center space-x-3">
+            <div class="flex items-center">
                 frontend:
                 <div class="ml-3 flex space-x-3 justify-center items-center">
                     {#each frontendFrameworks as framework}
@@ -80,9 +80,6 @@
     <div class="flex flex-col  font-bold text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 bg-neutral-800 text-white space-y-5">
         <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .info
-        </div>
-        <div>
-            Some information about me.
         </div>
         <AboutMeDisplay/>
     </div>
