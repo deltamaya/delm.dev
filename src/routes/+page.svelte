@@ -12,15 +12,15 @@
 
 </script>
 
-<div class="flex flex-col w-full">
+<div class="flex flex-col w-full scroll-smooth">
     <Header dark={false}/>
     <div class="flex flex-col justify-center items-center">
         <img src="avatar.png" alt="avatar"
              class="lg:h-96 md:h-64 sm:h-48 h-36 rounded-full lg:border-8 md:border-6 border-4 hover:border-red-600 border-neutral-900 transition-colors duration-300"/>
         <div class="font-extrabold lg:text-4xl md:text-3xl sm:text-2xl text-xl lg:px-48 px-16 lg:pt-32 md:pt-24 pt-12 text-center">
             Hey, I'm <span class="text-red-600">deltamaya</span>.
-            A Computer Science student originally
-            from Shandong, China. I hope this page could help you understand me better.
+            <div> <span class="text-red-600">S</span>tudent /  <span class="text-red-600">D</span>eveloper</div>
+            I hope this page could help you understand me better.
         </div>
         <div class="flex my-10 space-x-2">
             {#each socialLinks as link}
@@ -68,7 +68,7 @@
         </div>
 
     </div>
-    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5">
+    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5" id="projects">
         <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .projects
         </div>
@@ -77,13 +77,13 @@
         </div>
         <ProjectsDisplay/>
     </div>
-    <div class="flex flex-col  font-bold text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 bg-neutral-800 text-white space-y-5">
+    <div class="flex flex-col  font-bold text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 bg-neutral-800 text-white space-y-5" id="info">
         <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .info
         </div>
         <AboutMeDisplay/>
     </div>
-    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5">
+    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5" id="links">
         <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .links
         </div>
