@@ -135,8 +135,8 @@ export const friends = [
     },
     {
         name: 'maya',
-        avatar: 'https://avatars.githubusercontent.com/u/118270686?v=4',
-        desc: 'Together We Advance.',
+        avatar: 'https://img.delm.dev/evil.png',
+        desc: '"夢はいつでも膨らむばかりで"',
         link: 'https://www.delm.dev',
         site: 'localhost',
     },

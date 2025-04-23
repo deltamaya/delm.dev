@@ -11,7 +11,7 @@
 <div class=" flex flex-col w-full scroll-smooth">
     <Header/>
     <div class="flex flex-col justify-center items-center">
-        <img src="avatar.png" alt="avatar"
+        <img src="https://img.delm.dev/evil.png" alt="avatar"
              class="lg:h-72 md:h-64 sm:h-56 h-48 rounded-full lg:border-8 md:border-6 border-4 hover:border-red-600 border-neutral-900 transition-colors duration-300"/>
         <div class="lg:text-4xl md:text-3xl text-2xl font-bold mt-5 justify-center items-center flex flex-col">
             <div>
