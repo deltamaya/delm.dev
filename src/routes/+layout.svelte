@@ -1,37 +1,19 @@
 <script lang="ts">
     import "../app.css";
-    import {fly} from 'svelte/transition'
-    import Header from "./Header.svelte";
 
     let {children} = $props();
-        let showHeader = $state(false);
-    let showHeaderThreshold = 500;
 
-    $effect(() => {
-        handleScroll()
-        window.addEventListener('scroll', handleScroll)
-        return () => {
-            window.removeEventListener('scroll', handleScroll)
-        }
-    })
-
-    function handleScroll() {
-        showHeader = window.scrollY > showHeaderThreshold;
-    }
 </script>
 
-{#if showHeader}
-    <Header dark={true}/>
-{/if}
-    <div class="w-full h-6 bg-red-600"></div>
+<div class="w-full h-4 bg-red-600"></div>
 
-<main class="bg-neutral-100 font-Inter">
+<main class="bg-neutral-100 font-IBMPlexMono">
     {#if children}
         {@render children()}
     {/if}
 </main>
 
-<footer class="bg-neutral-900 text-white flex justify-center items-center font-Inter h-10 !z-40 relative">
+<footer class="bg-neutral-900 text-white flex justify-center items-center h-10 !z-40 relative font-IBMPlexMono">
     <div class="text-sm text-center flex flex-wrap justify-center items-center z-40">
         <span class="inline-block mr-2">©</span>
         <span>{new Date().getFullYear()} Maya. All works&nbsp;</span>

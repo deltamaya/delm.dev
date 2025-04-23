@@ -8,9 +8,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                // ibmPlexSansSC: ['IBM Plex Sans SC', 'sans-serif'],
-                // IBMPlexMono: ['IBM Plex Mono', 'monospace'],
-                // IBMPlexSans:['IBM Plex Sans','sans']
+                IBMPlexMono: ['IBM Plex Mono', 'monospace'],
                 Inter:['Inter','system']
             },
             animation: {

@@ -1,6 +1,4 @@
 <script lang="ts">
-
-
     import ProjectsDisplay from "./ProjectsDisplay.svelte";
     import FriendsDisplay from "./FriendsDisplay.svelte";
     import AboutMeDisplay from "./AboutMeDisplay.svelte";
@@ -8,27 +6,37 @@
     import IconLink from "./IconLink.svelte";
     import SocialLink from "./SocialLink.svelte";
     import Header from "./Header.svelte";
-
-
 </script>
 
-<div class="flex flex-col w-full scroll-smooth">
-    <Header dark={false}/>
+<div class=" flex flex-col w-full scroll-smooth">
+    <Header/>
     <div class="flex flex-col justify-center items-center">
         <img src="avatar.png" alt="avatar"
-             class="lg:h-96 md:h-64 sm:h-48 h-36 rounded-full lg:border-8 md:border-6 border-4 hover:border-red-600 border-neutral-900 transition-colors duration-300"/>
-        <div class="font-extrabold lg:text-4xl md:text-3xl sm:text-2xl text-xl lg:px-48 px-16 lg:pt-32 md:pt-24 pt-12 text-center">
-            Hey, I'm <span class="text-red-600">deltamaya</span>.
-            <div> <span class="text-red-600">S</span>tudent /  <span class="text-red-600">D</span>eveloper</div>
-            I hope this page could help you understand me better.
-        </div>
-        <div class="flex my-10 space-x-2">
-            {#each socialLinks as link}
-                <SocialLink iconClass={link.iconClass} label={link.label} href={link.href}/>
-            {/each}
+             class="lg:h-72 md:h-64 sm:h-56 h-48 rounded-full lg:border-8 md:border-6 border-4 hover:border-red-600 border-neutral-900 transition-colors duration-300"/>
+        <div class="lg:text-4xl md:text-3xl text-2xl font-bold mt-5 justify-center items-center flex flex-col">
+            <div>
+                <span class="text-red-600">del</span>ta<span class="text-red-600">m</span>aya
+            </div>
+            <div>
+                <span class="text-red-600">S</span>tudent / <span class="text-red-600">D</span>eveloper
+            </div>
+            <div class="my-16">
+              "夢はいつでも膨らむばかりで"
+            </div>
         </div>
     </div>
-    <div class="bg-neutral-800 w-full flex flex-col font-bold text-4xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 text-white">
+
+        <div class="h-1 bg-neutral-200 w-4/5 self-center"></div>
+    <div class="flex flex-col  font-bold text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 bg-neutral-100 space-y-5" id="info">
+        <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
+            .info
+        </div>
+        <AboutMeDisplay/>
+    </div>
+
+
+    <div class="h-1 bg-neutral-200 w-4/5 self-center"></div>
+    <div class="bg-neutral-100 w-full flex flex-col font-bold text-4xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8">
         <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .tech
         </div>
@@ -68,6 +76,7 @@
         </div>
 
     </div>
+        <div class="h-1 bg-neutral-200 w-4/5 self-center"></div>
     <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5" id="projects">
         <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .projects
@@ -77,12 +86,9 @@
         </div>
         <ProjectsDisplay/>
     </div>
-    <div class="flex flex-col  font-bold text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 bg-neutral-800 text-white space-y-5" id="info">
-        <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
-            .info
-        </div>
-        <AboutMeDisplay/>
+
     </div>
+        <div class="h-1 bg-neutral-200 w-4/5 self-center"></div>
     <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5" id="links">
         <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .links
@@ -91,5 +97,4 @@
             Here are some links of my friends or some websites I appreciate.
         </div>
         <FriendsDisplay/>
-    </div>
 </div>

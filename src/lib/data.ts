@@ -1,6 +1,6 @@
 export const socialLinks = [
     {href: 'https://github.com/deltamaya', label: 'github', iconClass: 'mdi:github'},
-    {href: "https://bsky.app/profile/delm.dev", label: "bluesky", iconClass: "ri:bluesky-fill"},
+    {href: "https://x.com/0xdelm", label: "x", iconClass: "ri:twitter-x-fill"},
     {href: "https://t.me/deltamayabot", label: "telegram bot", iconClass: "mdi:telegram"},
     {
         href: "https://music.163.com/#/user/home?id=372313613",
@@ -48,34 +48,6 @@ export const miscs = [
     },
 ]
 
-export const bios = [
-    'Together We Advance.',
-    'Work Hard, Play Hard.',
-    'Technology should serve humanity.',
-    'Problem Solver. Life Enthusiast.',
-    'Make Programming Great Again!',
-    'Stay Hungry, Stay Foolish.',
-    'It works on my machine',
-    'One good deed a day',
-    '悠哉日常大王',
-    'Just for fun.',
-    'Better Call Maya!',
-    'Why are you still here?',
-    'I\'m running out of intros!',
-    'Are you boring?',
-    'You could read some of my blogs',
-    'It\'s better than staying here and watch me!',
-    'There is nothing here, really.',
-    'What are you expecting?',
-    '...',
-    '...',
-    'Okay, you won.',
-    'I\'ll tell you a little secret',
-    'But remember, do not tell anybody',
-    'You matter more than you realize.',
-    'Your presence brings something unique to this world.',
-    'You are valued, needed, and loved.'
-]
 
 export const projects = [
     {
@@ -120,7 +92,7 @@ export const friends = [
     },
     {
         name: 'bloodnighttw',
-        avatar: 'https://bntw.dev/_next/image?url=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F44264182%3Fs%3D460%26u%3Db59e580f37ab7e6a3979ab8a6df1f12ba6588069%26v%3D4&w=384&q=75',
+        avatar: 'https://avatars.githubusercontent.com/u/44264182',
         desc: 'Software Developer | Gamer',
         link: 'https://bntw.dev/',
         site: '',
