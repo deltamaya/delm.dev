@@ -1,4 +1,9 @@
 <div class="max-w-4xl mx-auto p-6 lg:text-2xl md:text-xl text-lg bg-neutral-200">
+    <div class="w-full justify-between flex mb-2">
+        <span class="underline">profile(1)</span>
+        <span>DELM</span>
+        <span class="underline">profile(1)</span>
+    </div>
     <section>
         <h1 class="text-2xl font-bold text-red-600 mb-2">NAME</h1>
         <p class="ml-6 mb-4">Profile - A brief overview of a passionate Computer Science student</p>
@@ -69,9 +74,10 @@
     <section>
         <h1 class="text-2xl font-bold text-red-600 mb-2">SEE ALSO</h1>
         <p class="ml-6 mb-4">
-            <a href="https://blog.delm.dev" class="text-gray-500 hover:underline">blogs(1)</a>,
             <a href="https://github.com/deltamaya" class="text-gray-500 hover:underline">github(7)</a>,
-            <a href="https://steamcommunity.com/id/deltamaya" class="text-gray-500 hover:underline">steamcommunity(3)</a>
+            <a href="https://blog.delm.dev" class="text-gray-500 hover:underline">blogs(1)</a>,
+            <a href="https://steamcommunity.com/id/deltamaya"
+               class="text-gray-500 hover:underline">steamcommunity(3)</a>
             <a href="https://t.me/deltamayabot" class="text-gray-500 hover:underline">telegram(4)</a>,
             <a href="https://x.com/0xdelm" class="text-gray-500 hover:underline">twitter(5)</a>,
             <a href="https://music.163.com/#/user/home?id=372313613" class="text-gray-500 hover:underline">neteasemusic(2)</a>,

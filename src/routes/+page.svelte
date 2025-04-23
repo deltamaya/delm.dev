@@ -21,26 +21,31 @@
                 <span class="text-red-600">S</span>tudent / <span class="text-red-600">D</span>eveloper
             </div>
             <div class="my-16">
-              "夢はいつでも膨らむばかりで"
+                "夢はいつでも膨らむばかりで"
             </div>
         </div>
     </div>
 
-        <div class="h-1 bg-neutral-200 w-4/5 self-center"></div>
-    <div class="flex flex-col  font-bold text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 bg-neutral-100 space-y-5" id="info">
+    <div class="h-1 bg-neutral-200 w-4/5 self-center"></div>
+    <div class="flex flex-col  font-bold text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 bg-neutral-100 space-y-5"
+         id="info">
         <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .info
         </div>
+
         <AboutMeDisplay/>
     </div>
 
 
     <div class="h-1 bg-neutral-200 w-4/5 self-center"></div>
-    <div class="bg-neutral-100 w-full flex flex-col font-bold text-4xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8">
+    <div class="bg-neutral-100 w-full flex flex-col font-bold text-4xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5">
         <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .tech
         </div>
-        <div class="flex flex-col space-y-5 mt-5 lg:text-5xl md:text-3xl text-2xl p-5">
+        <div class="font-normal text-xl">
+            Favorite / supported technology.
+        </div>
+        <div class="flex flex-col space-y-5 mt-5 lg:text-4xl md:text-3xl text-2xl p-5">
             <div class="flex items-center">
                 languages:
                 <div class="ml-3 flex space-x-3 justify-center items-center">
@@ -76,25 +81,27 @@
         </div>
 
     </div>
-        <div class="h-1 bg-neutral-200 w-4/5 self-center"></div>
-    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5" id="projects">
+    <div class="h-1 bg-neutral-200 w-4/5 self-center"></div>
+    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5"
+         id="projects">
         <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .projects
         </div>
-        <div>
-            Here are some projects I built or contributed.
+        <div class="font-normal text-xl">
+            Built / contributed projects.
         </div>
         <ProjectsDisplay/>
     </div>
-
-    </div>
-        <div class="h-1 bg-neutral-200 w-4/5 self-center"></div>
-    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5" id="links">
+    <div class="h-1 bg-neutral-200 w-4/5 self-center"></div>
+    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5"
+         id="links">
         <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .links
         </div>
-        <div>
-            Here are some links of my friends or some websites I appreciate.
+        <div class="font-normal text-xl">
+            External links.
         </div>
         <FriendsDisplay/>
+    </div>
+
 </div>
