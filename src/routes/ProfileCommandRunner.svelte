@@ -93,7 +93,7 @@
         command = historyIndex === -1 ? "" : history[history.length - 1 - historyIndex].command;
       }
       resetHistoryIndex=false;
-    }else if(e.key==='Tab') {
+    }else if(e.key==='Tab' && command!=='profile -f') {
       e.preventDefault()
       command='profile -f'
     }
@@ -102,14 +102,13 @@
     }
   }
 
-  // Focus the input on mount
-  let inputElement;
-  $effect(() => {
-    inputElement?.focus();
-  });
 </script>
 
-<div class="w-4/5 bg-gray-900 text-green-600 p-4 rounded-lg shadow-lg text-sm self-center">
+<div
+  role="region"
+  aria-label="Terminal Emulator"
+  class="w-4/5 bg-gray-900 text-green-600 p-4 rounded-lg shadow-lg text-sm self-center"
+>
   <div class="min-h-[400px] max-h-[400px] overflow-y-auto">
     {#each history as { command, output }}
       <div class="mb-2">
@@ -120,12 +119,12 @@
     <div class="flex items-center">
       <span class="mr-2">$</span>
       <input
-        bind:this={inputElement}
         type="text"
         bind:value={command}
-        onkeydown={e=>handleKeydown(e)}
+        onkeydown={handleKeydown}
         class="bg-transparent text-green-600 focus:outline-none w-full"
         placeholder="profile -f"
+        aria-label="Command input"
       />
     </div>
   </div>
