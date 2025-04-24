@@ -9,12 +9,12 @@
     import ProfileCommandRunner from "./ProfileCommandRunner.svelte";
 </script>
 
-<div class=" flex flex-col w-full scroll-smooth">
+<div class=" flex flex-col w-full scroll-smooth text-neutral-100">
     <Header/>
     <div class="flex flex-col justify-center items-center">
         <img src="https://img.delm.dev/avatar.webp" alt="avatar"
              class="lg:h-72 md:h-64 sm:h-56 h-48 rounded-full lg:border-8 md:border-6 border-4 hover:border-red-600 border-neutral-900 transition-colors duration-500"/>
-        <div class="lg:text-4xl md:text-3xl text-2xl font-bold mt-5 justify-center items-center flex flex-col">
+        <div class="lg:text-3xl md:text-2xl text-xl font-bold mt-5 justify-center items-center flex flex-col">
             <div>
                 <span class="text-red-600">del</span>ta<span class="text-red-600">m</span>aya
             </div>
@@ -27,8 +27,8 @@
         </div>
     </div>
 
-    <div class="h-1 bg-neutral-200 w-4/5 self-center"></div>
-    <div class="flex flex-col  font-bold text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 bg-neutral-100 space-y-5"
+    <div class="h-[1px] bg-neutral-600 w-4/5 self-center"></div>
+    <div class="flex flex-col  font-bold text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 bg-neutral-900 space-y-5"
          id="info">
         <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .info
@@ -39,8 +39,8 @@
     </div>
 
 
-    <div class="h-1 bg-neutral-200 w-4/5 self-center"></div>
-    <div class="bg-neutral-100 w-full flex flex-col font-bold text-4xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5">
+    <div class="h-[1px] bg-neutral-600 w-4/5 self-center"></div>
+    <div class="bg-neutral-900 w-full flex flex-col font-bold text-4xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5">
         <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .tech
         </div>
@@ -83,7 +83,7 @@
         </div>
 
     </div>
-    <div class="h-1 bg-neutral-200 w-4/5 self-center"></div>
+    <div class="h-[1px] bg-neutral-600 w-4/5 self-center"></div>
     <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5"
          id="projects">
         <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
@@ -94,7 +94,7 @@
         </div>
         <ProjectsDisplay/>
     </div>
-    <div class="h-1 bg-neutral-200 w-4/5 self-center"></div>
+    <div class="h-[1px] bg-neutral-600 w-4/5 self-center"></div>
     <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5"
          id="links">
         <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">

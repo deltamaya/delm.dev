@@ -107,7 +107,7 @@
 <div
   role="region"
   aria-label="Terminal Emulator"
-  class="w-4/5 bg-gray-900 text-green-600 p-4 rounded-lg shadow-lg text-sm self-center"
+  class="w-4/5 bg-neutral-800 text-green-600 p-4 rounded-lg shadow-lg text-sm self-center"
 >
   <div class="min-h-[400px] max-h-[400px] overflow-y-auto">
     {#each history as { command, output }}

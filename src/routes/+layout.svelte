@@ -5,9 +5,9 @@
 
 </script>
 
-<div class="w-full h-4 bg-red-600"></div>
+<div class="w-full h-2 bg-red-600"></div>
 
-<main class="bg-neutral-100 font-IBMPlexMono">
+<main class="bg-neutral-900 font-IBMPlexMono">
     {#if children}
         {@render children()}
     {/if}
@@ -16,7 +16,7 @@
 <footer class="bg-neutral-900 text-white flex justify-center items-center h-10 !z-40 relative font-IBMPlexMono">
     <div class="text-sm text-center flex flex-wrap justify-center items-center z-40">
         <span class="inline-block mr-2">©</span>
-        <span>{new Date().getFullYear()} Maya. All works&nbsp;</span>
+        <span>{new Date().getFullYear()} deltamaya. All works&nbsp;</span>
         <a
                 href="https://www.gnu.org/copyleft/"
                 target="_blank"
