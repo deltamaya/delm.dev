@@ -1,74 +1,81 @@
 <div class="max-w-4xl mx-auto p-6 lg:text-2xl md:text-xl text-lg bg-neutral-200">
     <div class="w-full justify-between flex mb-2">
-        <span class="underline">profile(1)</span>
+        <span class="underline">Profile(1)</span>
         <span>DELM</span>
-        <span class="underline">profile(1)</span>
+        <span class="underline">Profile(1)</span>
     </div>
     <section>
         <h1 class="text-2xl font-bold text-red-600 mb-2">NAME</h1>
-        <p class="ml-6 mb-4">Profile - A brief overview of a passionate Computer Science student</p>
+        <p class="ml-6 mb-4">Profile - overview deltamaya</p>
     </section>
 
     <section>
         <h1 class="text-2xl font-bold text-red-600 mb-2">SYNOPSIS</h1>
         <p class="ml-6 mb-4">
-            student [ <span class="text-red-600">--origin</span> Shandong, China ]
-            [ <span class="text-red-600">--interests</span> STEM, digital multimedia, anime ]
-            [ <span class="text-red-600">--aspiration</span> Full-Stack Magic Girl ]
-            [ <span class="text-red-600">--current-status</span> university student ]
+            profile [-o | --origin] [-i | --interests] [-a | --aspirations] [-s | --status] [-f | --full]
         </p>
     </section>
 
     <section>
         <h1 class="text-2xl font-bold text-red-600 mb-2">DESCRIPTION</h1>
         <p class="ml-6 mb-4">
-            I am a Computer Science student hailing from Shandong, China, with a fervent enthusiasm for STEM and a
-            particular fondness for the "nerdy" realms of digital multimedia. My ultimate ambition is to transform into
-            a <span class="text-red-600">Full-Stack Magic Girl</span>, mastering the art and science of technology with
-            a touch of creativity.
-        </p>
-        <p class="ml-6 mb-4">
-            My days are filled with anime marathons and engaging discussions with friends who share my zeal for
-            technology, culture, and creativity. As a university student, I am proactively shaping my future, exploring
-            career paths in technology and education, and weaving my passions into a vibrant professional tapestry.
+            The profile command outputs the contents of a user's self-introduction,
+            formatted according to the specified options. The output is structured along
+            multiple dimensions, each corresponding to a distinct category of personal information.
+            If no options are provided, a default summary may be displayed,
+            depending on the implementation.
         </p>
     </section>
 
     <section>
         <h1 class="text-2xl font-bold text-red-600 mb-2">OPTIONS</h1>
+        <p class="ml-6 mb-4">The following options control the output dimensions of the profile command:</p>
         <dl class="ml-6 mb-4">
-            <dt class="text-red-600">--origin</dt>
-            <dd class="ml-6 mb-2">Specifies my hometown as Shandong, China, grounding my global aspirations in rich
-                cultural roots.
+            <dt class="text-red-600">-o, --origin</dt>
+            <dd class="ml-6 mb-2">
+                Display the origin of the user.
+                This includes foundational details such as background or starting point,
+                providing context for the user's identity.
             </dd>
 
-            <dt class="text-red-600">--interests</dt>
-            <dd class="ml-6 mb-2">Highlights my love for STEM, digital multimedia, and anime, which fuel my curiosity
-                and creativity.
+            <dt class="text-red-600">-i, --interests</dt>
+            <dd class="ml-6 mb-2">
+                Output a list of the user's interests.
+                The interests displayed may vary over time,
+                reflecting changes in preferences or activities.
             </dd>
 
-            <dt class="text-red-600">--aspiration</dt>
-            <dd class="ml-6 mb-2">Declares my dream to become a Full-Stack Magic Girl, a whimsical yet determined goal
-                to excel in full-stack development.
+            <dt class="text-red-600">-a, --aspirations</dt>
+            <dd class="ml-6 mb-2">
+                Show the user's aspirations.
+                This option presents a directional goal or vision,
+                emphasizing intent rather than a fixed milestone.
             </dd>
 
-            <dt class="text-red-600">--current-status</dt>
-            <dd class="ml-6 mb-2">Notes my current role as a university student, actively planning my career in
-                technology and education.
+            <dt class="text-red-600">-s, --status</dt>
+            <dd class="ml-6 mb-2">
+                Report the user's current status.
+                This dynamic field reflects the user's state at the time of invocation
+                and may change frequently.
+            </dd>
+            <dt class="text-red-600">-f, --full</dt>
+            <dd class="ml-6 mb-2">
+                Display all available profile information,
+                equivalent to specifying -o, -i, -a, and -s together.
             </dd>
         </dl>
     </section>
 
     <section>
         <h1 class="text-2xl font-bold text-red-600 mb-2">EXAMPLES</h1>
-        <p class="ml-6 mb-2">To get a quick sense of who I am:</p>
-        <p class="ml-10 mb-2 text-gray-500">$ profile --origin --interests</p>
-        <p class="ml-10 mb-4">A Shandong native with a passion for STEM, digital multimedia, and anime.</p>
+        <p class="ml-6 mb-2">To display the user's origin:</p>
+        <p class="ml-10 mb-2 text-gray-500">$ profile -o</p>
 
-        <p class="ml-6 mb-2">To understand my dreams and current journey:</p>
-        <p class="ml-10 mb-2 text-gray-500">$ profile --aspiration --current-status</p>
-        <p class="ml-10 mb-4">Aspiring Full-Stack Magic Girl, currently a university student exploring tech and
-            education.</p>
+        <p class="ml-6 mb-2">To view the user's current interests and aspirations:</p>
+        <p class="ml-10 mb-2 text-gray-500">$ profile --interests --aspirations</p>
+
+        <p class="ml-6 mb-2">To retrieve all available profile information:</p>
+        <p class="ml-10 mb-2 text-gray-500">$ profile -f</p>
     </section>
 
     <section>
@@ -87,6 +94,6 @@
     <section>
         <h1 class="text-2xl font-bold text-red-600 mb-2">AUTHOR</h1>
         <p class="ml-6 mb-4">Written by a starry-eyed Computer Science student with big dreams and a love for all things
-            nerdy.</p>
+            "nerdy."</p>
     </section>
 </div>

@@ -6,6 +6,7 @@
     import IconLink from "./IconLink.svelte";
     import SocialLink from "./SocialLink.svelte";
     import Header from "./Header.svelte";
+    import ProfileCommandRunner from "./ProfileCommandRunner.svelte";
 </script>
 
 <div class=" flex flex-col w-full scroll-smooth">
@@ -34,6 +35,7 @@
         </div>
 
         <AboutMeDisplay/>
+        <ProfileCommandRunner/>
     </div>
 
 
