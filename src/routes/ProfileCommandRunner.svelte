@@ -1,10 +1,10 @@
 <script>
   // Profile data
   const profileData = {
-    origin: "A starry-eyed Computer Science student from [Your City], passionate about technology and innovation.",
-    interests: "Coding, gaming, anime, reading sci-fi novels, and exploring open-source projects.",
-    aspirations: "To build impactful software that solves real-world problems and contributes to a better future.",
-    status: "Currently a student, working on personal projects and learning new technologies."
+    origin: "A Computer Science student from Shandong, China.",
+    interests: "Digital multimedia, watching anime, discussing technology, culture, and creativity with friends.",
+    aspirations: "To become a Full-Stack Magic Girl.",
+    status: "Currently a university student, exploring opportunities in technology and education."
   };
 
   // Reactive state
