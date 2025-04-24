@@ -9,7 +9,7 @@
 
   // Reactive state
   let command = $state("");
-  let history = $state([]);
+  let history = $state([{command:"profile -a",output:generateOutput(parseCommand("profile -a"))}]);
   let historyIndex = $state(-1);
 
   // Function to parse command and options
@@ -43,7 +43,6 @@
   // Function to generate output based on options
   function generateOutput({options,error}) {
     if (error) return error;
-    console.log(options)
     if (options.full) {
       return [
         `Origin: ${profileData.origin}`,
@@ -68,7 +67,6 @@
 
   // Handle command execution
   function runCommand() {
-      console.log(command)
     const parsed = parseCommand(command);
     const output = generateOutput(parsed);
     history = [...history, { command, output }];
@@ -77,21 +75,30 @@
 
     // Handle keydown events for command input
   function handleKeydown(e) {
+    let resetHistoryIndex=true;
     if (e.key === "Enter") {
       runCommand();
-      historyIndex=-1
+      historyIndex=-1;
     } else if (e.key === "ArrowUp") {
       e.preventDefault(); // Prevent cursor from moving to start of input
       if (historyIndex < history.length - 1) {
         historyIndex += 1;
         command = history[history.length - 1 - historyIndex].command;
       }
+      resetHistoryIndex=false;
     } else if (e.key === "ArrowDown") {
       e.preventDefault(); // Prevent cursor from moving to end of input
       if (historyIndex > -1) {
         historyIndex -= 1;
         command = historyIndex === -1 ? "" : history[history.length - 1 - historyIndex].command;
       }
+      resetHistoryIndex=false;
+    }else if(e.key==='Tab') {
+      e.preventDefault()
+      command='profile -f'
+    }
+    if(resetHistoryIndex){
+      historyIndex=-1;
     }
   }
 
