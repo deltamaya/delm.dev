@@ -12,12 +12,6 @@ export const socialLinks = [
 
 ]
 
-export const menuItems = [
-    {href: 'https://blog.delm.dev', label: 'blogs', title: 'Blogs', iconUrl: 'fa-solid:blog'},
-    {href: "/friends", label: "friends", title: "Friends", iconUrl: "fa-solid:heart"},
-    {href: '/projects', label: 'projects', title: 'Projects', iconUrl: 'ion:hammer'},
-    {href: "/about", label: "about", title: "About", iconUrl: "fa-solid:info-circle"},
-]
 
 export const languages = [
     {href: "https://en.cppreference.com/w/", label: "c plus plus", iconUrl: "cpp.svg"},
