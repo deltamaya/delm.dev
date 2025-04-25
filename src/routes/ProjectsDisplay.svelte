@@ -5,7 +5,7 @@
     {#each projects as {href,title,techs,desc},index}
         <a href={href}
            class="flex justify-center flex-col items-center border-[1px] border-neutral-700 px-4 py-2 min-w-[350px]
-           backdrop-blur hover:-translate-y-1 duration-300"  style="z-index: : {index+1}">
+           backdrop-blur hover:-translate-y-1 duration-300 bg-opacity-20 bg-neutral-900"  style="z-index: : {index+1}">
             <div class="flex justify-between w-full">
                 <div class="lg:text-2xl md:text-xl text-lg font-bold">
                     {title}
