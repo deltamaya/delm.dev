@@ -1,5 +1,6 @@
-<div class="py-2 lg:px-48 md:px-32 px-8 self-center w-full flex lg:text-4xl md:text-3xl sm:text-2xl text-xl sticky top-0 bg-neutral-900 border-b border-neutral-600 bg-opacity-70 backdrop-blur-xl">
-    <a href="https://delm.dev">
+<div class="py-2 self-center px-5 w-full flex lg:text-4xl md:text-3xl sm:text-2xl text-xl sticky top-0 bg-neutral-900 border-b border-neutral-600 bg-opacity-70 backdrop-blur-xl items-center justify-center">
+    <div class="max-w-[1024px] w-full self-center">
+        <a href="https://delm.dev">
         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 3000 3000">
             <defs>
                 <style>
@@ -22,4 +23,5 @@
             <path class="cls-2" d="M3000,2348.16l-564.32-1.38L1575.33,789.838h565.64"/>
         </svg>
     </a>
+    </div>
 </div>

@@ -28,9 +28,9 @@
     </div>
 
     <div class="h-[1px] bg-neutral-600 w-4/5 self-center"></div>
-    <div class="flex flex-col  font-bold text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 bg-neutral-900 space-y-5"
+    <div class="flex flex-col  font-bold text-2xl lg:py-16 md:py-8 py-4 px-5 bg-neutral-900 space-y-5 justify-center items-center"
          id="info">
-        <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
+        <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold w-full max-w-[1024px]">
             .info
         </div>
 
@@ -40,12 +40,12 @@
 
 
     <div class="h-[1px] bg-neutral-600 w-4/5 self-center"></div>
-    <div class="bg-neutral-900 w-full flex flex-col font-bold text-4xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5">
-        <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
+    <div class="bg-neutral-900 w-full flex flex-col font-bold text-4xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5 items-center">
+        <div class="px-5 w-full max-w-[1024px] lg:text-6xl md:text-4xl text-3xl font-extrabold">
             .tech
         </div>
         <div class="font-normal text-xl">
-            Favorite / supported technology.
+            Favorite / supported technology
         </div>
         <div class="flex flex-col space-y-5 mt-5 lg:text-4xl md:text-3xl text-2xl p-5">
             <div class="flex items-center">
@@ -84,24 +84,24 @@
 
     </div>
     <div class="h-[1px] bg-neutral-600 w-4/5 self-center"></div>
-    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5"
+    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5 items-center"
          id="projects">
-        <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
+        <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1024px]">
             .projects
         </div>
         <div class="font-normal text-xl">
-            Built / contributed projects.
+            Built / contributed projects
         </div>
         <ProjectsDisplay/>
     </div>
     <div class="h-[1px] bg-neutral-600 w-4/5 self-center"></div>
-    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5"
+    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5 items-center"
          id="links">
-        <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold">
+        <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1024px]" >
             .links
         </div>
         <div class="font-normal text-xl">
-            External links.
+            External links
         </div>
         <FriendsDisplay/>
     </div>

@@ -134,4 +134,11 @@ export const friends = [
         link: 'https://www.delm.dev',
         site: 'localhost',
     },
+    {
+        name: 'you',
+        avatar: '',
+        desc: 'Exchange Friend Link',
+        link: '/exchange',
+        site: 'undefined',
+    },
 ]
