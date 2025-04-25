@@ -5,7 +5,7 @@
 
 </script>
 
-<div class="w-full h-2 bg-red-600"></div>
+<div class="w-full h-1 bg-red-600"></div>
 
 <main class="bg-neutral-900 font-IBMPlexMono">
     {#if children}

@@ -46,7 +46,7 @@ export const miscs = [
 export const projects = [
     {
         title: 'DELM Blog',
-        iconUrl: 'blog.svg',
+        techs: ['ts.svg','svelte.svg','tailwind.svg'],
         desc: 'The blog subdomain where I post content with text centered.',
         href: 'https://blog.delm.dev'
     },
@@ -58,19 +58,19 @@ export const projects = [
     // },
     {
         title: 'Arc VP',
-        iconUrl: 'player.svg',
+        techs: ['cpp.svg','ffmpeg.svg','sdl.svg'],
         desc: 'Toy video player based on FFmpeg, OpenGL, and SDL2.',
         href: 'https://github.com/deltamaya/ArcVP'
     },
     {
         title: 'kvraft',
-        iconUrl: 'hashtag.svg',
+        techs: ['go.svg'],
         desc: 'Distributed kv service build on Raft consensus.',
         href: 'https://github.com/deltamaya/MIT6.824'
     },
     {
         title: 'venera',
-        iconUrl: 'https://nyne.dev/venera.png',
+        techs: ['flutter.svg'],
         desc: 'A comic app allows you read from multiple sources in a single app.',
         href: 'https://github.com/venera-app/venera'
     },
