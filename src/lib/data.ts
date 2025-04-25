@@ -45,7 +45,7 @@ export const miscs = [
 
 export const projects = [
     {
-        title: 'DELM Blog',
+        title: 'blogs',
         techs: ['ts.svg','svelte.svg','tailwind.svg'],
         desc: 'The blog subdomain where I post content with text centered.',
         href: 'https://blog.delm.dev'
@@ -99,6 +99,13 @@ export const friends = [
         site: '欠陥電気の摸鱼小池',
     },
     {
+        name: 'Reverier-Xu',
+        avatar: 'https://avatars.githubusercontent.com/u/41937333?v=4',
+        desc: '一个希望写点有趣东西的理想主义者',
+        link: 'https://blog.woooo.tech/',
+        site: 'Reverier\'s Blog',
+    },
+    {
         name: 'Sunset',
         avatar: 'https://avatars.githubusercontent.com/u/26019675?v=4',
         desc: 'Lead Programmer of @Sunset-Edu-Tech-Group. English & Chinese.',
@@ -113,13 +120,7 @@ export const friends = [
         site: '',
     },
 
-    {
-        name: 'Reverier-Xu',
-        avatar: 'https://avatars.githubusercontent.com/u/41937333?v=4',
-        desc: '一个希望写点有趣东西的理想主义者',
-        link: 'https://blog.woooo.tech/',
-        site: 'Reverier\'s Blog',
-    },
+
     {
         name: 'archlinux 简明指南',
         avatar: 'https://arch.icekylin.online/images/hero.svg',
