@@ -9,7 +9,7 @@
 
 <a
       href={href}
-      class="icon-button lg:text-5xl md:text-4xl text-3xl hover:text-red-700 transition-colors duration-300 inline-block"
+      class="lg:text-3xl md:text-2xl text-xl hover:text-red-600 transition-colors duration-300 inline-block"
       aria-label={label}
       style="transform: scale({$scale});"
       onmouseenter={() => scale.set(1.25)}

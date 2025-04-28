@@ -4,6 +4,8 @@
 
     import Header from "./Header.svelte";
     import BlogsDisplay from "./BlogsDisplay.svelte";
+    import {socialLinks} from "$lib/data";
+    import SocialLink from "./SocialLink.svelte";
 
     let {data} = $props()
 </script>
@@ -11,12 +13,12 @@
 <Header/>
 <div class="flex flex-col w-full scroll-smooth text-neutral-100 items-center">
     <div class="flex flex-wrap justify-around items-center w-full max-w-[1440px] my-10">
-        <div class="flex flex-col justify-center items-center mx-3">
+        <div class="flex flex-col justify-center items-center mx-5">
             <img src="https://img.delm.dev/avatar.webp" alt="avatar"
                  class="my-5 lg:h-72 md:h-64 sm:h-56 h-48 rounded-full lg:border-4 md:border-3 border-2 hover:border-red-600 border-neutral-900 transition-colors duration-500"/>
         </div>
         <div>
-            <div class="lg:text-2xl md:text-xl text-lg font-bold justify-center items-center flex flex-col">
+            <div class="lg:text-2xl md:text-xl text-lg font-bold justify-center items-center flex flex-col mb-3">
                 <div>
                     <span class="text-red-600">del</span>ta<span class="text-red-600">m</span>aya
                 </div>
@@ -51,6 +53,12 @@
 
             <div class="my-16">
                 "夢はいつでも膨らむばかりで"
+            </div>
+
+            <div class="flex space-x-2">
+                {#each socialLinks as link}
+                    <SocialLink href={link.href} label={link.label} iconClass={link.iconClass}/>
+                {/each}
             </div>
         </div>
     </div>
