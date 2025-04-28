@@ -33,11 +33,11 @@
                 C / C++ / Go / Python / TypeScript
             </div>
             <div>
-                ArchLinux / macOS / Windows
+                ArchLinux & macOS & Windows
             </div>
 
             <div>
-                Multimedia / Graphics
+                Multimedia & Graphics
             </div>
             <div>
                 - <span class="text-red-600">D</span>eveloper
