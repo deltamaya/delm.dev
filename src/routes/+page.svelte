@@ -24,33 +24,34 @@
                 </div>
             </div>
             <div>
-                Average CS student, uses:
+                Computer Science
+            </div>
+            <div>
+                C / C++ / Rust
             </div>
             <div>
                 #! /bin/zsh
             </div>
             <div>
-                C / C++ / Go / Python / TypeScript
+                macOS & Windows & Debian
             </div>
             <div>
-                ArchLinux & macOS & Windows
-            </div>
-
-            <div>
-                Multimedia & Graphics
+                city pop / vaporwave
             </div>
             <div>
-                - <span class="text-red-600">D</span>eveloper
-            </div>
-            <div>
-                - <span class="text-red-600">G</span>amer
-            </div>
-
-            <div>
-                - <span class="text-red-600">D</span>reamer
+                <span class="text-red-600">M</span>edia-Processing & Game-<span class="text-red-600">E</span>ngine
             </div>
 
 
+            <div>
+                - love playing <span class="text-red-600">G</span>ames
+            </div>
+            <div>
+                - average <span class="text-red-600">A</span>nime watcher
+            </div>
+            <div>
+                - not quite an <span class="text-red-600">E</span>ngineer
+            </div>
             <div class="my-16">
                 "夢はいつでも膨らむばかりで"
             </div>
