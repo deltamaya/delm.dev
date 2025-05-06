@@ -3,8 +3,8 @@
 
 </script>
 
-<div class="min-h-[calc(100vh-4rem)] flex justify-evenly items-center self-center text-center gap-10
-bg-gray-200 font-bold
+<div class="min-h-[calc(100vh-42px)] flex justify-evenly items-center self-center text-center gap-10 bg-neutral-900
+text-white font-bold
     -z-10
 ">
     <div class="flex flex-col text-2xl z-10">
@@ -35,7 +35,7 @@ bg-gray-200 font-bold
 
 <div style="font-size: 1000px"
              in:fly={{ y: 100, duration: 400 }}
-        class="text-9xl pointer-events-none select-none z-0 fixed object-cover font-bold text-gray-300 top-0 left-0"
+        class="text-9xl pointer-events-none select-none z-0 fixed object-cover font-bold text-neutral-800 top-0 left-0"
 >
      &lt;&gt;
 </div>

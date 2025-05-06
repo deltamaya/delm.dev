@@ -67,7 +67,7 @@
     <div class="h-[1px] bg-neutral-600 w-4/5 self-center"></div>
     <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5 items-center"
     >
-        <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
+        <div class="lg:text-5xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
             .blogs
         </div>
         <div class="font-normal text-xl">
@@ -80,7 +80,7 @@
 
     <div class="h-[1px] bg-neutral-600 w-4/5 self-center"></div>
     <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5 items-center">
-        <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
+        <div class="lg:text-5xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
             .projects
         </div>
         <div class="font-normal text-xl">
@@ -93,7 +93,7 @@
 
     <div class="h-[1px] bg-neutral-600 w-4/5 self-center"></div>
     <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5 items-center">
-        <div class="lg:text-6xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
+        <div class="lg:text-5xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
             .links
         </div>
         <div class="font-normal text-xl">
