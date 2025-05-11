@@ -6,8 +6,8 @@
     {#each friends as {link, avatar, name, desc, site},index}
 
         <a href={link}
-           class="flex flex-col border-[1px] border-neutral-800 px-4 py-2 hover:-translate-y-1 duration-300 min-w-[300px]
-           backdrop-blur relative bg-neutral-900 bg-opacity-20 transition-all hover:border-red-600" style="z-index: : {index+1}">
+           class="flex flex-col border-[1px] border-neutral-800 px-4 py-2 hover:-translate-y-1 duration-300 min-w-[300px] z-30
+           backdrop-blur relative bg-black transition-all hover:border-red-600" style="z-index: : {index+1}">
             <img src={avatar} alt="icon" class="w-16 h-16 m-2"/>
             <div class="lg:text-2xl md:text-xl text-lg font-bold">
                 {name}

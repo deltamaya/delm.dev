@@ -2,7 +2,6 @@
     import ProjectsDisplay from "./ProjectsDisplay.svelte";
     import FriendsDisplay from "./FriendsDisplay.svelte";
 
-    import Header from "./Header.svelte";
     import BlogsDisplay from "./BlogsDisplay.svelte";
     import {socialLinks} from "$lib/data";
     import SocialLink from "./SocialLink.svelte";
@@ -11,9 +10,8 @@
     let {data} = $props()
 </script>
 
-<Header/>
-<div class="flex flex-col w-full scroll-smooth text-neutral-100 items-center z-[-20] bg-black">
-    <div class="flex flex-wrap justify-around items-center w-full max-w-[1440px] my-10 z-[10]">
+<div class="flex flex-grow flex-col w-full scroll-smooth text-neutral-100 items-center bg-black">
+    <div class="flex flex-wrap justify-around items-center w-full max-w-[1440px] my-10">
         <div class="flex flex-col justify-center items-center mx-5">
             <img src="https://img.delm.dev/avatar.webp" alt="avatar"
                  class="my-5 lg:h-72 md:h-64 sm:h-56 h-48 rounded-full lg:border-4 md:border-3 border-2 hover:border-red-600 border-neutral-900 transition-colors duration-500"/>
@@ -64,7 +62,7 @@
 
 
     <Seperator/>
-    <div class="z-[10] flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 w-full max-w-[1440px] px-2 space-y-5 items-center"
+    <div class=" flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 w-full max-w-[1440px] px-2 space-y-5 items-center"
     >
         <div class="lg:text-5xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
             .blogs
@@ -77,7 +75,7 @@
         </div>
     </div>
     <Seperator/>
-    <div class=" z-[10] flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 w-full max-w-[1440px] px-2 space-y-5 items-center">
+    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 w-full max-w-[1440px] px-2 space-y-5 items-center">
         <div class="lg:text-5xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
             .projects
         </div>
@@ -90,7 +88,7 @@
     </div>
 
     <Seperator/>
-    <div class=" z-[10] flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4  w-full max-w-[1440px] px-2 space-y-5 items-center">
+    <div class=" flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4  w-full max-w-[1440px] px-2 space-y-5 items-center">
         <div class="lg:text-5xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
             .links
         </div>
@@ -102,7 +100,7 @@
 
 </div>
 
-<div class="fixed inset-0 pointer-events-none z-[0] w-[1440px] h-[712px] opacity-5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="fixed inset-0 pointer-events-none z-[10] w-[1440px] h-[712px] opacity-5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
     <img
             src="/logo-white.svg"
             alt="Background Logo"
