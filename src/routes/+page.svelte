@@ -7,7 +7,6 @@
     import {socialLinks} from "$lib/data";
     import SocialLink from "./SocialLink.svelte";
     import Seperator from "./Seperator.svelte";
-	import { fly } from 'svelte/transition';
 
     let {data} = $props()
 </script>
@@ -51,14 +50,13 @@
             <div>
                 - not quite an <span class="text-red-600">E</span>ngineer
             </div>
-            <div class="my-16" in:fly>
+            <div class="my-16">
                 "夢はいつでも膨らむばかりで"
             </div>
 
             <div class="flex space-x-2">
-                {#each socialLinks as link,index}
-
-                    <SocialLink  href={link.href} label={link.label} iconClass={link.iconClass} {index}/>
+                {#each socialLinks as link}
+                    <SocialLink  href={link.href} label={link.label} iconClass={link.iconClass}/>
                 {/each}
             </div>
         </div>

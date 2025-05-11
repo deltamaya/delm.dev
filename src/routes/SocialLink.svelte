@@ -1,10 +1,9 @@
 <script lang="ts">
   import {Spring} from "svelte/motion";
   import Icon from "@iconify/svelte";
-  import {fly} from "svelte/transition";
 
   let scale=new Spring(1,{stiffness:0.1,damping:0.3});
-  let {href,label,iconClass,index} =$props()
+  let {href,label,iconClass} =$props()
 </script>
 
 
@@ -15,7 +14,6 @@
       style="transform: scale({scale.current});"
       onmouseenter={() => scale.set(1.25)}
       onmouseleave={() => scale.set(1)}
-        transition:fly={{delay:index*100,duration:200}}
 >
   <Icon icon={iconClass}/>
 </a>
