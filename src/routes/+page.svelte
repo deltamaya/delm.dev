@@ -6,13 +6,15 @@
     import BlogsDisplay from "./BlogsDisplay.svelte";
     import {socialLinks} from "$lib/data";
     import SocialLink from "./SocialLink.svelte";
+    import Seperator from "./Seperator.svelte";
+	import { fly } from 'svelte/transition';
 
     let {data} = $props()
 </script>
 
 <Header/>
-<div class="flex flex-col w-full scroll-smooth text-neutral-100 items-center">
-    <div class="flex flex-wrap justify-around items-center w-full max-w-[1440px] my-10">
+<div class="flex flex-col w-full scroll-smooth text-neutral-100 items-center z-[-20] bg-black">
+    <div class="flex flex-wrap justify-around items-center w-full max-w-[1440px] my-10 z-[10]">
         <div class="flex flex-col justify-center items-center mx-5">
             <img src="https://img.delm.dev/avatar.webp" alt="avatar"
                  class="my-5 lg:h-72 md:h-64 sm:h-56 h-48 rounded-full lg:border-4 md:border-3 border-2 hover:border-red-600 border-neutral-900 transition-colors duration-500"/>
@@ -36,9 +38,6 @@
                 macOS & Windows & Debian
             </div>
             <div>
-                city pop / vaporwave
-            </div>
-            <div>
                 <span class="text-red-600">M</span>edia-Processing & Game-<span class="text-red-600">E</span>ngine
             </div>
 
@@ -52,21 +51,22 @@
             <div>
                 - not quite an <span class="text-red-600">E</span>ngineer
             </div>
-            <div class="my-16">
+            <div class="my-16" in:fly>
                 "夢はいつでも膨らむばかりで"
             </div>
 
             <div class="flex space-x-2">
-                {#each socialLinks as link}
-                    <SocialLink href={link.href} label={link.label} iconClass={link.iconClass}/>
+                {#each socialLinks as link,index}
+
+                    <SocialLink  href={link.href} label={link.label} iconClass={link.iconClass} {index}/>
                 {/each}
             </div>
         </div>
     </div>
 
 
-    <div class="h-[1px] bg-neutral-600 w-4/5 self-center"></div>
-    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5 items-center"
+    <Seperator/>
+    <div class="z-[10] flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 w-full max-w-[1440px] px-2 space-y-5 items-center"
     >
         <div class="lg:text-5xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
             .blogs
@@ -78,9 +78,8 @@
             <BlogsDisplay blogs={data.blogs}/>
         </div>
     </div>
-
-    <div class="h-[1px] bg-neutral-600 w-4/5 self-center"></div>
-    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5 items-center">
+    <Seperator/>
+    <div class=" z-[10] flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 w-full max-w-[1440px] px-2 space-y-5 items-center">
         <div class="lg:text-5xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
             .projects
         </div>
@@ -92,8 +91,8 @@
         </div>
     </div>
 
-    <div class="h-[1px] bg-neutral-600 w-4/5 self-center"></div>
-    <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 lg:px-48 md:px-32 px-8 space-y-5 items-center">
+    <Seperator/>
+    <div class=" z-[10] flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4  w-full max-w-[1440px] px-2 space-y-5 items-center">
         <div class="lg:text-5xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
             .links
         </div>
@@ -103,4 +102,13 @@
         <FriendsDisplay/>
     </div>
 
+</div>
+
+<div class="fixed inset-0 pointer-events-none z-[0] w-[1440px] h-[712px] opacity-5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+    <img
+            src="/logo-white.svg"
+            alt="Background Logo"
+            class="absolute"
+            style="filter: blur(10px);"
+    />
 </div>

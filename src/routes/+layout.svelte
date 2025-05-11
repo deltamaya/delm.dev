@@ -13,17 +13,15 @@
     {/if}
 </main>
 
-<footer class="bg-neutral-900 text-white flex justify-center items-center h-10 !z-40 relative font-IBMPlexMono">
+<footer class="bg-black text-white flex justify-center items-center h-10 !z-10 relative font-IBMPlexMono">
     <div class="text-sm text-center flex flex-wrap justify-center items-center z-40">
         <span class="inline-block mr-2">©</span>
-        <span>{new Date().getFullYear()} deltamaya. All works&nbsp;</span>
+        <span>{new Date().getFullYear()} deltamaya. All works licensed under&nbsp;</span>
         <a
-                href="https://www.gnu.org/copyleft/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-red-600 underline font-extrabold"
+                href="https://creativecommons.org/licenses/by/4.0/"
+                class="text-red-600 underline"
         >
-          Copyleft
+          CC BY 4.0
         </a>
     </div>
 </footer>

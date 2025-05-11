@@ -45,7 +45,7 @@ export const miscs = [
 
 export const projects = [
     {
-        title: 'blogs',
+        title: 'DELM Blogs',
         techs: ['ts.svg','svelte.svg','tailwind.svg'],
         desc: 'The blog subdomain where I post content with text centered.',
         href: 'https://blog.delm.dev'
