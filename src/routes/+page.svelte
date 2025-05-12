@@ -5,7 +5,7 @@
     import BlogsDisplay from "./BlogsDisplay.svelte";
     import {socialLinks} from "$lib/data";
     import SocialLink from "./SocialLink.svelte";
-    import Seperator from "./Seperator.svelte";
+    import Separator from "./Separator.svelte";
 
     let {data} = $props()
 </script>
@@ -61,7 +61,7 @@
     </div>
 
 
-    <Seperator/>
+    <Separator/>
     <div class=" flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 w-full max-w-[1440px] px-2 space-y-5 items-center"
     >
         <div class="lg:text-5xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
@@ -74,7 +74,7 @@
             <BlogsDisplay blogs={data.blogs}/>
         </div>
     </div>
-    <Seperator/>
+    <Separator/>
     <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 w-full max-w-[1440px] px-2 space-y-5 items-center">
         <div class="lg:text-5xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
             .projects
@@ -87,7 +87,7 @@
         </div>
     </div>
 
-    <Seperator/>
+    <Separator/>
     <div class=" flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4  w-full max-w-[1440px] px-2 space-y-5 items-center">
         <div class="lg:text-5xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
             .links
