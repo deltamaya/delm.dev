@@ -3,16 +3,15 @@
     import FriendsDisplay from "./FriendsDisplay.svelte";
 
     import BlogsDisplay from "./BlogsDisplay.svelte";
-    import {socialLinks} from "$lib/data";
+    import {socialLinks,blogs} from "$lib/data";
     import SocialLink from "./SocialLink.svelte";
     import Separator from "./Separator.svelte";
 
-    let {data} = $props()
 </script>
 
 <div class="flex flex-grow flex-col w-full scroll-smooth text-neutral-100 items-center bg-black">
     <div class="flex flex-wrap justify-around items-center w-full max-w-[1440px] my-10">
-        <div class="flex flex-col justify-center items-center mx-5">
+        <div class="flex flex-col justify-center items-center mx-5 z-[20]">
             <img src="https://img.delm.dev/avatar.webp" alt="avatar"
                  class="my-5 lg:h-72 md:h-64 sm:h-56 h-48 rounded-full lg:border-4 md:border-3 border-2 hover:border-red-600 border-neutral-900 transition-colors duration-500"/>
         </div>
@@ -22,34 +21,20 @@
                     <span class="text-red-600">del</span>ta<span class="text-red-600">m</span>aya
                 </div>
             </div>
-            <div>
-                Computer Science
-            </div>
-            <div>
-                C / C++ / Rust
-            </div>
-            <div>
-                #! /bin/zsh
-            </div>
-            <div>
-                macOS & Windows & Debian
-            </div>
-            <div>
-                <span class="text-red-600">M</span>edia-Processing & Game-<span class="text-red-600">E</span>ngine
-            </div>
-
 
             <div>
-                - love playing <span class="text-red-600">G</span>ames
+                zh-CN / en-US
             </div>
             <div>
-                - average <span class="text-red-600">A</span>nime watcher
+                <span class="text-red-600 font-bold">S</span>oftware Developer & <span class="text-red-600 font-bold">C</span>ontent Creator
             </div>
+
             <div>
-                - not quite an <span class="text-red-600">E</span>ngineer
+                - average <span class="text-red-600 font-bold">ACG</span> enthusiast
             </div>
+
             <div class="my-16">
-                "夢はいつでも膨らむばかりで"
+                Work hard, Play hard.
             </div>
 
             <div class="flex space-x-2">
@@ -62,21 +47,22 @@
 
 
     <Separator/>
-    <div class=" flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 w-full max-w-[1440px] px-2 space-y-5 items-center"
+    <div class=" flex flex-col  font-bold lg:py-16 md:py-8 py-4 w-full max-w-[1440px] px-2 space-y-5 items-center"
     >
-        <div class="lg:text-5xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
+        <div class="lg:text-4xl md:text-3xl text-2xl font-extrabold px-5 w-full max-w-[1440px]">
             .blogs
         </div>
         <div class="font-normal text-xl">
-            Recent blogs
+            Picked posts from <a href="https://blog.delm.dev" class="underline transition-colors hover:text-red-600">blog.delm.dev</a>
         </div>
         <div class="flex justify-center items-center w-full max-w-[1440px]">
-            <BlogsDisplay blogs={data.blogs}/>
+            <BlogsDisplay blogs={blogs}/>
         </div>
     </div>
+
     <Separator/>
     <div class="flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4 w-full max-w-[1440px] px-2 space-y-5 items-center">
-        <div class="lg:text-5xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
+        <div class="font-extrabold px-5 w-full max-w-[1440px]">
             .projects
         </div>
         <div class="font-normal text-xl">
@@ -86,10 +72,23 @@
             <ProjectsDisplay/>
         </div>
     </div>
+    <Separator/>
 
+    <div class=" flex flex-col  font-bold lg:py-16 md:py-8 py-4 w-full max-w-[1440px] px-2 space-y-5 items-center"
+    >
+        <div class="lg:text-4xl md:text-3xl text-2xl font-extrabold px-5 w-full max-w-[1440px]">
+            .videos
+        </div>
+        <div class="font-normal text-xl">
+            Picked videos from <a href="https://www.youtube.com/@0xdelm" class="underline transition-colors hover:text-red-600">0xdelm channel</a>
+        </div>
+        <div class="flex justify-center items-center w-full max-w-[1440px]">
+            <BlogsDisplay blogs={blogs}/>
+        </div>
+    </div>
     <Separator/>
     <div class=" flex flex-col  font-bold lg:text-4xl md:text-3xl text-2xl lg:py-16 md:py-8 py-4  w-full max-w-[1440px] px-2 space-y-5 items-center">
-        <div class="lg:text-5xl md:text-4xl text-3xl font-extrabold px-5 w-full max-w-[1440px]">
+        <div class="font-extrabold px-5 w-full max-w-[1440px]">
             .links
         </div>
         <div class="font-normal text-xl">
@@ -105,6 +104,6 @@
             src="/logo-white.svg"
             alt="Background Logo"
             class="absolute"
-            style="filter: blur(10px);"
+            style="filter: blur(30px);"
     />
 </div>

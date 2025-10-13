@@ -12,36 +12,40 @@ export const socialLinks = [
 
 ]
 
+export const blogs = [
 
-export const languages = [
-    {href: "https://en.cppreference.com/w/", label: "c plus plus", iconUrl: "cpp.svg"},
-    {href: "https://go.dev/", label: "go", iconUrl: "go.svg"},
-    {href: "https://www.python.org/", label: "python", iconUrl: "python.svg"},
-    {href: "https://www.typescriptlang.org/", label: "typescript", iconUrl: "ts.svg"},
-]
-export const frontendFrameworks = [
-    {href: "https://svelte.dev/", label: "Svelte", iconUrl: "svelte.svg"},
-    {href: "https://tailwindcss.com/", label: "Tailwind", iconUrl: "tailwind.svg"},
-]
+        {
+            title: "How to avoid proxy detection",
+            link: "https://blog.delm.dev/blog/avoid-proxy-detection",
+            description: "Attempting to avoid proxy detection",
+            pubDate: "2024/12/27"
+        },
+        {
+            title: "Misappropriation of clash proxy",
+            link: "https://blog.delm.dev/blog/scan-clash",
+            description: "Use others clash proxy for free using zmap",
+            pubDate: "2024/12/21"
+        },
+        {
+            title: "MPV Player Setup",
+            link: "https://blog.delm.dev/blog/mpv-setup",
+            description: "A guide to set up mpv player to watch Anime like a pro",
+            pubDate: "2024/11/18"
+        },
+        {
+            title: "The YUV Color Model",
+            link: "https://blog.delm.dev/blog/yuv-color-model",
+            description: "learning to understand the YUV color model",
+            pubDate: "2024/09/21"
+        },
+        {
+            title: "Common Methods in Network Attacks",
+            link: "https://blog.delm.dev/blog/common-attack",
+            description: "A brief introduction to common methods in network attacks",
+            pubDate: "2024/09/05"
+        }
 
-export const operatingSystems = [
-    {href: "https://www.apple.com/macos", label: "macOS", iconUrl: "apple.svg"},
-    {href: "https://archlinux.org", label: "ArchLinux", iconUrl: "archlinux.svg"},
-    {href: "https://www.microsoft.com/windows", label: "Windows", iconUrl: "microsoft.svg"},
 ]
-
-export const miscs = [
-    {href: "https://www.google.com/chrome/", label: "chrome", iconUrl: "chrome.svg"},
-    {href: "https://ohmyz.sh/", label: "zsh", iconUrl: "zsh.svg"},
-    {href: "https://neovim.io/", label: "neovim", iconUrl: "nvim.svg"},
-    {href: "https://code.visualstudio.com/", label: "vscode", iconUrl: "vscode.svg"},
-    {
-        href: "https://catppuccin.com/",
-        label: "catppuccin",
-        iconUrl: "https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png"
-    },
-]
-
 
 export const projects = [
     {
@@ -131,7 +135,7 @@ export const friends = [
     {
         name: 'maya',
         avatar: 'https://img.delm.dev/avatar.webp',
-        desc: '"夢はいつでも膨らむばかりで"',
+        desc: 'Work hard, play hard.',
         link: 'https://www.delm.dev',
         site: 'localhost',
     },
@@ -139,7 +143,7 @@ export const friends = [
         name: 'you',
         avatar: '',
         desc: 'Exchange Friend Link',
-        link: '/exchange',
+        link: 'mailto:me@delm.dev',
         site: 'undefined',
     },
 ]

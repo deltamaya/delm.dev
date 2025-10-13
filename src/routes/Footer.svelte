@@ -3,10 +3,10 @@
         <span class="inline-block mr-2">©</span>
         <span>{new Date().getFullYear()} deltamaya. All works licensed under&nbsp;</span>
         <a
-                href="https://creativecommons.org/licenses/by/4.0/"
+                href="https://creativecommons.org/licenses/by-nc/4.0/"
                 class="text-red-600 underline"
         >
-          CC BY 4.0
+          CC BY-NC 4.0
         </a>
     </div>
 </footer>
