@@ -3,9 +3,10 @@
     import FriendsDisplay from "./FriendsDisplay.svelte";
 
     import BlogsDisplay from "./BlogsDisplay.svelte";
-    import {socialLinks,blogs} from "$lib/data";
+    import {socialLinks} from "$lib/data";
     import SocialLink from "./SocialLink.svelte";
     import Separator from "./Separator.svelte";
+    import VideoDisplay from "./VideoDisplay.svelte";
 
 </script>
 
@@ -56,7 +57,7 @@
             Picked posts from <a href="https://blog.delm.dev" class="underline transition-colors hover:text-red-600">blog.delm.dev</a>
         </div>
         <div class="flex justify-center items-center w-full max-w-[1440px]">
-            <BlogsDisplay blogs={blogs}/>
+            <BlogsDisplay/>
         </div>
     </div>
 
@@ -83,7 +84,7 @@
             Picked videos from <a href="https://www.youtube.com/@0xdelm" class="underline transition-colors hover:text-red-600">0xdelm channel</a>
         </div>
         <div class="flex justify-center items-center w-full max-w-[1440px]">
-            <BlogsDisplay blogs={blogs}/>
+            <VideoDisplay/>
         </div>
     </div>
     <Separator/>

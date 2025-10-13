@@ -35,7 +35,7 @@ export const blogs = [
         {
             title: "The YUV Color Model",
             link: "https://blog.delm.dev/blog/yuv-color-model",
-            description: "learning to understand the YUV color model",
+            description: "Learning to understand the YUV color model",
             pubDate: "2024/09/21"
         },
         {
@@ -45,6 +45,23 @@ export const blogs = [
             pubDate: "2024/09/05"
         }
 
+]
+
+
+export const videos = [
+
+    {
+        title: "CreditsEXTREME",
+        link: "https://www.youtube.com/watch?v=7CJ3mxao7pk",
+        description: "Frums - Credits: The 10th Anniversary",
+        thumbnail: "https://img.youtube.com/vi/7CJ3mxao7pk/sddefault.jpg"
+    },
+    {
+        title: "GOODDS&A",
+        link: "https://www.youtube.com/watch?v=iu9Z2LTEmok",
+        description: "Fan Made MV of EBIMAYO - GOODRAGE",
+        thumbnail: "https://img.youtube.com/vi/iu9Z2LTEmok/sddefault.jpg"
+    },
 ]
 
 export const projects = [
