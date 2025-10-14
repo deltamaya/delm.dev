@@ -6,12 +6,15 @@
     {#each friends as {link, avatar, name, desc, site},index}
 
         <a href={link}
-           class="flex flex-col border-[1px] border-neutral-800 px-4 py-2 hover:-translate-y-1 duration-300 min-w-[300px] z-30
-           backdrop-blur relative bg-black transition-all hover:border-red-600" style="z-index: : {index+1}">
-            <img src={avatar} alt="icon" class="w-16 h-16 m-2"/>
-            <div class="lg:text-2xl md:text-xl text-lg font-bold">
-                {name}
+           class="flex flex-col border-[1px] border-neutral-800 px-4 py-2 hover:-translate-y-1 duration-300 z-30
+           backdrop-blur relative bg-black transition-all hover:border-red-600 justify-between" style="z-index: : {index+1}">
+            <div>
+                <img src={avatar} alt="icon" class="w-16 h-16 my-2"/>
+                <div class="lg:text-2xl md:text-xl text-lg font-bold">
+                    {name}
+                </div>
             </div>
+
             <div class="lg:text-xl md:text-lg text-sm font-normal text-neutral-400">
                 {desc}
             </div>

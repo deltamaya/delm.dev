@@ -11,10 +11,10 @@
 </script>
 
 <div class="flex flex-grow flex-col w-full scroll-smooth text-neutral-100 items-center bg-black">
-    <div class="flex flex-wrap justify-around items-center w-full max-w-[1440px] my-10">
+    <div class="flex flex-wrap justify-around items-center w-full max-w-[1440px] my-12">
         <div class="flex flex-col justify-center items-center mx-5 z-[20]">
             <img src="https://img.delm.dev/avatar.webp" alt="avatar"
-                 class="my-5 lg:h-72 md:h-64 sm:h-56 h-48 rounded-full lg:border-4 md:border-3 border-2 hover:border-red-600 border-neutral-900 transition-colors duration-500"/>
+                 class="my-5 lg:h-72 md:h-64 sm:h-56 h-48 rounded-full lg:border-4 md:border-3 border-2 hover:border-red-600 border-neutral-950 transition-colors duration-500"/>
         </div>
         <div>
             <div class="lg:text-2xl md:text-xl text-lg font-bold justify-center items-center flex flex-col mb-3">
@@ -33,8 +33,13 @@
             <div>
                 - average <span class="text-red-600 font-bold">ACG</span> enthusiast
             </div>
-
-            <div class="my-16">
+            <div>
+                - not quite an <span class="text-red-600 font-bold">E</span>ngineer
+            </div>
+            <div>
+                - trying to be <span class="text-red-600 font-bold">C</span>reative
+            </div>
+            <div class="my-12">
                 Work hard, Play hard.
             </div>
 
