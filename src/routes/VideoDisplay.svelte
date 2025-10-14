@@ -5,8 +5,8 @@
     {#each videos as {link,title,description,thumbnail},index}
         <a href={link}
            class="flex flex-col border-[1px]  bg-black border-neutral-800 min-w-[250px] hover:border-red-600 transition-all
-               backdrop-blur hover:-translate-y-1 duration-300 "  style="z-index: : {index+1}">
-            <img src="{thumbnail}" alt="thumbnail" class="h-auto"/>
+               backdrop-blur hover:-translate-y-1 duration-300"  style="z-index: : {index+1}">
+            <img src="{thumbnail}" alt="thumbnail"/>
             <div class="bg-black px-3 py-2">
                 <div>
                     <div class="lg:text-2xl md:text-xl text-lg font-bold flex flex-col justify-between h-full">
