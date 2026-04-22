@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.blurred_background {
+    @apply pointer-events-none select-none blur-3xl opacity-10 z-0 fixed inset-0 w-full h-full object-cover;
+}
+
+@keyframes logo-float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(150px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    animation: logo-float 5s ease-in-out infinite;
+}
+
+@keyframes title-float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.title-float {
+    animation: title-float 5s ease-in-out infinite;
+}
+
+.vaporwave-grid-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+body {
+    margin: 0;
+}

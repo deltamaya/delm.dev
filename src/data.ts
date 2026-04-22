@@ -1,0 +1,158 @@
+export const socialLinks = [
+    { href: 'https://github.com/deltamaya', label: 'github', iconClass: 'mdi:github' },
+    { href: 'https://open.spotify.com/user/31iehqt26zkgouif2grvhraash7m', label: 'spotify', iconClass: 'mdi:spotify' },
+    { href: 'https://steamcommunity.com/id/deltamaya', label: 'steam community', iconClass: 'mdi:steam' },
+    { href: 'mailto:me@delm.dev', label: 'email me', iconClass: 'ic:baseline-email' },
+]
+
+export const blogs = [
+    {
+        title: 'How to avoid proxy detection',
+        link: 'https://blog.delm.dev/blog/avoid-proxy-detection',
+        description: 'Attempting to avoid proxy detection',
+        pubDate: '2024/12/27',
+    },
+    {
+        title: 'Misappropriation of clash proxy',
+        link: 'https://blog.delm.dev/blog/scan-clash',
+        description: 'Use others clash proxy for free using zmap',
+        pubDate: '2024/12/21',
+    },
+    {
+        title: 'MPV Player Setup',
+        link: 'https://blog.delm.dev/blog/mpv-setup',
+        description: 'A guide to set up mpv player to watch Anime like a pro',
+        pubDate: '2024/11/18',
+    },
+    {
+        title: 'The YUV Color Model',
+        link: 'https://blog.delm.dev/blog/yuv-color-model',
+        description: 'Learning to understand the YUV color model',
+        pubDate: '2024/09/21',
+    },
+    {
+        title: 'Common Methods in Network Attacks',
+        link: 'https://blog.delm.dev/blog/common-attack',
+        description: 'A brief introduction to common methods in network attacks',
+        pubDate: '2024/09/05',
+    },
+]
+
+export const videos = [
+    {
+        title: 'CreditsEXTREME',
+        link: 'https://www.youtube.com/watch?v=7CJ3mxao7pk',
+        description: "Frums - Credits: The 10th Anniversary",
+        thumbnail: 'https://img.youtube.com/vi/7CJ3mxao7pk/sddefault.jpg',
+    },
+    {
+        title: 'GOODDS&A',
+        link: 'https://www.youtube.com/watch?v=iu9Z2LTEmok',
+        description: 'Fan Made MV of EBIMAYO - GOODRAGE',
+        thumbnail: 'https://img.youtube.com/vi/iu9Z2LTEmok/sddefault.jpg',
+    },
+]
+
+export const projects = [
+    {
+        title: 'Blogs',
+        techs: ['ts.svg', 'svelte.svg', 'tailwind.svg'],
+        icon: 'logo-white.svg',
+        desc: 'The blog subdomain where I post content with text centered.',
+        href: 'https://blog.delm.dev',
+    },
+    {
+        title: 'Arc VP',
+        techs: ['cpp.svg', 'ffmpeg.svg', 'sdl.svg'],
+        icon: null,
+        desc: 'Toy video player based on FFmpeg, OpenGL, and SDL2.',
+        href: 'https://github.com/deltamaya/ArcVP',
+    },
+    {
+        title: 'kvraft',
+        techs: ['go.svg'],
+        icon: null,
+        desc: 'Distributed kv service build on Raft consensus.',
+        href: 'https://github.com/deltamaya/MIT6.824',
+    },
+    {
+        title: 'venera',
+        techs: ['flutter.svg'],
+        icon: 'venera.png',
+        desc: 'A comic app allows you read from multiple sources in a single app.',
+        href: 'https://github.com/venera-app/venera',
+    },
+    {
+        title: 'zed',
+        techs: ['rust.svg'],
+        icon: 'zed.svg',
+        desc: 'Next-generation code editor designed for high-performance collaboration with humans and AI.',
+        href: 'https://zed.dev/',
+    },
+]
+
+export const friends = [
+    {
+        name: 'Neko_oxff',
+        avatar: 'https://avatars.githubusercontent.com/u/54382007',
+        desc: 'A Studen from Taiwan Tainan City',
+        link: 'https://neko-0xff-blog.deno.dev/',
+        site: 'Neko_oxff Tech Blog',
+    },
+    {
+        name: 'bloodnighttw',
+        avatar: 'https://avatars.githubusercontent.com/u/44264182',
+        desc: 'Software Developer | Gamer',
+        link: 'https://bntw.dev/',
+        site: '',
+    },
+    {
+        name: '欠陥電気',
+        avatar: 'https://secure.gravatar.com/avatar/bedbc698e8dbf819a84b440b9ad0ee8e?s=256',
+        desc: 'Any sufficiently advanced technology is indistinguishable from magic.',
+        link: 'https://blog.apeiria.net',
+        site: '欠陥電気の摸鱼小池',
+    },
+    {
+        name: 'Reverier-Xu',
+        avatar: 'https://avatars.githubusercontent.com/u/41937333?v=4',
+        desc: '一个希望写点有趣东西的理想主义者',
+        link: 'https://blog.woooo.tech/',
+        site: "Reverier's Blog",
+    },
+    {
+        name: 'Sunset',
+        avatar: 'https://avatars.githubusercontent.com/u/26019675?v=4',
+        desc: 'Lead Programmer of @Sunset-Edu-Tech-Group. English & Chinese.',
+        link: 'https://blog.sunmkt.uk/',
+        site: 'Sunset 的重构博客',
+    },
+    {
+        name: 'nyne',
+        avatar: 'https://avatars.githubusercontent.com/u/67669799?v=4',
+        desc: "I'm a student working for my interests.",
+        link: 'https://nyne.dev',
+        site: '',
+    },
+    {
+        name: 'archlinux 简明指南',
+        avatar: 'https://arch.icekylin.online/images/hero.svg',
+        desc: '让 archlinux 成为你的常用系统吧！',
+        link: 'https://arch.icekylin.online/',
+        site: '',
+    },
+    {
+        name: 'maya',
+        avatar: 'https://img.delm.dev/avatar.webp',
+        desc: 'Work hard, play hard.',
+        link: 'https://www.delm.dev',
+        site: 'localhost',
+    },
+    {
+        name: 'you',
+        avatar: '',
+        desc: 'Exchange Friend Link',
+        link: 'mailto:me@delm.dev',
+        site: 'undefined',
+    },
+]
