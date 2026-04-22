@@ -143,7 +143,7 @@ export const friends = [
     },
     {
         name: 'maya',
-        avatar: 'https://img.delm.dev/avatar.webp',
+        avatar: 'https://delm.dev/avatar.webp',
         desc: 'Work hard, play hard.',
         link: 'https://www.delm.dev',
         site: 'localhost',

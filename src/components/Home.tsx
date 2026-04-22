@@ -13,7 +13,7 @@ export default function Home() {
             <div className="flex flex-wrap justify-around items-center w-full max-w-[1440px] my-12">
                 <div className="flex flex-col justify-center items-center mx-5 z-[20]">
                     <img
-                        src="https://img.delm.dev/avatar.webp"
+                        src="https://delm.dev/avatar.webp"
                         alt="avatar"
                         className="my-5 lg:h-72 md:h-64 sm:h-56 h-48 rounded-full lg:border-4 md:border-3 border-2 hover:border-red-600 border-neutral-950 transition-colors duration-500"
                     />
