@@ -33,10 +33,10 @@ export default function Home() {
                         - average <span className="text-red-600 font-bold">ACG</span> enthusiast
                     </div>
                     <div>
-                        - not quite an <span className="text-red-600 font-bold">E</span>ngineer
+                        - always keeping <span className="text-red-600 font-bold">C</span>uriosity
                     </div>
                     <div>
-                        - trying to be <span className="text-red-600 font-bold">C</span>reative
+                        - trying to be <span className="text-red-600 font-bold">I</span>nnovative
                     </div>
                     <div className="my-12">"Work hard, Play hard."</div>
                     <div className="flex space-x-2">

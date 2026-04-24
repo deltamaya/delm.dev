@@ -56,28 +56,24 @@ export const videos = [
 export const projects = [
     {
         title: 'Blogs',
-        techs: ['ts.svg', 'svelte.svg', 'tailwind.svg'],
         icon: 'logo-white.svg',
         desc: 'The blog subdomain where I post content with text centered.',
         href: 'https://blog.delm.dev',
     },
     {
         title: 'Arc VP',
-        techs: ['cpp.svg', 'ffmpeg.svg', 'sdl.svg'],
         icon: null,
         desc: 'Toy video player based on FFmpeg, OpenGL, and SDL2.',
         href: 'https://github.com/deltamaya/ArcVP',
     },
     {
         title: 'kvraft',
-        techs: ['go.svg'],
         icon: null,
         desc: 'Distributed kv service build on Raft consensus.',
         href: 'https://github.com/deltamaya/MIT6.824',
     },
     {
         title: 'zed',
-        techs: ['rust.svg'],
         icon: 'zed.svg',
         desc: 'Next-generation code editor designed for high-performance collaboration with humans and AI.',
         href: 'https://zed.dev/',

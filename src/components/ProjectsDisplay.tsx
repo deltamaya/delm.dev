@@ -20,11 +20,6 @@ export default function ProjectsDisplay() {
                             {desc}
                         </div>
                     </div>
-                    <div className="flex space-x-2 justify-end m-1">
-                        {techs.map((tech) => (
-                            <img key={tech} src={tech} alt={tech} className="lg:h-[25px] h-[20px] w-auto" />
-                        ))}
-                    </div>
                 </a>
             ))}
         </div>
