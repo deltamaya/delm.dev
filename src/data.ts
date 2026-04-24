@@ -76,13 +76,6 @@ export const projects = [
         href: 'https://github.com/deltamaya/MIT6.824',
     },
     {
-        title: 'venera',
-        techs: ['flutter.svg'],
-        icon: 'venera.png',
-        desc: 'A comic app allows you read from multiple sources in a single app.',
-        href: 'https://github.com/venera-app/venera',
-    },
-    {
         title: 'zed',
         techs: ['rust.svg'],
         icon: 'zed.svg',
@@ -126,13 +119,6 @@ export const friends = [
         desc: 'Lead Programmer of @Sunset-Edu-Tech-Group. English & Chinese.',
         link: 'https://blog.sunmkt.uk/',
         site: 'Sunset 的重构博客',
-    },
-    {
-        name: 'nyne',
-        avatar: 'https://avatars.githubusercontent.com/u/67669799?v=4',
-        desc: "I'm a student working for my interests.",
-        link: 'https://nyne.dev',
-        site: '',
     },
     {
         name: 'archlinux 简明指南',
