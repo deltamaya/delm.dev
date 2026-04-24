@@ -33,7 +33,7 @@ export default function Home() {
                         - average <span className="text-red-600 font-bold">ACG</span> enthusiast
                     </div>
                     <div>
-                        - always keeping <span className="text-red-600 font-bold">C</span>uriosity
+                        - <span className="text-red-600 font-bold">C</span>urious about everything
                     </div>
                     <div>
                         - trying to be <span className="text-red-600 font-bold">I</span>nnovative
